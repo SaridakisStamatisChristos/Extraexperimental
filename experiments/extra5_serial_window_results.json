@@ -1,0 +1,81 @@
+{
+  "research_date": "2026-10-29",
+  "dataset": "extra5_last100_data.csv",
+  "draw_id_first": 14256,
+  "draw_id_last": 14355,
+  "dataset_canonical_sha256": "1ce2d5c4d5f3b5e145a4dc58f20b14a4c8c5b3de74d00a179fcfe8365d0e16b6",
+  "num_draws": 100,
+  "num_80draw_windows": 21,
+  "null": "iid uniform 5-of-35 unordered subsets",
+  "global_uniformity": {
+    "statistic_chi_square_adjusted_34df": 17.067999999999994,
+    "asymptotic_upper_tail_p": 0.9931380793618053,
+    "asymptotic_lower_tail_p": 0.006861920638194685,
+    "mc_lower_tail_p": 0.006719865602687947,
+    "extreme_lower": 335,
+    "min_count": 10,
+    "max_count": 21
+  },
+  "window_80": {
+    "target_draw_ids": [
+      14268,
+      14347
+    ],
+    "target_std_pop": 2.1285234893930487,
+    "target_ss": 158.57142857142858,
+    "min_window_draw_ids": [
+      14264,
+      14343
+    ],
+    "min_window_std_pop": 2.0182837728513556,
+    "mc_fixed_window_lower_p": 0.0023399532009359815,
+    "mc_min_of_21_lower_p": 0.005879882402351953,
+    "extreme_fixed": 116,
+    "extreme_min_scan": 293
+  },
+  "serial": {
+    "adjacent_histogram": {
+      "0": 43,
+      "1": 40,
+      "2": 15,
+      "3": 1
+    },
+    "null_overlap_probs_k0_to_5": [
+      0.43897705709849916,
+      0.42209332413317224,
+      0.12506468863205103,
+      0.013399788067719754,
+      0.0004620616575075778,
+      0.0000030804110500505186
+    ],
+    "observed_sum_overlap_by_lag": {
+      "1": 73,
+      "2": 84,
+      "3": 73,
+      "4": 66,
+      "5": 58
+    },
+    "standardized_z_by_lag": {
+      "1": 0.31255078150809934,
+      "2": 1.9241159586215748,
+      "3": 0.5131043359441806,
+      "4": -0.3570714214271422,
+      "5": -1.3759589957170737
+    },
+    "max_abs_z_lags_1_to_5": 1.9241159586215748,
+    "mc_familywise_max_abs_z_p": 0.251414971700566,
+    "extreme_max_abs_z": 12570
+  },
+  "mc": {
+    "iterations": 50000,
+    "seed": 20261029,
+    "generator": "numpy default_rng PCG64",
+    "sampler": "5 smallest iid continuous uniforms per draw, uniform without replacement",
+    "plus_one": true
+  },
+  "software": {
+    "python": "3.13.5",
+    "numpy": "2.3.5"
+  },
+  "interpretation": "Exploratory retrospective 100-draw sample; p-values do not imply prediction; 21-window correction applies only within 100-draw archive."
+}

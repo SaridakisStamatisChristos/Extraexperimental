@@ -43,3 +43,15 @@
 
 **Step 1 evidence label:** file-integrity checks EXECUTED; selected source results CROSS-CHECKED; full authoritative data verification NOT DONE.
 
+## 2026-10-29 continuation — Step 2: serial-overlap and 80-window scan (EXECUTED)
+
+- New committed program: [extra5_serial_window_audit.py](../experiments/extra5_serial_window_audit.py), outputs [extra5_serial_window_results.json](../experiments/extra5_serial_window_results.json); methods and limitations in [extra5_serial_window_report.md](../experiments/extra5_serial_window_report.md).
+- Under the **independent uniform 5-of-35** null, 50,000 Monte Carlo replicate 100-draw histories (seed 20261029, NumPy PCG64; draw 5 smallest of 35 iid uniform ranks) were generated. This run is **historical and exploratory, not preregistered**.
+- Over 100 draws #14256–14355, count frequencies are *unusually even*: adjusted Pearson chi-square(34) = **17.068**; **lower-tail** Monte Carlo p = **0.00672** (upper-tail p = 0.993; do not mistake that for evidence of normal dispersion).
+- Earlier noticed 80-draw interval #14268–14347 reproduces on raw draw records with population count SD **2.1285**, fixed-interval lower-tail Monte Carlo p **0.00234**.
+- Allowing selection of the **minimum among all 21 overlapping 80-draw windows** in this 100-draw archive, the most even window is #14264–14343 with population count SD **2.0183**; within-this-archive search-adjusted Monte Carlo p = **0.00588**.
+- The 99 adjacent overlaps have counts **0×43, 1×40, 2×15, 3×1** (sum 73, expectation 70.714). Lags 1–5 overlap totals: **73, 84, 73, 66, 58**. The maximum absolute standardized lag deviation was **1.924**; familywise null Monte Carlo p **0.2514**: no convincing detected short-lag signal.
+- **Interpretation:** local underdispersion is a replicated descriptive observation but **not** established RNG bias, tampering, code attribution or forecastability. The 100-draw period itself was chosen retrospectively after examining historical data, and the test family/period were not selected prospectively; the 21-window correction does not cover the entire historical search space. Source records are only spot-checked, not all 100 verified against an authoritative operator export.
+- **Priority next:** obtain an independently selected **non-overlapping prior 100-draw window**, preferably operator-verified, and apply the frozen script with the same statistic and directional hypotheses. The current script intentionally pins IDs 14256–14355 and must be parameterized for the new control window **without changing the statistical test**.
+
+**Step 2 evidence label:** local experiment EXECUTED, 50,000 randomized null replicates; significance descriptive and selection-limited, prospective prediction NOT DONE.

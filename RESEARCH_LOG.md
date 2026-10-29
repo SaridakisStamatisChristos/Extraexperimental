@@ -54,3 +54,7 @@
 **Priority next:** reconcile authoritative historical draws and true drawn-order metadata; obtain current configuration/certification documentation; preregister sequential, overlap, and rolling-window testing; then perform a live forward-only prediction test only if a predeclared model exists.
 
 No CI/automated deployment is requested. Archive is intentionally documentation-first.
+
+## Phase 6 — 100-draw serial independence and local underdispersion (29 Oct 2026)
+
+Executed fixed Python diagnostic over #14256–14355, using 50,000 independent null histories. Overall adjusted χ²(34)=17.068, **lower-tail** Monte Carlo p≈0.00672; all 21 overlapping 80-draw windows scanned, minimum SD≈2.0183 and **within-window-family** p≈0.00588. Earlier #14268–14347 window reproduced, SD≈2.1285 and fixed-window p≈0.00234. Short-lag overlapping-number totals for lags 1–5 = 73/84/73/66/58, familywise calibrated max-|z| p≈0.2514. The apparent evenness requires full historical look-elsewhere correction and independent replication, not an inference of predictability or a compromised RNG. Details: \`experiments/extra5_serial_window_report.md\`; immediate next checkpoint: frozen tests on a non-overlapping verified historical control block.

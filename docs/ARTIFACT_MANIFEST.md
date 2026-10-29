@@ -26,3 +26,7 @@ python extra5_regenerate_all.py
 This will recompute all derived analyses and PNGs from the committed historical datasets. It is deterministic under the original environment, but cross-version numerical/runtime differences may alter some serialization or benchmark timing.
 
 **Source caveat:** Archived results come from third-party websites, not an operator-certified 2026 archive. The figures are faithful visualizations of archived metrics but regenerated raster images are not pixel-identical to earlier local figures. The JSON diagnostic files contain restored computed values rather than an externally certified audit. The benchmark remains retrospective and has no validated predictive value.
+
+### 29 October 2026 serial/window audit extension
+- Added \`experiments/extra5_serial_window_audit.py\` (locally executed), \`experiments/extra5_serial_window_results.json\` (50,000 null simulations) and \`experiments/extra5_serial_window_report.md\`.
+- Updated \`docs/CONTINUATION.md\` **after both provenance Step 1 and statistical Step 2**, keeping limits and next replication checkpoint explicit.
