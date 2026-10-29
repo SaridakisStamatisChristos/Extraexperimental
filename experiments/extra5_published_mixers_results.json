@@ -1,0 +1,33 @@
+{
+  "source": "Bikos et al. (2023), §5.3.5, DOI 10.3390/cryptography7040054",
+  "scope": "literal published bit-level mixers, not verified deployed software",
+  "B_inputs_exhaustively_checked": 32764,
+  "B_lengths_tested": [
+    2,
+    14
+  ],
+  "B_main_loop_max_mismatches_to_shifted_X": 2,
+  "B_entire_output_max_mismatches_to_cyclic_shift_X": 2,
+  "B_mismatch_count_by_length": {
+    "2": 0,
+    "3": 4,
+    "4": 12,
+    "5": 28,
+    "6": 60,
+    "7": 124,
+    "8": 252,
+    "9": 508,
+    "10": 1020,
+    "11": 2044,
+    "12": 4092,
+    "13": 8188,
+    "14": 16380
+  },
+  "M_pair_inputs_checked": 21840,
+  "M_not_a_permutation_counterexample": {
+    "X": "001",
+    "Y": "001",
+    "output": "000"
+  },
+  "current_2026_rng_identified": false
+}
