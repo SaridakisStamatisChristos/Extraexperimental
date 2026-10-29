@@ -1,0 +1,182 @@
+{
+  "experiment": "EXTRA5-multifamily-blind-draw14250",
+  "training": {
+    "draw_id": 14249,
+    "numbers": [
+      2,
+      4,
+      30,
+      32,
+      35
+    ],
+    "user_provided": true
+  },
+  "hidden": {
+    "draw_id": 14250,
+    "result_never_accessed": true
+  },
+  "tested": 1640000,
+  "first_draw_exact_fits": 5,
+  "finite_preview_decode_failures": 505,
+  "seed_domain": "EXTRA5-MULTI-FAMILY-BLIND-20261029-v1|PUBLIC-SYNTHETIC|",
+  "seed_index_bound_exclusive_by_class": {
+    "cipher": 400000,
+    "number_theoretic": 80000,
+    "mix": 100000
+  },
+  "families": [
+    {
+      "family": "aes192-cfb128",
+      "tested": 400000,
+      "exceptions": 78,
+      "models": [
+        {
+          "seed_index": 43315,
+          "first_ticket": [
+            2,
+            4,
+            30,
+            32,
+            35
+          ],
+          "second_ticket_pre_reveal": [
+            1,
+            10,
+            22,
+            25,
+            27
+          ]
+        },
+        {
+          "seed_index": 236403,
+          "first_ticket": [
+            2,
+            4,
+            30,
+            32,
+            35
+          ],
+          "second_ticket_pre_reveal": [
+            4,
+            6,
+            19,
+            27,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "family": "des-cfb64",
+      "tested": 400000,
+      "exceptions": 68,
+      "models": []
+    },
+    {
+      "family": "cast128-cfb64",
+      "tested": 400000,
+      "exceptions": 78,
+      "models": [
+        {
+          "seed_index": 78501,
+          "first_ticket": [
+            2,
+            4,
+            30,
+            32,
+            35
+          ],
+          "second_ticket_pre_reveal": [
+            1,
+            14,
+            24,
+            30,
+            31
+          ]
+        },
+        {
+          "seed_index": 251682,
+          "first_ticket": [
+            2,
+            4,
+            30,
+            32,
+            35
+          ],
+          "second_ticket_pre_reveal": [
+            11,
+            23,
+            27,
+            30,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "family": "bbs-parity-toy",
+      "tested": 80000,
+      "exceptions": 15,
+      "models": []
+    },
+    {
+      "family": "rsa-parity-toy",
+      "tested": 80000,
+      "exceptions": 204,
+      "models": []
+    },
+    {
+      "family": "xor-aes192-des",
+      "tested": 100000,
+      "exceptions": 24,
+      "models": [
+        {
+          "seed_index": 29267,
+          "first_ticket": [
+            2,
+            4,
+            30,
+            32,
+            35
+          ],
+          "second_ticket_pre_reveal": [
+            9,
+            16,
+            19,
+            26,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "family": "m-aes192-bbs",
+      "tested": 100000,
+      "exceptions": 19,
+      "models": []
+    },
+    {
+      "family": "b-bbs",
+      "tested": 80000,
+      "exceptions": 19,
+      "models": []
+    }
+  ],
+  "winner": {
+    "family": "aes192-cfb128",
+    "seed_index": 236403,
+    "second_ticket_pre_reveal": [
+      4,
+      6,
+      19,
+      27,
+      31
+    ]
+  },
+  "winner_selection_rule": "minimum SHA256(DOMAIN + b'FIXED-SELECTION|' + family|seed) among exact first-ticket matches",
+  "reference_expected_fits_under_ideal_uniform_output": 5.051874122082851,
+  "independent_replay": "A shorter implementation reproduced all seed fits, finite-preview failures, and chosen ticket in a second full 1,640,000-attempt execution",
+  "local_tests_passed": 18,
+  "source_provenance": "Historic cipher/PRNG/mixer families only; synthetic SHA512 KDF, CFB choices, toy RSA/BBS primes, 256-bit mixer blocks and combinadic sampler are hypothetical",
+  "historical_target_status": "Blinded retrospective, no future live result predicted"
+}
