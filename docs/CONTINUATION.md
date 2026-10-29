@@ -170,3 +170,11 @@ python -m unittest discover -s tests -p 'test_historical_engine.py' -v
 **Next checkpoint:** move from synthetic seed sweeps to **documentary protocol recovery**. Seek full Vasiliki Liagkou thesis, original FC2004 and ISC2005 lottery papers, exact CFB segmentation/initialization, NR input serialization, actual generator-selection protocol and output-to-five conversion. Cite concrete code-level evidence before changing source-derived components. Preserve uncertainty about 2026 production. Further arbitrary seed sweeps will not identify a properly entropy-seeded CSPRNG.
 
 **Step 8 evidence:** EXECUTED deterministic historical replay and independent equivalent rerun; statistical calibration EXECUTED; production algorithm attribution UNVERIFIED; exact win reproduction and forecast NOT DEMONSTRATED. No CI.
+
+### Step 8 addendum — independent reproducibility confirmation and archived records
+
+- The committed compact source [`extra5_seeded_replay.py`](../experiments/extra5_seeded_replay.py) was run independently at the complete **8-seed / 3,000-null-history** settings; results **exactly agreed** with the original local long-form benchmark on all candidate counts, selected model outcomes, and the Monte Carlo exceedance `2735/3000`.
+- The **1,479-row score CSVs are byte-identical across the two local implementations**, SHA-256 `86d9a47e992923e689308a2242083e14fb070c96dbd728e5a22f20a5304cc174`. This full CSV is regenerated on demand by the committed code; **it is not currently committed as a raw CSV**.
+- Machine-readable [observation checkpoint](../experiments/extra5_seeded_replay_observations.json) now preserves exact counts, both selected candidates' **20 historical prediction sequences**, null calibration and the score checksum. Dataset SHA-256 `a5a78e5cb4b3c50023cfe6fe179911a19d3b9598b33afcd930ac8aabcfb2c5e4` was calculated on the local snapshot.
+- [Local-only regression tests](../tests/test_seeded_replay.py) added; **59 tests passed in total locally** across the existing historical engine, pipeline, seeded original-benchmark tests and replay tests. No CI or workflow added.
+- No conclusion about live Allwyn keys/software or prospective prediction changes.
