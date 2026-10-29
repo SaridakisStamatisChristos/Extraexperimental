@@ -1,0 +1,539 @@
+{
+  "experiment": "EXTRA5-three-draw-seed-test-v1",
+  "tested_on": "2026-10-29",
+  "training": [
+    {
+      "draw_id": 14249,
+      "numbers": [
+        2,
+        4,
+        30,
+        32,
+        35
+      ]
+    },
+    {
+      "draw_id": 14250,
+      "numbers": [
+        2,
+        5,
+        9,
+        30,
+        33
+      ]
+    },
+    {
+      "draw_id": 14251,
+      "numbers": [
+        10,
+        18,
+        21,
+        25,
+        29
+      ]
+    }
+  ],
+  "historical_family_attempts_reused": 1640000,
+  "historical_first_draw_fits_replayed": [
+    {
+      "family": "aes192-cfb128",
+      "seed_index": 43315,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          1,
+          10,
+          22,
+          25,
+          27
+        ],
+        [
+          4,
+          15,
+          19,
+          31,
+          32
+        ]
+      ],
+      "exact_prefix": 1
+    },
+    {
+      "family": "aes192-cfb128",
+      "seed_index": 236403,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          4,
+          6,
+          19,
+          27,
+          31
+        ],
+        [
+          1,
+          7,
+          8,
+          30,
+          32
+        ]
+      ],
+      "exact_prefix": 1
+    },
+    {
+      "family": "cast128-cfb64",
+      "seed_index": 78501,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          1,
+          14,
+          24,
+          30,
+          31
+        ],
+        [
+          8,
+          12,
+          14,
+          16,
+          19
+        ]
+      ],
+      "exact_prefix": 1
+    },
+    {
+      "family": "cast128-cfb64",
+      "seed_index": 251682,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          11,
+          23,
+          27,
+          30,
+          31
+        ],
+        [
+          8,
+          20,
+          26,
+          28,
+          34
+        ]
+      ],
+      "exact_prefix": 1
+    },
+    {
+      "family": "xor-aes192-des",
+      "seed_index": 29267,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          9,
+          16,
+          19,
+          26,
+          32
+        ],
+        [
+          3,
+          5,
+          13,
+          26,
+          31
+        ]
+      ],
+      "exact_prefix": 1
+    }
+  ],
+  "arithmetic_seed_sweeps": {
+    "splitmix64": {
+      "tested": 1000000,
+      "first_exact": 3,
+      "two_exact": 0,
+      "three_exact": 0,
+      "candidates": [
+        {
+          "seed_index": 182912,
+          "tickets": [
+            [
+              2,
+              4,
+              30,
+              32,
+              35
+            ],
+            [
+              2,
+              20,
+              21,
+              28,
+              30
+            ],
+            [
+              5,
+              11,
+              23,
+              31,
+              32
+            ]
+          ],
+          "exact_prefix": 1
+        },
+        {
+          "seed_index": 487015,
+          "tickets": [
+            [
+              2,
+              4,
+              30,
+              32,
+              35
+            ],
+            [
+              7,
+              22,
+              25,
+              27,
+              35
+            ],
+            [
+              3,
+              4,
+              10,
+              12,
+              33
+            ]
+          ],
+          "exact_prefix": 1
+        },
+        {
+          "seed_index": 544468,
+          "tickets": [
+            [
+              2,
+              4,
+              30,
+              32,
+              35
+            ],
+            [
+              4,
+              7,
+              15,
+              19,
+              24
+            ],
+            [
+              13,
+              30,
+              32,
+              33,
+              35
+            ]
+          ],
+          "exact_prefix": 1
+        }
+      ]
+    },
+    "xorshift64star": {
+      "tested": 1000000,
+      "first_exact": 2,
+      "two_exact": 0,
+      "three_exact": 0,
+      "candidates": [
+        {
+          "seed_index": 399686,
+          "tickets": [
+            [
+              2,
+              4,
+              30,
+              32,
+              35
+            ],
+            [
+              3,
+              6,
+              11,
+              17,
+              27
+            ],
+            [
+              1,
+              10,
+              22,
+              29,
+              35
+            ]
+          ],
+          "exact_prefix": 1
+        },
+        {
+          "seed_index": 595793,
+          "tickets": [
+            [
+              2,
+              4,
+              30,
+              32,
+              35
+            ],
+            [
+              7,
+              13,
+              14,
+              29,
+              35
+            ],
+            [
+              7,
+              9,
+              15,
+              19,
+              27
+            ]
+          ],
+          "exact_prefix": 1
+        }
+      ]
+    },
+    "lcg64": {
+      "tested": 1000000,
+      "first_exact": 6,
+      "two_exact": 0,
+      "three_exact": 0,
+      "candidates": [
+        {
+          "seed_index": 14251,
+          "tickets": [
+            [
+              2,
+              4,
+              30,
+              32,
+              35
+            ],
+            [
+              8,
+              21,
+              28,
+              30,
+              34
+            ],
+            [
+              3,
+              9,
+              22,
+              26,
+              31
+            ]
+          ],
+          "exact_prefix": 1
+        },
+        {
+          "seed_index": 180242,
+          "tickets": [
+            [
+              2,
+              4,
+              30,
+              32,
+              35
+            ],
+            [
+              10,
+              20,
+              23,
+              31,
+              35
+            ],
+            [
+              2,
+              6,
+              12,
+              13,
+              33
+            ]
+          ],
+          "exact_prefix": 1
+        },
+        {
+          "seed_index": 346233,
+          "tickets": [
+            [
+              2,
+              4,
+              30,
+              32,
+              35
+            ],
+            [
+              13,
+              21,
+              22,
+              26,
+              27
+            ],
+            [
+              1,
+              5,
+              6,
+              14,
+              30
+            ]
+          ],
+          "exact_prefix": 1
+        },
+        {
+          "seed_index": 512224,
+          "tickets": [
+            [
+              2,
+              4,
+              30,
+              32,
+              35
+            ],
+            [
+              24,
+              26,
+              29,
+              33,
+              35
+            ],
+            [
+              13,
+              15,
+              25,
+              26,
+              33
+            ]
+          ],
+          "exact_prefix": 1
+        },
+        {
+          "seed_index": 678215,
+          "tickets": [
+            [
+              2,
+              4,
+              30,
+              32,
+              35
+            ],
+            [
+              1,
+              8,
+              10,
+              22,
+              34
+            ],
+            [
+              9,
+              11,
+              14,
+              26,
+              30
+            ]
+          ],
+          "exact_prefix": 1
+        },
+        {
+          "seed_index": 844206,
+          "tickets": [
+            [
+              2,
+              4,
+              30,
+              32,
+              35
+            ],
+            [
+              2,
+              4,
+              10,
+              27,
+              35
+            ],
+            [
+              6,
+              15,
+              19,
+              24,
+              34
+            ]
+          ],
+          "exact_prefix": 1
+        }
+      ]
+    }
+  },
+  "total_attempts": 4640000,
+  "total_exact_three_seed_only": 0,
+  "algebraically_fitted_three_draw_models": {
+    "ranks": [
+      55817,
+      57278,
+      268706
+    ],
+    "affine": {
+      "seed_x0": 55817,
+      "a": 194124,
+      "c": 204866,
+      "gcd_a_N": 28,
+      "draw14252": [
+        13,
+        16,
+        21,
+        26,
+        32
+      ]
+    },
+    "quadratic": {
+      "seed_x0": 55817,
+      "a": 1,
+      "b": 81029,
+      "c": 315056,
+      "draw14252": [
+        3,
+        12,
+        17,
+        18,
+        33
+      ]
+    }
+  },
+  "uniform_ideal_expected_three_matches": 1.3562632636631108e-10,
+  "caveat": "The 1.64M historical-family attempts were archived previously; in this step all five exact-first candidates were replayed for three tickets. 3M additional public arithmetic-PRNG seeds were newly executed. Two coefficient-fitted algebraic models match 3/3 by construction, not by discovering a production seed. #14252 has not been examined."
+}

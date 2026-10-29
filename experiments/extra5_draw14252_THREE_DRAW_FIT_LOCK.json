@@ -1,0 +1,66 @@
+{
+  "experiment": "EXTRA5-14249-14251-three-draw-fitted-recurrence-v1",
+  "training": [
+    {
+      "draw_id": 14249,
+      "numbers": [
+        2,
+        4,
+        30,
+        32,
+        35
+      ]
+    },
+    {
+      "draw_id": 14250,
+      "numbers": [
+        2,
+        5,
+        9,
+        30,
+        33
+      ]
+    },
+    {
+      "draw_id": 14251,
+      "numbers": [
+        10,
+        18,
+        21,
+        25,
+        29
+      ]
+    }
+  ],
+  "target_draw_id": 14252,
+  "target_result_consulted": false,
+  "model_selection_rule": "Use lowest polynomial degree among exactly fitted recurrence models as the exploratory primary, before reveal",
+  "primary": {
+    "family": "affine congruential rank recurrence",
+    "seed_initial_state": 55817,
+    "a": 194124,
+    "c": 204866,
+    "numbers": [
+      13,
+      16,
+      21,
+      26,
+      32
+    ]
+  },
+  "secondary": {
+    "family": "quadratic congruential rank recurrence",
+    "seed_initial_state": 55817,
+    "a": 1,
+    "b": 81029,
+    "c": 315056,
+    "numbers": [
+      3,
+      12,
+      17,
+      18,
+      33
+    ]
+  },
+  "note": "Fitted with all three known results; not historical lottery PRNG state, nor a validated prediction. Disclose both candidates before obtaining #14252."
+}
