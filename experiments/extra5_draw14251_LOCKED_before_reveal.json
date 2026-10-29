@@ -1,0 +1,76 @@
+{
+  "experiment": "EXTRA5-14249-14250-two-draw-rank-transition-v1",
+  "training_draws": [
+    {
+      "draw_id": 14249,
+      "numbers": [
+        2,
+        4,
+        30,
+        32,
+        35
+      ]
+    },
+    {
+      "draw_id": 14250,
+      "numbers": [
+        2,
+        5,
+        9,
+        30,
+        33
+      ]
+    }
+  ],
+  "hidden_target_draw_id": 14251,
+  "hidden_target_result_consulted": false,
+  "ordered_combination_mapping": "lexicographic rank of five sorted unique numbers drawn from 1..35; rank domain 0..324631",
+  "transition_formula": "rank_(t+1) = (a * rank_t + c) modulo 324632",
+  "fitted_state_ranks": [
+    55817,
+    57278
+  ],
+  "primary_selection_rule": "a=1 by predeclared minimal positive multiplier; infer c=(rank14250-a*rank14249) mod 324632",
+  "locked_primary": {
+    "a": 1,
+    "c": 1461,
+    "last_known_rank": 57278,
+    "next_rank": 58739,
+    "predicted_ticket": [
+      2,
+      5,
+      15,
+      30,
+      34
+    ]
+  },
+  "secondary_models_for_nonidentifiability": [
+    {
+      "a": 3,
+      "c": 214459,
+      "next_rank": 61661,
+      "predicted_ticket": [
+        2,
+        6,
+        12,
+        20,
+        28
+      ]
+    },
+    {
+      "a": 5,
+      "c": 102825,
+      "next_rank": 64583,
+      "predicted_ticket": [
+        2,
+        7,
+        11,
+        14,
+        32
+      ]
+    }
+  ],
+  "previous_historical_family_search": "1,640,000 public synthetic seed configurations yielded five exact first-draw matches for #14249 and zero matches for both #14249 AND #14250 under the same continuously running generator",
+  "methodological_limit": "This affine-rank surrogate is constructed from both observations and not a published Allwyn RNG; fitted coefficients are not real production keys. The #14251 result must remain withheld. One unseen historical test will not validate a forecasting edge.",
+  "source_evidence": "User-supplied results for #14249 and #14250, not operator verified in this step"
+}
