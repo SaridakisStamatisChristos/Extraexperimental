@@ -62,3 +62,7 @@ python extra5_seeded_replay.py --seeds 8 --null-replicates 3000
 Expected: 1,584 attempted, 1,479 completed, 105 safety-limit failures; training-selected candidate 21/100 later-number overlap; posthoc best 25/100; 2,735/3,000 null searches reached at least 25. **Zero exact 5/5 matches** among successful configurations on the later 20 draws. The generated `extra5_seeded_replay_scores.csv` has SHA-256 `86d9a47e992923e689308a2242083e14fb070c96dbd728e5a22f20a5304cc174` in the original local environment (not committed; regenerate via the command). The compact [observations JSON](extra5_seeded_replay_observations.json) saves chosen model predictions and exact counts; see [research interpretation](../docs/SEEDED_GENERATOR_BENCHMARK.md).
 
 **All seeds, coupon bytes, entropy, key sizes, and sampler/switching settings are synthetic.** No actual production generator configuration is identified or predicted. No CI.
+
+### Step 9 — Expanded 128-seed synthetic search
+
+Run `python extra5_seed_sweep.py --seed-start 0 --seed-stop 128 --null-replicates 1200 --out .` and inspect `extra5_seed_sweep_results.json` and the fully committed 23,343-row `extra5_seed_sweep_scores.csv`. The report is [EXPANDED_SEED_SWEEP.md](../docs/EXPANDED_SEED_SWEEP.md). This is a retrospective seed/route/sampler experiment, NOT production seed recovery.

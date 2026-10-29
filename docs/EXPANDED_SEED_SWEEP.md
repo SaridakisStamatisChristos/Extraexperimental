@@ -24,7 +24,7 @@
 - In **1,200 simulated fair 20-draw histories**, taking the maximum across the **same fixed 23,343 candidate predictions**, **648** attained 29 or more. Familywise plus-one p≈**0.5404**.
 - No completed candidate matched all five numbers on any later-20 draw (0 exact tickets across the candidate library). Under independent fair ticket assumptions the expected count is ~**1.44**, but the models are correlated.
 
-**Scores file:** 23,343-row CSV generated locally, SHA256 `aa6957f68853af23e4cadeb48cf86decc2d98c437910df58e26143aa80510c81`. This hash verifies the optimized implementation output; source code and results were generated locally. The full CSV is **not included in this archival commit**; regenerate it from the benchmark.
+**Scores file:** 23,343-row CSV generated locally, SHA256 `aa6957f68853af23e4cadeb48cf86decc2d98c437910df58e26143aa80510c81`. This hash verifies the optimized implementation output; source code and results were generated locally. The full CSV is **included in this repository**; the complete CSV is committed at [extra5_seed_sweep_scores.csv](../experiments/extra5_seed_sweep_scores.csv).
 
 ## Reproduction with code already in this repository
 
@@ -40,3 +40,19 @@ This original replay implementation is slower than the optimized locally run cac
 Brute-force searching arbitrary synthetic seed indexes produces chance historical overlaps. Without operator entropy, coupon input bytes, secret CSPRNG parameters, and actual switching/sampling configuration, this exercise **does not** recover the operator seed or forecast future numbers. Expanding the search again without additional technical evidence has diminishing scientific value.
 
 Next: seek original implementation documentation that identifies concrete seed/IV derivation, cipher parameters, route schedule, and 5/35 number mapping, then test pinned source-grounded variants. No CI.
+
+## Exact optimized implementation archived
+
+- [Optimized seed sweep](../experiments/extra5_seed_sweep.py) — executed with `--seed-start 0 --seed-stop 128 --null-replicates 1200`; caches per-draw seed masters and rewinds an identical bitstream prefix across sampler variants.
+- [Full CSV](../experiments/extra5_seed_sweep_scores.csv) — 23,343 scored model configurations; verified local SHA-256 `aa6957f68853af23e4cadeb48cf86decc2d98c437910df58e26143aa80510c81`.
+- [Full numerical diagnostics](../experiments/extra5_seed_sweep_results.json), [report generator](../experiments/extra5_seed_sweep_report.py), [five new regression tests](../tests/test_seed_sweep.py).
+- The first eight seed indices reproduced the earlier 1,479-row score CSV **byte-for-byte**. Locally the full test suite passed **64/64** tests, but no fresh-clone or CI verification has been performed.
+
+To recreate the exact optimized run:
+
+```bash
+cd experiments
+python extra5_seed_sweep.py --seed-start 0 --seed-stop 128 --null-replicates 1200 --out .
+python extra5_seed_sweep_report.py --results extra5_seed_sweep_results.json --out ../docs/EXPANDED_SEED_SWEEP.md
+cd .. && python -m unittest discover -s tests -p 'test_*.py'
+```

@@ -1,0 +1,172 @@
+{
+  "research_scope": "retrospective synthetic seed search, NOT production seed recovery",
+  "data_source": "experiments/extra5_last100_data.csv",
+  "draw_id_range": [
+    14256,
+    14355
+  ],
+  "train_draws": 80,
+  "pseudo_holdout_draws": 20,
+  "seed_domain": "EXTRA5-INDEPENDENT-SEED-SEARCH-v1|NOT-OPERATOR-SEEDS|",
+  "seed_start_inclusive": 0,
+  "seed_stop_exclusive": 128,
+  "attempts": 25344,
+  "completed": 23343,
+  "failures": 2001,
+  "failure_reasons": {
+    "sampler exhausted 1024-bit safety budget": 2001
+  },
+  "sample_failures": [
+    {
+      "seed_index": 0,
+      "seed_policy": "fresh_fixture",
+      "schedule": "fixed",
+      "operation": "single",
+      "sources": "rsa",
+      "sampler": "sequential",
+      "error": "sampler exhausted 1024-bit safety budget"
+    },
+    {
+      "seed_index": 0,
+      "seed_policy": "fresh_fixture",
+      "schedule": "fixed",
+      "operation": "single",
+      "sources": "rsa",
+      "sampler": "distinct_rejection",
+      "error": "sampler exhausted 1024-bit safety budget"
+    },
+    {
+      "seed_index": 0,
+      "seed_policy": "fresh_fixture",
+      "schedule": "fixed",
+      "operation": "b",
+      "sources": "rsa",
+      "sampler": "sequential",
+      "error": "sampler exhausted 1024-bit safety budget"
+    },
+    {
+      "seed_index": 0,
+      "seed_policy": "fresh_fixture",
+      "schedule": "fixed",
+      "operation": "b",
+      "sources": "rsa",
+      "sampler": "distinct_rejection",
+      "error": "sampler exhausted 1024-bit safety budget"
+    },
+    {
+      "seed_index": 0,
+      "seed_policy": "fresh_fixture",
+      "schedule": "round_robin",
+      "operation": "single",
+      "sources": "dynamic-31",
+      "sampler": "sequential",
+      "error": "sampler exhausted 1024-bit safety budget"
+    },
+    {
+      "seed_index": 0,
+      "seed_policy": "fresh_fixture",
+      "schedule": "round_robin",
+      "operation": "single",
+      "sources": "dynamic-31",
+      "sampler": "distinct_rejection",
+      "error": "sampler exhausted 1024-bit safety budget"
+    },
+    {
+      "seed_index": 0,
+      "seed_policy": "fresh_fixture",
+      "schedule": "hash_switch",
+      "operation": "single",
+      "sources": "dynamic-31",
+      "sampler": "distinct_rejection",
+      "error": "sampler exhausted 1024-bit safety budget"
+    },
+    {
+      "seed_index": 0,
+      "seed_policy": "previous_state_fixture",
+      "schedule": "fixed",
+      "operation": "single",
+      "sources": "rsa",
+      "sampler": "distinct_rejection",
+      "error": "sampler exhausted 1024-bit safety budget"
+    },
+    {
+      "seed_index": 0,
+      "seed_policy": "previous_state_fixture",
+      "schedule": "fixed",
+      "operation": "b",
+      "sources": "rsa",
+      "sampler": "distinct_rejection",
+      "error": "sampler exhausted 1024-bit safety budget"
+    },
+    {
+      "seed_index": 0,
+      "seed_policy": "previous_state_fixture",
+      "schedule": "round_robin",
+      "operation": "single",
+      "sources": "dynamic-31",
+      "sampler": "distinct_rejection",
+      "error": "sampler exhausted 1024-bit safety budget"
+    }
+  ],
+  "schedules": [
+    "fixed",
+    "round_robin",
+    "hash_switch"
+  ],
+  "routes_fixed": 31,
+  "samplers": [
+    "sequential",
+    "combination_rank",
+    "distinct_rejection"
+  ],
+  "seed_policies": [
+    "fresh_fixture",
+    "previous_state_fixture"
+  ],
+  "best_train_selected": {
+    "seed_index": 86,
+    "seed_policy": "previous_state_fixture",
+    "schedule": "fixed",
+    "operation": "xor",
+    "sources": "bbs-rsa-des",
+    "sampler": "sequential",
+    "train_hits_80": 85,
+    "holdout_hits_20": 12,
+    "train_exact": 0,
+    "holdout_exact": 0,
+    "holdout_three_plus": 0
+  },
+  "best_holdout_posthoc": {
+    "seed_index": 17,
+    "seed_policy": "previous_state_fixture",
+    "schedule": "fixed",
+    "operation": "xor",
+    "sources": "bbs-des",
+    "sampler": "combination_rank",
+    "train_hits_80": 47,
+    "holdout_hits_20": 29,
+    "train_exact": 0,
+    "holdout_exact": 0,
+    "holdout_three_plus": 0
+  },
+  "models_with_any_exact_ticket_on_holdout": 0,
+  "total_exact_tickets_on_holdout": 0,
+  "expected_exact_tickets_under_iid_null": 1.4381207028265852,
+  "null_fixed_holdout_expected_individual_matches": 14.285714285714286,
+  "train_selected_fixed_model_holdout_upper_tail_p": 0.79959940524041,
+  "posthoc_model_uncorrected_upper_tail_p": 3.235765211353254e-05,
+  "null_calibration": {
+    "replicates": 1200,
+    "generator": "numpy PCG64 seed 20261029",
+    "max_score_exceedances": 648,
+    "familywise_plus_one_p": 0.5403830141548709,
+    "mean_null_max": 28.7575
+  },
+  "scores_csv_sha256": "aa6957f68853af23e4cadeb48cf86decc2d98c437910df58e26143aa80510c81",
+  "execution": {
+    "elapsed_seconds": 197.79,
+    "python": "3.13.5",
+    "numpy": "2.3.5"
+  },
+  "interpretation": "Synthetic seeds do not recover secret physical entropy, coupons, keys, algorithm choices, or future draws. Best-of-thousands overlaps require search correction."
+}

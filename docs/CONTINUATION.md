@@ -189,3 +189,11 @@ python -m unittest discover -s tests -p 'test_historical_engine.py' -v
 - **Verdict:** no evidence of recovered live seed or predictive power; retrospective pseudo-holdout already publicly known. A much larger *arbitrary* seed search does not reveal a CSPRNG's inaccessible physical-entropy and key state. Next task remains original protocol/seed documentation. No CI.
 
 **Step 9 evidence:** 128-index experiment EXECUTED locally, 1,200 null simulations EXECUTED, 64 tests PASS; real seed identification NOT DEMONSTRATED.
+
+### Step 9 — Complete artifact archival (verified Git blobs)
+
+- Supersedes the earlier Step 9 note that the large CSV and optimized script were not committed.
+- The **exact locally executed** optimized [seed sweep](../experiments/extra5_seed_sweep.py), [full 23,343-row scores](../experiments/extra5_seed_sweep_scores.csv), [detailed results JSON](../experiments/extra5_seed_sweep_results.json), [report generator](../experiments/extra5_seed_sweep_report.py), and [five new local regression tests](../tests/test_seed_sweep.py) are now committed to the repository. Git blob hashes were compared to the local source files before attaching them to the main branch.
+- Full CSV SHA256 **`aa6957f68853af23e4cadeb48cf86decc2d98c437910df58e26143aa80510c81`**; the new code was executed locally and matched all earlier 8-seed outputs byte-for-byte. The previously stated 64 passing local tests include the five new tests that are now archived.
+- Reproduce exactly: `cd experiments && python extra5_seed_sweep.py --seed-start 0 --seed-stop 128 --null-replicates 1200 --out .`; then `python extra5_seed_sweep_report.py --results extra5_seed_sweep_results.json --out ../docs/EXPANDED_SEED_SWEEP.md`.
+- **No prediction, live Allwyn entropy, secret key or production seed recovered. No CI added.**
