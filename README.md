@@ -45,7 +45,7 @@ python extra5_mass_algorithm_benchmark.py
 python extra5_mass_algorithm_calibration.py
 ```
 
-The benchmark regenerates the mass scores JSON/CSV and the cached per-draw bitmasks needed by the calibration script. It is computation-heavy. Other experiments:
+The benchmark regenerates the mass scores JSON/CSV and the cached per-draw bitmasks needed by the calibration script. For a complete local rebuild, use `cd experiments && python extra5_regenerate_all.py`. Regenerated PNG and SVG figures are stored under `figures/`. Other experiments:
 
 ```bash
 python extra5_sampler_forensics.py

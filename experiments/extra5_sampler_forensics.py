@@ -79,7 +79,7 @@ def main():
                "number_counts":dict(zip(range(1,POOL+1),FREQUENCIES)),
                "hypothesis":"Unbiased uniformly distributed b-bit words, modulo 35, then reject duplicates until five distinct numbers",
                "candidate_tests":[test_width(bits) for bits in (8,10,16,32)]}
-    out = Path('/mnt/data/extra5_sampler_forensics_results.json')
+    out = Path(__file__).resolve().parent / 'extra5_sampler_forensics_results.json'
     out.write_text(json.dumps(results,indent=2,ensure_ascii=False))
     print('draws=',N,'appearances=',sum(FREQUENCIES),'possible subsets=',comb(POOL,PICKS))
     for d in results['candidate_tests']:
