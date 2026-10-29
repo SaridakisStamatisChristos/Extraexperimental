@@ -1,0 +1,100 @@
+{
+  "experiment": "EXTRA5-multifamily-14249-to-14250-blind-20261029-v1",
+  "user_supplied_training": {
+    "draw_id": 14249,
+    "results": [
+      2,
+      4,
+      30,
+      32,
+      35
+    ],
+    "date": "2026-09-05"
+  },
+  "hidden_target": {
+    "draw_id": 14250,
+    "result_unseen": true
+  },
+  "primary_prediction": {
+    "numbers": [
+      4,
+      6,
+      19,
+      27,
+      31
+    ],
+    "family": "aes192-cfb128",
+    "synthetic_seed_index": 236403
+  },
+  "fixed_selection_rule": "Across all first-ticket exact fitting candidates, take the minimum SHA256 of ASCII bytes DOMAIN + 'FIXED-SELECTION|' + family + '|' + decimal seed_index; ignore target result.",
+  "public_domain": "EXTRA5-MULTI-FAMILY-BLIND-20261029-v1|PUBLIC-SYNTHETIC|",
+  "search_limits": {
+    "cipher_family_each": 400000,
+    "math_family_each": 80000,
+    "mixed_family_each": 100000
+  },
+  "seed_search_summary": {
+    "total_attempted": 1640000,
+    "first_ticket_exact_fits": 5,
+    "failed_prefix_decodes": 505
+  },
+  "alternative_pre_reveal_candidates": [
+    {
+      "family": "aes192-cfb128",
+      "seed_index": 43315,
+      "next": [
+        1,
+        10,
+        22,
+        25,
+        27
+      ]
+    },
+    {
+      "family": "aes192-cfb128",
+      "seed_index": 236403,
+      "next": [
+        4,
+        6,
+        19,
+        27,
+        31
+      ]
+    },
+    {
+      "family": "cast128-cfb64",
+      "seed_index": 78501,
+      "next": [
+        1,
+        14,
+        24,
+        30,
+        31
+      ]
+    },
+    {
+      "family": "cast128-cfb64",
+      "seed_index": 251682,
+      "next": [
+        11,
+        23,
+        27,
+        30,
+        31
+      ]
+    },
+    {
+      "family": "xor-aes192-des",
+      "seed_index": 29267,
+      "next": [
+        9,
+        16,
+        19,
+        26,
+        32
+      ]
+    }
+  ],
+  "estimated_expected_fits_if_uniform": 5.051874122082851,
+  "evidence_caveat": "Source-grounded historical RNG *families* only. Public synthetic SHA512 seed KDF, toy BBS/RSA moduli, CFB segmentation/IV, block mixing, 24-bit rejection/combinadic sampler and continual stream are hypotheses. This is a researcher-blind historical forecast, not production RNG identification."
+}
