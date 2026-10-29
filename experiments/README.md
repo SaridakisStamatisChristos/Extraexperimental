@@ -31,8 +31,8 @@ The benchmark generates `extra5_mass_algorithm_results.json`, 9,360-row scores C
 **Evidence:** The synthetic candidates are NOT the actual EXTRA 5 RNG system; no candidate showed reliable predictive ability or compromised a system. The 20 later historical draws were known before model evaluation; not prospective predictions.
 
 ### Continued audit (29 October 2026)
-- [Serial and 80-window audit](extra5_serial_window_report.md) — program: \`extra5_serial_window_audit.py\`; recorded results: \`extra5_serial_window_results.json\`.
-- Reproduce the recorded 50,000-history Monte Carlo: \`python extra5_serial_window_audit.py --iterations 50000 --seed 20261029\`. Scripts expect the archived \`extra5_last100_data.csv\`.
+- [Serial and 80-window audit](extra5_serial_window_report.md) — program: `extra5_serial_window_audit.py`; recorded results: `extra5_serial_window_results.json`.
+- Reproduce the recorded 50,000-history Monte Carlo: `python extra5_serial_window_audit.py --iterations 50000 --seed 20261029`. Scripts expect the archived `extra5_last100_data.csv`.
 - Lower-tail **underdispersion** and a 21-window scan are exploratory; no future-draw predictions or live RNG identification.
 
 ### Step 3 — Archive-length look-elsewhere calibration
@@ -44,9 +44,9 @@ Run `python extra5_archive_scale_null.py --replicates 5000 --fixed-replicates 20
 
 ### Step 6 — Working historical generator architecture
 
-- [\`extra5_historical_engine.py\`](extra5_historical_engine.py) — standalone historic-family generator reference (BBS/RSA/CFB DES/AES/CAST, published M/B, XOR and switchable routes).
-- [\`../tests/test_historical_engine.py\`](../tests/test_historical_engine.py) — 17 local tests, run from project root with \`python -m unittest discover -s tests -p 'test_historical_engine.py' -v\`.
-- [\`extra5_historical_engine_test_results.json\`](extra5_historical_engine_test_results.json) — original local verification record.
-- [\`../docs/RECONSTRUCTION_IMPLEMENTATION.md\`](../docs/RECONSTRUCTION_IMPLEMENTATION.md) — implementation assumptions and remaining unidentified source components.
+- [`extra5_historical_engine.py`](extra5_historical_engine.py) — standalone historic-family generator reference (BBS/RSA/CFB DES/AES/CAST, published M/B, XOR and switchable routes).
+- [`../tests/test_historical_engine.py`](../tests/test_historical_engine.py) — 17 local tests, run from project root with `python -m unittest discover -s tests -p 'test_historical_engine.py' -v`.
+- [`extra5_historical_engine_test_results.json`](extra5_historical_engine_test_results.json) — original local verification record.
+- [`../docs/RECONSTRUCTION_IMPLEMENTATION.md`](../docs/RECONSTRUCTION_IMPLEMENTATION.md) — implementation assumptions and remaining unidentified source components.
 
-Run example: \`python experiments/extra5_historical_engine.py --operation m --names bbs aes --draws 3\`. **These are synthetic demonstration tickets only**, not recovered production RNG output. No CI.
+Run example: `python experiments/extra5_historical_engine.py --operation m --names bbs aes --draws 3`. **These are synthetic demonstration tickets only**, not recovered production RNG output. No CI.
