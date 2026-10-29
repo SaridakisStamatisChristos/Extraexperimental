@@ -30,3 +30,14 @@ This will recompute all derived analyses and PNGs from the committed historical 
 ### 29 October 2026 serial/window audit extension
 - Added \`experiments/extra5_serial_window_audit.py\` (locally executed), \`experiments/extra5_serial_window_results.json\` (50,000 null simulations) and \`experiments/extra5_serial_window_report.md\`.
 - Updated \`docs/CONTINUATION.md\` **after both provenance Step 1 and statistical Step 2**, keeping limits and next replication checkpoint explicit.
+
+
+### Step 6 — newly archived algorithm reconstruction
+
+- \`experiments/extra5_historical_engine.py\` — modular demonstration of published historical eLottery generator components.
+- \`tests/test_historical_engine.py\` — locally executed 17-test unit suite.
+- \`experiments/extra5_historical_engine_test_results.json\` — verification record for local run.
+- \`docs/RECONSTRUCTION_IMPLEMENTATION.md\` — detailed classification of documented algorithms versus hypothesized wiring.
+- \`docs/CONTINUATION.md\` — Step 6 checkpoint.
+
+The generator is not identified as the actual 2026 deployed software; all example outputs are synthetic. No CI.
