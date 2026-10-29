@@ -94,3 +94,33 @@
 - Research direction: obtain full 2004 paper and Liagkou thesis; examine any precise 5/35 conversion, CFB mode configuration and version change; seek present-day current RNG certificate/supplier/technical documentation. **Do not claim live algorithm attribution or output prediction.**
 
 **Step 5 evidence state:** 2001–02 design families DOCUMENTED BY ORIGINAL DESIGNER; later paper's architecture DOCUMENTED; 2026 version UNVERIFIED; no exact five-number draw reproduction achieved.
+
+
+## 2026-10-29 continuation — Step 6: historical generator architecture reference implementation (LOCAL TESTS PASS)
+
+**Change of focus:** algorithm identification and faithful source-based implementation, not additional RNG frequency surveys or arbitrary-seed lottery matching.
+
+**Committed artifacts:**
+- [Reference engine](../experiments/extra5_historical_engine.py): \`BBS\`, \`RSAParity\`, \`CFBZeroBits\` (AES-192 / DES-compatible / CAST-128), published modified \`mixer_m\` and \`mixer_b\`, XOR, explicit \`Route\` / \`RoutedBits.configure()\` switching, a mathematical Naor–Reingold evaluator and an XOR helper for user-supplied entropy sample bytes.
+- [17-case test suite](../tests/test_historical_engine.py): modular arithmetic differential checks, published M/B comparison across exhaustive small bit strings, 60-byte CFB independent reference checks for the three ciphers, rejection sampler and route tests, and deterministic demonstration streams.
+- [Implementation and fidelity specification](RECONSTRUCTION_IMPLEMENTATION.md), plus [local test record](../experiments/extra5_historical_engine_test_results.json).
+
+**Executed evidence:** Python 3.13.5, cryptography 46.0.4; \`python -m unittest discover -s tests -p 'test_historical_engine.py' -v\` executed locally with **17 tests, 0 failures and 0 errors**. Byte-compiled and executed the demonstration routes. This is a source-level implementation check, not CI or an independent clone-based check.
+
+**Reproduce without CI:**
+
+\`\`\`bash
+python -m pip install -r requirements.txt
+python experiments/extra5_historical_engine.py --operation m --names bbs aes --draws 3
+python experiments/extra5_historical_engine.py --operation xor --names bbs rsa des aes --draws 3
+python experiments/extra5_historical_engine.py --operation single --names cast --draws 3
+python -m unittest discover -s tests -p 'test_historical_engine.py' -v
+\`\`\`
+
+**What is source-grounded:** historic BBS/RSA-style parity generation, DES/AES cipher-based generators, CAST-128 variant documented by the original developer for 2001–2002, modified paper M/B pseudocode, XOR family, optional generator switching. The earlier [published mixer](../experiments/extra5_published_mixers.py) remains untouched.
+
+**What remains a hypothesis:** demo parameter values, BBS/RSA initialization conventions and secrecy, CFB full-block segment length and bit order, key and IV provenance, mixer block size (set to 256 bits as a test choice), buffer handling on switch, the complete entropy/Naor–Reingold seed chain, reseeding cadence, generator-selection schedule, and the final **five-without-replacement sampler**. The reference sampler uses unbiased bit rejection plus sequential removal solely as an interface placeholder. Sample outputs are synthetic and not purported to be any past or future operator draw.
+
+**Research constraint:** a working historical-family reconstruction is NOT evidence that the current Allwyn production software uses this exact configuration and it does not recover production keys, seeds or forecasts. The reference module is deliberately not production cryptographic software.
+
+**Next checkpoint, priority:** retrieve Vasiliki Liagkou's original thesis and the Financial Cryptography 2004 full text; search for the *exact bitstream-to-five-in-1..35 conversion*, explicit CFB segment sizes, original number-generation order, seed/IV initialization, route switching and any CAST-128→AES revision evidence. For each documented detail, add a new source-pinned profile or regression vector while leaving all hypothetical settings explicit. No CI.
