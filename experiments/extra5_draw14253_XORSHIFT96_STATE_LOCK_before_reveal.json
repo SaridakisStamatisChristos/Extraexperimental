@@ -1,0 +1,74 @@
+{
+  "experiment": "EXTRA5-four-draw-inverse-state-fit-v2",
+  "timestamp_date": "2026-10-30",
+  "source": "User-revealed draws #14249 through #14252; target #14253 not consulted",
+  "known_draws": [
+    {
+      "id": 14249,
+      "numbers": [
+        2,
+        4,
+        30,
+        32,
+        35
+      ],
+      "rank": 55817
+    },
+    {
+      "id": 14250,
+      "numbers": [
+        2,
+        5,
+        9,
+        30,
+        33
+      ],
+      "rank": 57278
+    },
+    {
+      "id": 14251,
+      "numbers": [
+        10,
+        18,
+        21,
+        25,
+        29
+      ],
+      "rank": 268706
+    },
+    {
+      "id": 14252,
+      "numbers": [
+        1,
+        7,
+        9,
+        14,
+        18
+      ],
+      "rank": 23073
+    }
+  ],
+  "target_draw": 14253,
+  "target_numbers_seen": false,
+  "primary_policy": "xorshift96 fixed 3x32-bit state transition, continuous 32-bit big-endian word bytes, 24-bit rejection-and-combination-rank sampler, pick each accepted raw24 integer as minimum congruent nonnegative rank (k=0), zero rejected words in first four draws; invert the fixed GF(2) transition; no parameter fitting",
+  "primary_seed_hex": "92a140efbdfe8769d18dcbdc",
+  "primary_predicted_numbers": [
+    9,
+    24,
+    25,
+    30,
+    33
+  ],
+  "primary_predicted_raw24": 6751029,
+  "secondary_policy": "same fixed generator and sampler but raw24 for training #14249 = rank+324632; other three raw24=rank; zero rejected words",
+  "secondary_seed_hex": "2c5afd000d825d1fcaadd647",
+  "secondary_predicted_numbers": [
+    15,
+    17,
+    22,
+    29,
+    35
+  ],
+  "secondary_predicted_raw24": 1279662,
+  "warning": "The chosen raw24 branch is only one of at least 51^4 valid no-rejection branches. Fixed xorshift96 invertibility gives one state per full 96-bit raw stream, not a unique production seed. Neither this xorshift family nor sampler implementation is verified as deployed by the lottery."
+}
