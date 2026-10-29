@@ -79,3 +79,15 @@ If a generated intermediate is absent, run its producing script first. **There i
 A **working modular reference implementation** of the publicly described eLottery components is now available: [historical engine](experiments/extra5_historical_engine.py), [17 local unit tests](tests/test_historical_engine.py), [fidelity/limitations specification](docs/RECONSTRUCTION_IMPLEMENTATION.md), and [local test record](experiments/extra5_historical_engine_test_results.json).
 
 It models BBS, RSA-style parity generation, AES-192/DES-compatible/CAST-128 CFB, the published modified M/B bit mixers, XOR and explicit switching. **The final 5/35 number sampler, physical entropy and seed wiring, CFB settings, and live 2026 configuration are unknown; all demonstration draws are synthetic.** No CI has been added.
+
+
+## Algorithm-first seed and route pipeline (Step 7)
+
+The [seed/switch/5-of-35 reference pipeline](experiments/extra5_seed_switch_protocol.py) now connects the historically documented components: XORed input seeds and coupon-hash binding, a **toy mathematical Naor–Reingold PRF**, BBS/RSA and DES/AES generators, 31 explicitly selectable routing combinations (single/M/B/XOR), and **three hypothetical** 5-of-35 sampling procedures. A separate [regression suite](tests/test_seed_switch_protocol.py) and [source fidelity table](docs/SEED_SWITCH_SAMPLER_FIDELITY.md) document the implementation and unknowns.
+
+```bash
+python experiments/extra5_seed_switch_protocol.py --draws 3 --sampler combination_rank
+python -m unittest discover -s tests -p 'test_seed_switch_protocol.py' -v
+```
+
+**Not an attribution to Allwyn:** real entropy, keys, coupon serialization, exact reseeding/switching schedule and actual number-selection algorithm remain unknown. The tiny NR/RSA/BBS fixtures are **not secure**. The prior [continuation log](docs/CONTINUATION.md) records each implemented step and its evidence limitations. No CI.
