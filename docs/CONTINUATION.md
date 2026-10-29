@@ -124,3 +124,23 @@ python -m unittest discover -s tests -p 'test_historical_engine.py' -v
 **Research constraint:** a working historical-family reconstruction is NOT evidence that the current Allwyn production software uses this exact configuration and it does not recover production keys, seeds or forecasts. The reference module is deliberately not production cryptographic software.
 
 **Next checkpoint, priority:** retrieve Vasiliki Liagkou's original thesis and the Financial Cryptography 2004 full text; search for the *exact bitstream-to-five-in-1..35 conversion*, explicit CFB segment sizes, original number-generation order, seed/IV initialization, route switching and any CAST-128→AES revision evidence. For each documented detail, add a new source-pinned profile or regression vector while leaving all hypothetical settings explicit. No CI.
+
+
+## 2026-10-29 continuation — Step 7: seed, switching and 5-of-35 pipeline (IMPLEMENTED)
+
+**User direction:** reconstruct the *underlying algorithms*, not more number-frequency or arbitrary-seed fitting. Preserve this direction for every future continuation.
+
+**Source confirmation:** Bikos et al. (2023), *Cryptography* 7(4):54 §§5.2–5.3.5 describes a Generator/Verifier, coupon-file hash binding, XORed physical sources or an optional previous-state path, Naor–Reingold pseudorandom function, four RNG families (BBS, RSA/Rabin, DES and AES), mixing via published M/B/XOR and switchable generator combinations. The original developer's older CV lists CAST-128 in place of AES. None of this confirms the exact 2026 Allwyn production stack.
+
+**Committed code:**
+- [extra5_seed_switch_protocol.py](../experiments/extra5_seed_switch_protocol.py) — reference pipeline: XOR input, coupon binding, toy NR evaluator and explicit hypothetical key/IV expansion; instantiate BBS/RSA/DES/AES components; explicit per-draw route; three plausible **UNCONFIRMED** 5-of-35 samplers; demonstrative Generator/Verifier reproduction and checksums.
+- [test_seed_switch_protocol.py](../tests/test_seed_switch_protocol.py) — dedicated regression, adversarial-input, 31-route and 324,632-combination mapping tests.
+- [SEED_SWITCH_SAMPLER_FIDELITY.md](SEED_SWITCH_SAMPLER_FIDELITY.md) — evidence classification per component, full list of assumptions, mathematical mapping proof, reproduction commands.
+
+**Design detail:** four independent sources permit **31 route structures** described by the 2023 paper: 4 single + 4 B + 12 ordered M + 11 XOR groups. This counts supported *types*, not the actual deployed route schedule. One uniform sampler maps a 19-bit rejection-sampled rank bijectively into `C(35,5)=324632` combinations. The correct mathematical distribution does **not** identify that sampler as the real one.
+
+**Local execution evidence:** a full working development version of this pipeline was exercised together with the earlier historical engine, passing **44 local tests (27 new + 17 prior)**, including exhaustive five-subset unranking and all 31 routes. The committed compact implementation/test pair has not yet been independently exercised from a fresh clone; do **not** call the commit CI-verified or release-certified.
+
+**Unresolved:** operator coupon-file encoding/hash, original NR secret parameters, real physical-noise samples and seed/previous-state behavior, NR-result-to-generator-key derivation, cipher mode segment width, route switching and buffer handling, exact winning-number conversion order/algorithm, historical CAST-128→AES revision evidence, and current certified production version. The reference values (NR p=23,q=11; SHA-256 coupon digest; SHAKE-256 labeled expansion; 256-bit mixer block; per-draw resets; SHA-256 toy receipts) are **didactic assumptions**, not recovered implementation facts. Existing state-derived input is modeled as reseeding rather than uninterrupted internal PRNG continuation.
+
+**Next checkpoint:** focus on source acquisition for the original thesis and 2004 specification; implement versioned source-backed profiles only when evidence supplies explicit missing choices. Test the committed pair from a clean clone if a repository runtime becomes accessible. Do not add CI (user instruction). Do not claim statistical prediction.
