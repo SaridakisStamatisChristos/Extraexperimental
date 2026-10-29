@@ -144,3 +144,29 @@ python -m unittest discover -s tests -p 'test_historical_engine.py' -v
 **Unresolved:** operator coupon-file encoding/hash, original NR secret parameters, real physical-noise samples and seed/previous-state behavior, NR-result-to-generator-key derivation, cipher mode segment width, route switching and buffer handling, exact winning-number conversion order/algorithm, historical CAST-128→AES revision evidence, and current certified production version. The reference values (NR p=23,q=11; SHA-256 coupon digest; SHAKE-256 labeled expansion; 256-bit mixer block; per-draw resets; SHA-256 toy receipts) are **didactic assumptions**, not recovered implementation facts. Existing state-derived input is modeled as reseeding rather than uninterrupted internal PRNG continuation.
 
 **Next checkpoint:** focus on source acquisition for the original thesis and 2004 specification; implement versioned source-backed profiles only when evidence supplies explicit missing choices. Test the committed pair from a clean clone if a repository runtime becomes accessible. Do not add CI (user instruction). Do not claim statistical prediction.
+
+## 2026-10-29 continuation — Step 8: seeded end-to-end generator replay (EXECUTED)
+
+**User request:** seed the previously implemented historical cryptographic generator families and compare their actual synthetic output against recorded EXTRA 5 results; focus on identifying algorithms rather than generic frequency scans.
+
+**Committed sources and documentation:**
+- [Reproducible seeded replay](../experiments/extra5_seeded_replay.py) (uses the existing historical engine + seed/switch modules).
+- [Research results and interpretation](SEEDED_GENERATOR_BENCHMARK.md).
+- Input: [100 draw records](../experiments/extra5_last100_data.csv) (#14256–14355, 28 October 2026 cutoff). The old 80/20 split is **retrospective pseudo-holdout**, not unseen future data.
+
+**Actual local execution:**
+- Eight public, artificial seed indices (0–7), two assumed per-draw seed policies (fresh SHA-derived entropy pair or SHA-derived prior-state chain), 31 fixed historical-family routes plus two explicit hypothetical switching schedules, and three unbiased 5/35 sampler hypotheses.
+- **1,584 attempted configurations. 1,479 completed; 105 hit a bounded 1,024-bit consumption safety limit** (mostly toy RSA/BBS bit-period issues in rejection samplers; do not attribute to deployed systems).
+- Best selected solely by the first 80 draw overlaps: seed 0, chained-state assumption, fixed published `M(aes,bbs)` mixer, duplicate-rejection sampler; **80/400 first 80, 21/100 last 20**. Exact last-20 winning tickets: **zero**.
+- Best selected *after looking at* last 20: same seed/mixer but sequential-removal sampler; **64/400 first 80, 25/100 last 20**. Exact last-20 winning tickets: **zero**.
+- Draw #14355 actual `4,14,15,19,27`; training-selected output `1,11,13,28,34`; hindsight-selected output `1,12,13,20,30`; **zero overlap for either**.
+- 3,000 iid fair 20-draw null histories were each scanned against all 1,479 successful candidate sequences. **2,735** had some candidate score **at least 25**. Smoothed family-wise probability **p=0.911696**; expected best after broad search is already around 26 matches.
+- Benchmark source compiled and locally executed. Eight new supporting tests passed; across original historical-engine, seed-switch and benchmark tests **52 local tests passed**.
+- A second independently written **compact rerun using the GitHub reproducer's algorithm** exactly reproduced attempted/completed configurations, model selection, overlaps and 2,735/3,000 null calibration. GitHub code is therefore checked against a separate local implementation.
+- **Not disclosed/recovered:** the real physical entropy, historical coupon bytes, secure Naor–Reingold secret key, original BBS/RSA security-size parameters, per-draw switching, exact bit mapping, live 2026 software version. **No draw was recovered exactly; no prospective prediction or betting advantage exists.**
+
+**Reproduction:** `pip install -r requirements.txt` then `cd experiments && python extra5_seeded_replay.py --seeds 8 --null-replicates 3000` (generates detailed CSV and JSON locally; no CI).
+
+**Next checkpoint:** move from synthetic seed sweeps to **documentary protocol recovery**. Seek full Vasiliki Liagkou thesis, original FC2004 and ISC2005 lottery papers, exact CFB segmentation/initialization, NR input serialization, actual generator-selection protocol and output-to-five conversion. Cite concrete code-level evidence before changing source-derived components. Preserve uncertainty about 2026 production. Further arbitrary seed sweeps will not identify a properly entropy-seeded CSPRNG.
+
+**Step 8 evidence:** EXECUTED deterministic historical replay and independent equivalent rerun; statistical calibration EXECUTED; production algorithm attribution UNVERIFIED; exact win reproduction and forecast NOT DEMONSTRATED. No CI.
