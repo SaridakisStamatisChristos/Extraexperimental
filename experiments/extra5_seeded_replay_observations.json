@@ -1,0 +1,362 @@
+{
+  "research_date": "2026-10-29",
+  "type": "synthetic historical seeded replay; no production state",
+  "archived_dataset": "extra5_last100_data.csv",
+  "archived_dataset_sha256_local": "a5a78e5cb4b3c50023cfe6fe179911a19d3b9598b33afcd930ac8aabcfb2c5e4",
+  "seed_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "seed_policies": [
+    "fresh_fixture",
+    "previous_state_fixture"
+  ],
+  "routes_fixed": 31,
+  "switch_schedules": [
+    "round_robin",
+    "hash_switch"
+  ],
+  "samplers": [
+    "sequential",
+    "combination_rank",
+    "distinct_rejection"
+  ],
+  "attempted": 1584,
+  "completed": 1479,
+  "sampler_bit_budget_failures": 105,
+  "train_ids": [
+    14256,
+    14335
+  ],
+  "pseudo_holdout_ids": [
+    14336,
+    14355
+  ],
+  "expected_overlap_on_20": 14.285714285714286,
+  "train_selected": {
+    "seed_index": 0,
+    "seed_policy": "previous_state_fixture",
+    "route": "m(aes,bbs)",
+    "sampler": "distinct_rejection",
+    "train_overlap": 80,
+    "holdout_overlap": 21,
+    "exact_holdout": 0,
+    "holdout_preds": [
+      [
+        2,
+        7,
+        11,
+        15,
+        21
+      ],
+      [
+        8,
+        13,
+        14,
+        25,
+        30
+      ],
+      [
+        8,
+        9,
+        14,
+        30,
+        31
+      ],
+      [
+        5,
+        19,
+        25,
+        26,
+        28
+      ],
+      [
+        13,
+        16,
+        22,
+        31,
+        32
+      ],
+      [
+        6,
+        15,
+        17,
+        31,
+        32
+      ],
+      [
+        2,
+        6,
+        14,
+        28,
+        30
+      ],
+      [
+        3,
+        4,
+        7,
+        26,
+        34
+      ],
+      [
+        9,
+        12,
+        19,
+        23,
+        26
+      ],
+      [
+        17,
+        20,
+        23,
+        25,
+        26
+      ],
+      [
+        7,
+        11,
+        14,
+        21,
+        26
+      ],
+      [
+        16,
+        23,
+        26,
+        30,
+        32
+      ],
+      [
+        11,
+        14,
+        17,
+        29,
+        35
+      ],
+      [
+        3,
+        5,
+        8,
+        16,
+        31
+      ],
+      [
+        15,
+        16,
+        19,
+        27,
+        28
+      ],
+      [
+        17,
+        18,
+        19,
+        22,
+        28
+      ],
+      [
+        4,
+        21,
+        26,
+        28,
+        32
+      ],
+      [
+        8,
+        13,
+        20,
+        21,
+        30
+      ],
+      [
+        7,
+        8,
+        16,
+        18,
+        19
+      ],
+      [
+        1,
+        11,
+        13,
+        28,
+        34
+      ]
+    ]
+  },
+  "posthoc_selected": {
+    "seed_index": 0,
+    "seed_policy": "previous_state_fixture",
+    "route": "m(aes,bbs)",
+    "sampler": "sequential",
+    "train_overlap": 64,
+    "holdout_overlap": 25,
+    "exact_holdout": 0,
+    "holdout_preds": [
+      [
+        1,
+        7,
+        15,
+        23,
+        27
+      ],
+      [
+        8,
+        14,
+        15,
+        16,
+        30
+      ],
+      [
+        7,
+        9,
+        29,
+        31,
+        32
+      ],
+      [
+        5,
+        22,
+        25,
+        27,
+        33
+      ],
+      [
+        13,
+        31,
+        32,
+        33,
+        34
+      ],
+      [
+        6,
+        15,
+        31,
+        32,
+        35
+      ],
+      [
+        6,
+        9,
+        14,
+        28,
+        29
+      ],
+      [
+        2,
+        3,
+        4,
+        7,
+        13
+      ],
+      [
+        5,
+        12,
+        17,
+        20,
+        23
+      ],
+      [
+        10,
+        17,
+        25,
+        27,
+        32
+      ],
+      [
+        7,
+        12,
+        15,
+        24,
+        28
+      ],
+      [
+        14,
+        23,
+        27,
+        30,
+        32
+      ],
+      [
+        4,
+        11,
+        14,
+        17,
+        35
+      ],
+      [
+        1,
+        5,
+        9,
+        21,
+        32
+      ],
+      [
+        14,
+        15,
+        20,
+        23,
+        27
+      ],
+      [
+        7,
+        10,
+        17,
+        18,
+        23
+      ],
+      [
+        21,
+        22,
+        26,
+        33,
+        35
+      ],
+      [
+        13,
+        20,
+        24,
+        30,
+        34
+      ],
+      [
+        7,
+        9,
+        10,
+        19,
+        31
+      ],
+      [
+        1,
+        12,
+        13,
+        20,
+        30
+      ]
+    ]
+  },
+  "null_search": {
+    "replicates": 3000,
+    "seed": 20261029,
+    "exceed_ge25": 2735,
+    "empirical_plus_one_p": 0.9116961012995668,
+    "maximum_null_mean": 26.021
+  },
+  "generated_full_scores_csv_name": "extra5_seeded_replay_scores.csv",
+  "generated_full_scores_csv_sha256": "86d9a47e992923e689308a2242083e14fb070c96dbd728e5a22f20a5304cc174",
+  "source_replay": "experiments/extra5_seeded_replay.py",
+  "local_execution": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "cryptography": "46.0.4",
+    "scipy": "1.17.0",
+    "tests_passed": 59
+  },
+  "warning": "No production randomness, coupon data, keys, generation schedule or live RNG identified; all input seeds and NR parameters are toy choices; no predictive success."
+}
