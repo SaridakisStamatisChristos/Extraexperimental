@@ -1,0 +1,40 @@
+{
+  "experiment": "one_draw_blind_seed_fit_v1",
+  "training_draw": {
+    "id": 14248,
+    "date": "2026-09-05",
+    "numbers": [
+      13,
+      16,
+      22,
+      30,
+      31
+    ],
+    "total_columns_metadata": 10566
+  },
+  "hidden_target_draw_id": 14249,
+  "locked_prediction": [
+    8,
+    18,
+    24,
+    27,
+    34
+  ],
+  "selection": {
+    "model": "AES-192-CFB128 continuous zero stream",
+    "public_synthetic_seed_index": 1231545,
+    "rule": "lowest numerical seed among exactly matching training tickets",
+    "search_range": [
+      0,
+      4000000
+    ],
+    "matches_in_range": 12
+  },
+  "protocol": {
+    "training_result_only": true,
+    "hidden_target_result_not_consulted": true,
+    "source_of_target_result": "user reveal",
+    "historical_blind_test_not_prospective": true
+  },
+  "caveat": "Synthetic seed-to-key/IV and hypothetical 5/35 sampler; one-draw fitting cannot identify actual Allwyn generator state."
+}
