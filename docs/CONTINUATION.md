@@ -82,3 +82,15 @@
 **Next step:** seek thesis/full 2004 implementation specification and source-level final 5/35 sampler; construct a versioned module-by-module historical simulator with unambiguously labeled *source-confirmed* versus *hypothetical* transitions; only then consider tests that could distinguish implementations. User requested no CI.
 
 **Evidence classification:** historical algorithm description SOURCE-VERIFIED; mixer analysis PROVED for main loop and EXHAUSTIVELY TESTED for finite lengths; 2026 deployment UNVERIFIED; prediction NOT CLAIMED.
+
+## 2026-10-29 continuation — Step 5: original EXTRA 5 cipher identification (PRIMARY SOURCES)
+
+- User explicitly prioritized **identifying the real algorithm** over statistical-frequency scanning. Preserve this as the principal task direction.
+- NEW high-confidence historical source: the original designer Yannis C. Stamatiou's [2018 academic CV](https://www.bma.upatras.gr/images/new/encvstam2018.pdf), p.4 of PDF, **explicitly names the 2001–2002 EXTRA 5/SUPER 3 generators as BBS, RSA, DES and CAST-128**, plus three entropy sources (Zener diode, thermal resistor and motherboard clock) and Knuth M/B.
+- VERSION DISCREPANCY: the author's [2023 peer-reviewed group paper](https://doi.org/10.3390/cryptography7040054) instead describes historical **BBS, RSA/Rabin, DES-CFB, AES-192-CFB** and libmcrypt 2.5.3. **CAST-128 vs AES cannot be silently harmonized.** A documented change of version is currently a hypothesis, not an established finding.
+- Exact mathematical mechanisms from the 2023 publication: BBS `x←x² mod N; emit LSB`; RSA `x←x^e mod N; emit LSB`; cipher-feedback encrypting all-zero plaintext; Naor–Reingold function using combined physical-entropy and closed-ticket hash inputs; optional M/B/XOR mixing and generator switching. Actual **CFB segment width, keys, IVs, source/version, switching schedule and 5-of-35 bit sampler remain UNDISCLOSED**.
+- The published **M/B implementation pseudocode** is already archived and independently exhaustively exercised at [extra5_published_mixers.py](../experiments/extra5_published_mixers.py); 8 additional local reference tests of BBS/RSA/NR/CFB/M/B also passed on 29 Oct but have not been pushed as a standalone repository module.
+- NEW documentary lead: the University of Patras thesis by original researcher **Vasiliki Liagkou**, [catalog record](https://search.library.upatras.gr/Record/nemertes-10889-143/Details), likely relevant to exact historical protocol, but **full text not obtained**. Archive the evidence comparison in [GENERATOR_VERSION_EVIDENCE.md](GENERATOR_VERSION_EVIDENCE.md).
+- Research direction: obtain full 2004 paper and Liagkou thesis; examine any precise 5/35 conversion, CFB mode configuration and version change; seek present-day current RNG certificate/supplier/technical documentation. **Do not claim live algorithm attribution or output prediction.**
+
+**Step 5 evidence state:** 2001–02 design families DOCUMENTED BY ORIGINAL DESIGNER; later paper's architecture DOCUMENTED; 2026 version UNVERIFIED; no exact five-number draw reproduction achieved.
