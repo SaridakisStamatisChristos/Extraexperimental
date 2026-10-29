@@ -5,7 +5,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'experiments'))
 from extra5_four_draw_search import TICKETS,CONTROLS,FAMILIES,quick_first,exact_prefix,polynomial_congruence_obstruction
 from extra5_one_draw_seed_fit import rank_5of35,unrank_5of35
 from extra5_multifamily_compact import stream,decode
-from extra5_three_draw_seed_test import simple_seed_tickets,words
+from extra5_three_draw_seed_test import tickets as simple_seed_tickets, words
 
 class FourDrawTests(unittest.TestCase):
     def test_four_ranks(self):

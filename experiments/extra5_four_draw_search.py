@@ -10,9 +10,9 @@ synthetic sampler/stream semantics; successful prefixes are fully replayed.
 from __future__ import annotations
 import argparse, hashlib, json, math, sys, time
 from pathlib import Path
-from extra5_multifamily_blind import FAMILIES
+from extra5_multifamily_compact import FAMILIES
 from extra5_multifamily_compact import stream,decode
-from extra5_three_draw_seed_test import simple_seed_tickets,words
+from extra5_three_draw_seed_test import tickets as simple_seed_tickets, words
 from extra5_one_draw_seed_fit import COMBINATIONS,LIMIT,rank_5of35
 
 TICKETS=((2,4,30,32,35),(2,5,9,30,33),(10,18,21,25,29),(1,7,9,14,18))
@@ -50,9 +50,9 @@ def historical_first_matches(archive):
 
 def historical_arithmetic_matches(archive):
     rows=[]
-    sweeps=archive['additional_public_arithmetic_seed_sweeps']
+    sweeps=archive['arithmetic_seed_sweeps']
     for fam in CONTROLS:
-        assert sweeps[fam]['seeds_tested']==OLD_CONTROL_LIMIT
+        assert sweeps[fam]['tested']==OLD_CONTROL_LIMIT
         for item in sweeps[fam]['candidates']:
             seed=item['seed_index'];pred=simple_seed_tickets(fam,seed,len(TICKETS))
             if pred[0]!=TICKETS[0]:raise AssertionError('archived arithmetic candidate not reproducible')
