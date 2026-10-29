@@ -1,0 +1,6 @@
+# The preserved scripts use these packages (versions were not pinned in the original runs).
+numpy
+scipy
+cryptography
+matplotlib
+sympy

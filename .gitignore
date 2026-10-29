@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
+# Regenerable ~650 KB binary simulation intermediate; produced by mass benchmark:
+experiments/extra5_mass_algorithm_holdout_masks.npz
