@@ -1,0 +1,155 @@
+{
+  "experiment": "extra5_two_draw_multimodel_20261029_v1",
+  "recorded_before_14251_reveal": true,
+  "known_draws": [
+    {
+      "id": 14249,
+      "numbers": [
+        2,
+        4,
+        30,
+        32,
+        35
+      ]
+    },
+    {
+      "id": 14250,
+      "numbers": [
+        2,
+        5,
+        9,
+        30,
+        33
+      ]
+    }
+  ],
+  "unknown_target_draw_id": 14251,
+  "original_primary_pre_reveal_lock": {
+    "commit": "53784da5327baa669b3c5c7889c0059dcd2c1c3e",
+    "name": "affine_rank_a1",
+    "prediction": [
+      2,
+      5,
+      15,
+      30,
+      34
+    ],
+    "not_modified": true
+  },
+  "synthetic_crypto_family_first_fit_candidates": 5,
+  "synthetic_crypto_family_exact_two_draw_matches": 0,
+  "model_bank": [
+    {
+      "model": "affine_rank_a1",
+      "family": "affine LCG",
+      "training_transition_fit": true,
+      "third_ticket": [
+        2,
+        5,
+        15,
+        30,
+        34
+      ]
+    },
+    {
+      "model": "affine_rank_a3",
+      "family": "affine LCG",
+      "training_transition_fit": true,
+      "third_ticket": [
+        2,
+        6,
+        12,
+        20,
+        28
+      ]
+    },
+    {
+      "model": "affine_rank_a5",
+      "family": "affine LCG",
+      "training_transition_fit": true,
+      "third_ticket": [
+        2,
+        7,
+        11,
+        14,
+        32
+      ]
+    },
+    {
+      "model": "multiplicative_rank",
+      "family": "multiplicative congruential",
+      "training_transition_fit": true,
+      "third_ticket": [
+        2,
+        3,
+        12,
+        21,
+        22
+      ]
+    },
+    {
+      "model": "xor_rank_two_cycle",
+      "family": "XOR state",
+      "training_transition_fit": true,
+      "third_ticket": [
+        2,
+        4,
+        30,
+        32,
+        35
+      ]
+    },
+    {
+      "model": "positionwise_mod35",
+      "family": "per-number circular shifts",
+      "training_transition_fit": true,
+      "third_ticket": [
+        2,
+        6,
+        23,
+        28,
+        31
+      ]
+    },
+    {
+      "model": "permutation_extension",
+      "family": "35-symbol bijective permutation",
+      "training_transition_fit": true,
+      "third_ticket": [
+        2,
+        4,
+        9,
+        10,
+        34
+      ]
+    },
+    {
+      "model": "fibonacci_rank",
+      "family": "two-state modular recurrence",
+      "training_transition_fit": true,
+      "third_ticket": [
+        3,
+        12,
+        15,
+        17,
+        23
+      ]
+    },
+    {
+      "model": "constant_rank",
+      "family": "constant-output control",
+      "training_transition_fit": true,
+      "third_ticket": [
+        2,
+        5,
+        9,
+        30,
+        33
+      ]
+    }
+  ],
+  "candidate_count": 9,
+  "distinct_third_tickets": 9,
+  "test_status": "7 local regression tests passed on reference implementation; compact committed reproducer derives identical nine outputs",
+  "inference": "Two observed five-number outcomes cannot select one generator mechanism. These fitted formula families do not validate a real Allwyn implementation or an edge."
+}
