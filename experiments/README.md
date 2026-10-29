@@ -40,3 +40,13 @@ The benchmark generates `extra5_mass_algorithm_results.json`, 9,360-row scores C
 Run `python extra5_archive_scale_null.py --replicates 5000 --fixed-replicates 200000 --seed 202610291 --scan-horizon 14355` to recreate the [simulation results](extra5_archive_scale_null_results.json) and [report](extra5_archive_scale_null_report.md). **This is 14,355 simulated fair draws per replicate, not 14,355 obtained historical records.** The older independent archival replication remains pending.
 
 | Historical implementation forensics: published bit M/B mixers | `extra5_published_mixers.py` | `extra5_published_mixers_report.md` | `extra5_published_mixers_results.json`; exhaustive execution, no current production attribution |
+
+
+### Step 6 — Working historical generator architecture
+
+- [\`extra5_historical_engine.py\`](extra5_historical_engine.py) — standalone historic-family generator reference (BBS/RSA/CFB DES/AES/CAST, published M/B, XOR and switchable routes).
+- [\`../tests/test_historical_engine.py\`](../tests/test_historical_engine.py) — 17 local tests, run from project root with \`python -m unittest discover -s tests -p 'test_historical_engine.py' -v\`.
+- [\`extra5_historical_engine_test_results.json\`](extra5_historical_engine_test_results.json) — original local verification record.
+- [\`../docs/RECONSTRUCTION_IMPLEMENTATION.md\`](../docs/RECONSTRUCTION_IMPLEMENTATION.md) — implementation assumptions and remaining unidentified source components.
+
+Run example: \`python experiments/extra5_historical_engine.py --operation m --names bbs aes --draws 3\`. **These are synthetic demonstration tickets only**, not recovered production RNG output. No CI.
