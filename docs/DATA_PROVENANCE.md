@@ -25,3 +25,7 @@ Public data URLs:
 Do not treat generated `extra5_test_synthetic.csv` as historical data; that file is a synthetic input for testing parser/analysis workflows.
 
 Reproducibility requires pinning input snapshots, code versions, random seeds and software dependencies; archived outputs are tied to the stated 2026 snapshots and should not be silently overwritten by later results.
+
+## Raw transcription worksheet
+
+The 80 predecessor results (#14256–14335), originally kept as an intermediate descending-order plaintext worksheet, are preserved as [`experiments/extra5_preceding80_raw.txt`](../experiments/extra5_preceding80_raw.txt). This worksheet is a reversible restatement of the corresponding rows in `extra5_last100_data.csv`, not an independent verification or operator-issued export.
