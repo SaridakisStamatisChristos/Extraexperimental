@@ -1,0 +1,111 @@
+{
+  "experiment": "EXTRA5-4DRAW-XORSHIFT96-INVERSE-20261030",
+  "training_draws": [
+    {
+      "id": 14249,
+      "ticket": [
+        2,
+        4,
+        30,
+        32,
+        35
+      ],
+      "rank": 55817
+    },
+    {
+      "id": 14250,
+      "ticket": [
+        2,
+        5,
+        9,
+        30,
+        33
+      ],
+      "rank": 57278
+    },
+    {
+      "id": 14251,
+      "ticket": [
+        10,
+        18,
+        21,
+        25,
+        29
+      ],
+      "rank": 268706
+    },
+    {
+      "id": 14252,
+      "ticket": [
+        1,
+        7,
+        9,
+        14,
+        18
+      ],
+      "rank": 23073
+    }
+  ],
+  "sampler": "32-bit words big-endian as continuous bytes; 24-bit rejection to rank; zero initial rejects",
+  "xorshift64": {
+    "initial_state_bits": 64,
+    "canonical_branch_consistent": false
+  },
+  "xorshift96": {
+    "initial_state_bits": 96,
+    "canonical_state_hex": "92a140efbdfe8769d18dcbdc",
+    "equations_rank": 96,
+    "free_bits": 0,
+    "training_matched": 4,
+    "primary_fifth": [
+      9,
+      24,
+      25,
+      30,
+      33
+    ]
+  },
+  "xorshift96_alternative": {
+    "state_hex": "2c5afd000d825d1fcaadd647",
+    "first_raw24": 380449,
+    "training_matched": 4,
+    "secondary_fifth": [
+      15,
+      17,
+      22,
+      29,
+      35
+    ]
+  },
+  "xorshift128": {
+    "initial_state_bits": 128,
+    "equations_rank": 96,
+    "free_bits": 32,
+    "canonical_state_hex": "00da091bf3b1ce49af0e16b400000000",
+    "training_matched": 4,
+    "example_fifth": [
+      1,
+      6,
+      15,
+      31,
+      34
+    ]
+  },
+  "accepted_raw24_preimages_per_draw": 51,
+  "distinct_xorshift96_initial_states_without_rejected_first_four": 6765201,
+  "existing11family_seed_catalog": {
+    "attempts": 9280000,
+    "exact_four": 0,
+    "source": "experiments/extra5_four_draw_search_results.json"
+  },
+  "frozen_target": {
+    "draw_id": 14253,
+    "pre_reveal_commit": "db050505c8a184bed0390fed1aec0f4f494beac9"
+  },
+  "verification": {
+    "local_tests_passed": 7,
+    "ci_run": false,
+    "source": "same source as tests executed locally"
+  },
+  "limitation": "Toy fixed linear PRNG mapping; state candidates nonunique and no current operator RNG is known"
+}
