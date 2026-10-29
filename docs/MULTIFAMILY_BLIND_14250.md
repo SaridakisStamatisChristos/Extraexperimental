@@ -25,7 +25,7 @@ The first single-ticket experiment used only AES-192-CFB. This expansion tests e
 
 **Frozen primary tie-breaking rule:** among all exact first-ticket fits, choose the smallest SHA256 of `DOMAIN + b'FIXED-SELECTION|' + ASCII(family + '|' + seed_index)`. This rule references no hidden outcome. It selected **AES-192-CFB, seed index 236403**, yielding **4, 6, 19, 27, 31** for hidden draw #14250.
 
-**Pre-reveal immutable GitHub lock:** [extra5_draw14250_LOCKED_before_reveal.json](../experiments/extra5_draw14250_LOCKED_before_reveal.json), first lock commit [`8b0c8b447f86ebfe6c069fde5a52496ed674067c`](https://github.com/SaridakisStamatisChristos/Extraexperimental/commit/8b0c8b447f86ebfe6c069fde5a52496ed674067c). Do not amend this file after revelation. The **five alternative candidate outputs** were also locked; selecting one post hoc is invalid.
+**Pre-reveal immutable GitHub lock:** [extra5_draw14250_LOCKED_before_reveal.json](../experiments/extra5_draw14250_LOCKED_before_reveal.json), first lock commit [`8b0c8b447f86ebfe6c069fde5a52496ed674067c`](https://github.com/SaridakisStamatisChristos/Extraexperimental/commit/8b0c8b447f86ebfe6c069fde5a52496ed674067c). Do not amend this file after revelation. All **five candidate outputs** (the primary plus four alternatives) were also locked; selecting one post hoc is invalid.
 
 ## Validation
 
