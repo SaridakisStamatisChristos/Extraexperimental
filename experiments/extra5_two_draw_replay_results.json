@@ -1,0 +1,144 @@
+{
+  "experiment": "EXTRA5-14249-14250-two-consecutive-draw-fitting-v1",
+  "training": [
+    {
+      "draw_id": 14249,
+      "numbers": [
+        2,
+        4,
+        30,
+        32,
+        35
+      ]
+    },
+    {
+      "draw_id": 14250,
+      "numbers": [
+        2,
+        5,
+        9,
+        30,
+        33
+      ]
+    }
+  ],
+  "historical_generator_family_seed_audit": {
+    "previously_searched_synthetic_indices": 1640000,
+    "first_draw_fitting_seeds": 5,
+    "two_consecutive_exact_fits": 0,
+    "candidates": [
+      {
+        "family": "aes192-cfb128",
+        "seed_index": 43315,
+        "next_numbers": [
+          1,
+          10,
+          22,
+          25,
+          27
+        ],
+        "second_hits": 0
+      },
+      {
+        "family": "aes192-cfb128",
+        "seed_index": 236403,
+        "next_numbers": [
+          4,
+          6,
+          19,
+          27,
+          31
+        ],
+        "second_hits": 0,
+        "chosen_before_result": true
+      },
+      {
+        "family": "cast128-cfb64",
+        "seed_index": 78501,
+        "next_numbers": [
+          1,
+          14,
+          24,
+          30,
+          31
+        ],
+        "second_hits": 1
+      },
+      {
+        "family": "cast128-cfb64",
+        "seed_index": 251682,
+        "next_numbers": [
+          11,
+          23,
+          27,
+          30,
+          31
+        ],
+        "second_hits": 1
+      },
+      {
+        "family": "xor-aes192-des",
+        "seed_index": 29267,
+        "next_numbers": [
+          9,
+          16,
+          19,
+          26,
+          32
+        ],
+        "second_hits": 1
+      }
+    ],
+    "evidence": "Five first-ticket exact seeds drawn from earlier completed and independently reproduced 1.64M synthetic-seed search; each independently replayed locally now. No fresh 1.64M full sweep executed this step."
+  },
+  "exact_fitted_rank_model": {
+    "N": 324632,
+    "r_14249": 55817,
+    "r_14250": 57278,
+    "transition": "r_next = (a*r_current + c) mod 324632",
+    "primary": {
+      "a": 1,
+      "c": 1461,
+      "next_rank": 58739,
+      "next_ticket": [
+        2,
+        5,
+        15,
+        30,
+        34
+      ]
+    },
+    "alternative_a3": {
+      "a": 3,
+      "c": 214459,
+      "next_rank": 61661,
+      "next_ticket": [
+        2,
+        6,
+        12,
+        20,
+        28
+      ]
+    },
+    "alternative_a5": {
+      "a": 5,
+      "c": 102825,
+      "next_rank": 64583,
+      "next_ticket": [
+        2,
+        7,
+        11,
+        14,
+        32
+      ]
+    },
+    "caveat": "Exact two-point fit by construction, not operator RNG attribution or cryptographic state recovery."
+  },
+  "held_out_draw_id": 14251,
+  "held_out_result_not_read": true,
+  "pre_reveal_lock_commit": "53784da5327baa669b3c5c7889c0059dcd2c1c3e",
+  "local_verification": "9 tests of full extended implementation and 5 tests of committed compact replay all passed; rank/unrank exhaustively checked on 324632 tickets.",
+  "source_experiment_library": "experiments/extra5_multifamily_blind_14250.json",
+  "calibrated_uniform_pair_probability": 9.48893223727334e-12,
+  "anticipated_ideal_random_pair_fits_in_1640000": 0.000015561848869128278
+}
