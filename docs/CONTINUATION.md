@@ -101,21 +101,21 @@
 **Change of focus:** algorithm identification and faithful source-based implementation, not additional RNG frequency surveys or arbitrary-seed lottery matching.
 
 **Committed artifacts:**
-- [Reference engine](../experiments/extra5_historical_engine.py): \`BBS\`, \`RSAParity\`, \`CFBZeroBits\` (AES-192 / DES-compatible / CAST-128), published modified \`mixer_m\` and \`mixer_b\`, XOR, explicit \`Route\` / \`RoutedBits.configure()\` switching, a mathematical Naor–Reingold evaluator and an XOR helper for user-supplied entropy sample bytes.
+- [Reference engine](../experiments/extra5_historical_engine.py): `BBS`, `RSAParity`, `CFBZeroBits` (AES-192 / DES-compatible / CAST-128), published modified `mixer_m` and `mixer_b`, XOR, explicit `Route` / `RoutedBits.configure()` switching, a mathematical Naor–Reingold evaluator and an XOR helper for user-supplied entropy sample bytes.
 - [17-case test suite](../tests/test_historical_engine.py): modular arithmetic differential checks, published M/B comparison across exhaustive small bit strings, 60-byte CFB independent reference checks for the three ciphers, rejection sampler and route tests, and deterministic demonstration streams.
 - [Implementation and fidelity specification](RECONSTRUCTION_IMPLEMENTATION.md), plus [local test record](../experiments/extra5_historical_engine_test_results.json).
 
-**Executed evidence:** Python 3.13.5, cryptography 46.0.4; \`python -m unittest discover -s tests -p 'test_historical_engine.py' -v\` executed locally with **17 tests, 0 failures and 0 errors**. Byte-compiled and executed the demonstration routes. This is a source-level implementation check, not CI or an independent clone-based check.
+**Executed evidence:** Python 3.13.5, cryptography 46.0.4; `python -m unittest discover -s tests -p 'test_historical_engine.py' -v` executed locally with **17 tests, 0 failures and 0 errors**. Byte-compiled and executed the demonstration routes. This is a source-level implementation check, not CI or an independent clone-based check.
 
 **Reproduce without CI:**
 
-\`\`\`bash
+```bash
 python -m pip install -r requirements.txt
 python experiments/extra5_historical_engine.py --operation m --names bbs aes --draws 3
 python experiments/extra5_historical_engine.py --operation xor --names bbs rsa des aes --draws 3
 python experiments/extra5_historical_engine.py --operation single --names cast --draws 3
 python -m unittest discover -s tests -p 'test_historical_engine.py' -v
-\`\`\`
+```
 
 **What is source-grounded:** historic BBS/RSA-style parity generation, DES/AES cipher-based generators, CAST-128 variant documented by the original developer for 2001–2002, modified paper M/B pseudocode, XOR family, optional generator switching. The earlier [published mixer](../experiments/extra5_published_mixers.py) remains untouched.
 
