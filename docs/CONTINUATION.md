@@ -178,3 +178,14 @@ python -m unittest discover -s tests -p 'test_historical_engine.py' -v
 - Machine-readable [observation checkpoint](../experiments/extra5_seeded_replay_observations.json) now preserves exact counts, both selected candidates' **20 historical prediction sequences**, null calibration and the score checksum. Dataset SHA-256 `a5a78e5cb4b3c50023cfe6fe179911a19d3b9598b33afcd930ac8aabcfb2c5e4` was calculated on the local snapshot.
 - [Local-only regression tests](../tests/test_seeded_replay.py) added; **59 tests passed in total locally** across the existing historical engine, pipeline, seeded original-benchmark tests and replay tests. No CI or workflow added.
 - No conclusion about live Allwyn keys/software or prospective prediction changes.
+
+## 2026-10-29 continuation — Step 9: expanded seeded replay (EXECUTED)
+
+- User requested more seed experiments. Ran public synthetic seed indices **0–127** (same seed domain, 31 fixed routes + 2 switching schedules, 2 seed policies, 3 samplers); **25,344** attempts, **23,343** completed, **2,001** failed 1024-bit sampler budget.
+- Cached locally executed engine was regression-checked against previous eight seeds: 1,479 completed-model rows and the full scores CSV **byte-identical**; local total **64 tests passed**.
+- Highest first-80 training score: **85/400** for index **86**, previous-state, XOR(BBS,RSA,DES), sequential sampler; later-20 result only **12/100** (fair expectation 14.29).
+- Highest later-20 **post-hoc** score: **29/100** for index **17**, previous-state, XOR(BBS,DES), combination-rank sampler; training 47/400. Across **1,200** fair null histories searched over all **23,343** completed models, **648** attained >=29; corrected p≈**0.5404**. No candidate matched a full 5/5 ticket in later 20.
+- Full locally produced 23,343-row score CSV SHA-256: `aa6957f68853af23e4cadeb48cf86decc2d98c437910df58e26143aa80510c81`; output regenerable from existing [seeded replay code](../experiments/extra5_seeded_replay.py) using `--seeds 128 --null-replicates 1200`, though full re-execution with this slower original version was **not** performed. See [full report](EXPANDED_SEED_SWEEP.md) and [machine-readable summary](../experiments/extra5_seed_128_results.json).
+- **Verdict:** no evidence of recovered live seed or predictive power; retrospective pseudo-holdout already publicly known. A much larger *arbitrary* seed search does not reveal a CSPRNG's inaccessible physical-entropy and key state. Next task remains original protocol/seed documentation. No CI.
+
+**Step 9 evidence:** 128-index experiment EXECUTED locally, 1,200 null simulations EXECUTED, 64 tests PASS; real seed identification NOT DEMONSTRATED.

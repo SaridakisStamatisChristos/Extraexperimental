@@ -1,0 +1,82 @@
+{
+  "experiment_date": "2026-10-29",
+  "description": "Expanded retrospective synthetic seed sweep with identical seed domain and generator/route/sampler logic to archived 8-seed benchmark; no current production seeds recovered.",
+  "dataset": "experiments/extra5_last100_data.csv",
+  "draw_ids": [
+    14256,
+    14355
+  ],
+  "train_ids": [
+    14256,
+    14335
+  ],
+  "pseudo_holdout_ids": [
+    14336,
+    14355
+  ],
+  "seed_domain": "EXTRA5-INDEPENDENT-SEED-SEARCH-v1|NOT-OPERATOR-SEEDS|",
+  "seed_indices": [
+    0,
+    127
+  ],
+  "seed_policies": [
+    "fresh_fixture",
+    "previous_state_fixture"
+  ],
+  "fixed_routes": 31,
+  "dynamic_switching_schedules": 2,
+  "samplers": [
+    "sequential",
+    "combination_rank",
+    "distinct_rejection"
+  ],
+  "attempted": 25344,
+  "completed": 23343,
+  "failed_bit_budget": 2001,
+  "safety_limit_bits": 1024,
+  "best_training_selected": {
+    "seed_index": 86,
+    "seed_policy": "previous_state_fixture",
+    "schedule": "fixed",
+    "operation": "xor",
+    "sources": "bbs-rsa-des",
+    "sampler": "sequential",
+    "train_hits_80": 85,
+    "holdout_hits_20": 12,
+    "train_exact": 0,
+    "holdout_exact": 0
+  },
+  "best_holdout_posthoc": {
+    "seed_index": 17,
+    "seed_policy": "previous_state_fixture",
+    "schedule": "fixed",
+    "operation": "xor",
+    "sources": "bbs-des",
+    "sampler": "combination_rank",
+    "train_hits_80": 47,
+    "holdout_hits_20": 29,
+    "train_exact": 0,
+    "holdout_exact": 0
+  },
+  "total_holdout_exact_ticket_matches": 0,
+  "expected_holdout_exact_tickets_independent_tickets": 1.4381207028265852,
+  "holdout_expected_individual_matches": 14.285714285714286,
+  "training_selected_fixed_holdout_upper_tail_p": 0.79959940524041,
+  "posthoc_best_uncorrected_upper_tail_p": 0.00003235765211353254,
+  "familywise_calibration": {
+    "replicates": 1200,
+    "exceedances_at_least_29": 648,
+    "plus_one_p": 0.5403830141548709,
+    "null_mean_max": 28.7575,
+    "numpy_seed": 20261029
+  },
+  "scores_csv_sha256": "aa6957f68853af23e4cadeb48cf86decc2d98c437910df58e26143aa80510c81",
+  "reproduction_note": "Existing committed experiments/extra5_seeded_replay.py can run --seeds 128 --null-replicates 1200. The executed optimized cache/rewind implementation matched the previous 8-seed complete score CSV byte-for-byte. Full 128-seed run of the slower previous script was not rerun.",
+  "local_execution": {
+    "elapsed_seconds": 197.79,
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "tests_passed": 64
+  },
+  "important_limit": "Retrospective historical matching of publicly synthetic seeds; not production RNG identification or prediction."
+}
