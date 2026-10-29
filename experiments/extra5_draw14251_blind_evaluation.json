@@ -1,0 +1,131 @@
+{
+  "target": 14251,
+  "result": [
+    10,
+    18,
+    21,
+    25,
+    29
+  ],
+  "source": "user-provided 2026-10-29",
+  "original_primary_commit": "53784da5327baa669b3c5c7889c0059dcd2c1c3e",
+  "primary_prediction": [
+    2,
+    5,
+    15,
+    30,
+    34
+  ],
+  "primary_hits": 0,
+  "other_models": [
+    {
+      "model": "affine_rank_a1",
+      "predicted": [
+        2,
+        5,
+        15,
+        30,
+        34
+      ],
+      "matches": []
+    },
+    {
+      "model": "affine_rank_a3",
+      "predicted": [
+        2,
+        6,
+        12,
+        20,
+        28
+      ],
+      "matches": []
+    },
+    {
+      "model": "affine_rank_a5",
+      "predicted": [
+        2,
+        7,
+        11,
+        14,
+        32
+      ],
+      "matches": []
+    },
+    {
+      "model": "multiplicative_rank",
+      "predicted": [
+        2,
+        3,
+        12,
+        21,
+        22
+      ],
+      "matches": [
+        21
+      ]
+    },
+    {
+      "model": "xor_rank_two_cycle",
+      "predicted": [
+        2,
+        4,
+        30,
+        32,
+        35
+      ],
+      "matches": []
+    },
+    {
+      "model": "positionwise_mod35",
+      "predicted": [
+        2,
+        6,
+        23,
+        28,
+        31
+      ],
+      "matches": []
+    },
+    {
+      "model": "permutation_extension",
+      "predicted": [
+        2,
+        4,
+        9,
+        10,
+        34
+      ],
+      "matches": [
+        10
+      ]
+    },
+    {
+      "model": "fibonacci_rank",
+      "predicted": [
+        3,
+        12,
+        15,
+        17,
+        23
+      ],
+      "matches": []
+    },
+    {
+      "model": "constant_rank",
+      "predicted": [
+        2,
+        5,
+        9,
+        30,
+        33
+      ],
+      "matches": []
+    }
+  ],
+  "hit_histogram": {
+    "zero": 7,
+    "one": 2,
+    "two_or_more": 0
+  },
+  "note": "Researcher-blind retrospective result; prior prediction and model ledger unchanged; no proven predictive edge."
+}
