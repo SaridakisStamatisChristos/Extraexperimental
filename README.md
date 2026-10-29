@@ -72,3 +72,10 @@ If a generated intermediate is absent, run its producing script first. **There i
 - Historical aggregate statistics: [Foufos EXTRA 5](https://www.foufos.gr/en/stats/extra).
 
 **Status:** documented exploratory research; no identified live RNG, compromise, or betting advantage. Independent, unofficial project; not affiliated with Allwyn/OPAP.
+
+
+## Algorithm-first historical reconstruction (Step 6)
+
+A **working modular reference implementation** of the publicly described eLottery components is now available: [historical engine](experiments/extra5_historical_engine.py), [17 local unit tests](tests/test_historical_engine.py), [fidelity/limitations specification](docs/RECONSTRUCTION_IMPLEMENTATION.md), and [local test record](experiments/extra5_historical_engine_test_results.json).
+
+It models BBS, RSA-style parity generation, AES-192/DES-compatible/CAST-128 CFB, the published modified M/B bit mixers, XOR and explicit switching. **The final 5/35 number sampler, physical entropy and seed wiring, CFB settings, and live 2026 configuration are unknown; all demonstration draws are synthetic.** No CI has been added.
