@@ -1,0 +1,62 @@
+{
+  "historical_ids": [
+    14256,
+    14355
+  ],
+  "exact_history_matches": 100,
+  "prime": 524287,
+  "total_unordered_tickets": 324632,
+  "family": "finite-field polynomial interpolation plus historical vanishing polynomial",
+  "coefficients_for_arbitrary_future_outcomes": {
+    "14356": {
+      "low": {
+        "coefficient": 133247,
+        "next_rank": 0,
+        "next_ticket": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "high": {
+        "coefficient": 77743,
+        "next_rank": 324631,
+        "next_ticket": [
+          31,
+          32,
+          33,
+          34,
+          35
+        ]
+      }
+    },
+    "14357": {
+      "low": {
+        "coefficient": 256416,
+        "next_rank": 0,
+        "next_ticket": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "high": {
+        "coefficient": 53419,
+        "next_rank": 324631,
+        "next_ticket": [
+          31,
+          32,
+          33,
+          34,
+          35
+        ]
+      }
+    }
+  },
+  "claim": "100/100 exact historical fit is compatible with completely conflicting unseen outputs; proves nonidentification from fit alone, not predictive performance",
+  "data_sha256": "a5a78e5cb4b3c50023cfe6fe179911a19d3b9598b33afcd930ac8aabcfb2c5e4"
+}

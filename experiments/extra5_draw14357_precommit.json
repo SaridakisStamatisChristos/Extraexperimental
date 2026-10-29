@@ -1,0 +1,37 @@
+{
+  "prediction_created_at_local": "2026-10-29T16:26:56+02:00",
+  "timezone": "Europe/Athens",
+  "prediction_scope": "freeze BEFORE 2026-10-29 19:00 scheduled draw",
+  "draw_id": 14357,
+  "numbers": [
+    2,
+    11,
+    13,
+    14,
+    35
+  ],
+  "model": "cold",
+  "horizon": 2,
+  "last_known_actual_draw_id": 14355,
+  "training_data_sha256": "a5a78e5cb4b3c50023cfe6fe179911a19d3b9598b33afcd930ac8aabcfb2c5e4",
+  "full_candidate_grid": [
+    "uniform",
+    "frequency",
+    "exp_5",
+    "exp_20",
+    "exp_60",
+    "cold",
+    "markov_10",
+    "markov_30",
+    "neighbor_5",
+    "neighbor_15",
+    "ridge_20",
+    "ridge_80"
+  ],
+  "tuning_targets": "draw IDs 14286..14315 (30 prequential evaluations)",
+  "holdout_targets": "draw IDs 14316..14355 (40 retrospective prequential evaluations)",
+  "selection_rule": "minimum mean Brier over tuning targets, no holdout selection",
+  "must_not_change_after_commit": true,
+  "research_disclaimer": "Experimental history-based model, not production RNG reconstruction or validated betting forecast",
+  "canonical_sha256": "c3059e8a186e4f204922d5e101529bff945f29590cc5e5ef5cf2b0143f6e1504"
+}

@@ -1,0 +1,1564 @@
+{
+  "timestamp_purpose": "2026-10-29 afternoon Europe/Athens; predict target #14357 at 19:00 before result publication",
+  "source_range": [
+    14256,
+    14355
+  ],
+  "dataset_sha256": "a5a78e5cb4b3c50023cfe6fe179911a19d3b9598b33afcd930ac8aabcfb2c5e4",
+  "target_draw_id": 14357,
+  "missing_14356": "15:00 draw #14356 occurred, but outcome NOT used or available in this dataset",
+  "forecast_horizon": 2,
+  "training_selection": "early targets indices 30..59 (prior 30), selected solely by mean Brier",
+  "evaluation": "40 targets indices 60..99; for each, train on data ending 2 draws prior",
+  "model_grid": [
+    "uniform",
+    "frequency",
+    "exp_5",
+    "exp_20",
+    "exp_60",
+    "cold",
+    "markov_10",
+    "markov_30",
+    "neighbor_5",
+    "neighbor_15",
+    "ridge_20",
+    "ridge_80"
+  ],
+  "null": "independent uniform five-of-35 subsets",
+  "random_overlap_expected_40": 28.571428571428573,
+  "software": {
+    "python": "3.13.5",
+    "numpy": "2.3.5"
+  },
+  "horizons": {
+    "1": {
+      "selected_model": "cold",
+      "selection_30": {
+        "uniform": {
+          "draws": 30,
+          "hits": 22,
+          "brier_mean": 4.285714285714287
+        },
+        "frequency": {
+          "draws": 30,
+          "hits": 21,
+          "brier_mean": 4.332634517444109
+        },
+        "exp_5": {
+          "draws": 30,
+          "hits": 23,
+          "brier_mean": 4.364444976584153
+        },
+        "exp_20": {
+          "draws": 30,
+          "hits": 17,
+          "brier_mean": 4.368998314418414
+        },
+        "exp_60": {
+          "draws": 30,
+          "hits": 17,
+          "brier_mean": 4.370213077698583
+        },
+        "cold": {
+          "draws": 30,
+          "hits": 20,
+          "brier_mean": 4.295020527245381
+        },
+        "markov_10": {
+          "draws": 30,
+          "hits": 19,
+          "brier_mean": 4.354661516378441
+        },
+        "markov_30": {
+          "draws": 30,
+          "hits": 18,
+          "brier_mean": 4.338235080796947
+        },
+        "neighbor_5": {
+          "draws": 30,
+          "hits": 28,
+          "brier_mean": 4.477610402817757
+        },
+        "neighbor_15": {
+          "draws": 30,
+          "hits": 18,
+          "brier_mean": 4.43027549333572
+        },
+        "ridge_20": {
+          "draws": 30,
+          "hits": 18,
+          "brier_mean": 4.3650355267351735
+        },
+        "ridge_80": {
+          "draws": 30,
+          "hits": 16,
+          "brier_mean": 4.361049505212011
+        }
+      },
+      "test_40": {
+        "uniform": {
+          "draws": 40,
+          "hits": 33,
+          "brier_mean": 4.2857142857142865,
+          "p_one_sided_hits_fixed_ticket": 0.19736875643360285
+        },
+        "frequency": {
+          "draws": 40,
+          "hits": 23,
+          "brier_mean": 4.334476877021075,
+          "p_one_sided_hits_fixed_ticket": 0.9069906626160782
+        },
+        "exp_5": {
+          "draws": 40,
+          "hits": 30,
+          "brier_mean": 4.31661188679291,
+          "p_one_sided_hits_fixed_ticket": 0.4135806208313081
+        },
+        "exp_20": {
+          "draws": 40,
+          "hits": 26,
+          "brier_mean": 4.3327360113847515,
+          "p_one_sided_hits_fixed_ticket": 0.7420535634817669
+        },
+        "exp_60": {
+          "draws": 40,
+          "hits": 22,
+          "brier_mean": 4.3414579027056535,
+          "p_one_sided_hits_fixed_ticket": 0.9396088291642588
+        },
+        "cold": {
+          "draws": 40,
+          "hits": 37,
+          "brier_mean": 4.266208486549802,
+          "p_one_sided_hits_fixed_ticket": 0.04705440723335607
+        },
+        "markov_10": {
+          "draws": 40,
+          "hits": 27,
+          "brier_mean": 4.377179380602864,
+          "p_one_sided_hits_fixed_ticket": 0.6663279427273439
+        },
+        "markov_30": {
+          "draws": 40,
+          "hits": 27,
+          "brier_mean": 4.351039258159567,
+          "p_one_sided_hits_fixed_ticket": 0.6663279427273439
+        },
+        "neighbor_5": {
+          "draws": 40,
+          "hits": 29,
+          "brier_mean": 4.524867657616141,
+          "p_one_sided_hits_fixed_ticket": 0.49835476821699254
+        },
+        "neighbor_15": {
+          "draws": 40,
+          "hits": 29,
+          "brier_mean": 4.507422116689237,
+          "p_one_sided_hits_fixed_ticket": 0.49835476821699254
+        },
+        "ridge_20": {
+          "draws": 40,
+          "hits": 26,
+          "brier_mean": 4.403032619318197,
+          "p_one_sided_hits_fixed_ticket": 0.7420535634817669
+        },
+        "ridge_80": {
+          "draws": 40,
+          "hits": 25,
+          "brier_mean": 4.35969992936724,
+          "p_one_sided_hits_fixed_ticket": 0.8083089031438784
+        }
+      },
+      "selected_test_score": {
+        "draws": 40,
+        "hits": 37,
+        "brier_mean": 4.266208486549802,
+        "p_one_sided_hits_fixed_ticket": 0.04705440723335607
+      },
+      "uniform_baseline_test": {
+        "draws": 40,
+        "hits": 33,
+        "brier_mean": 4.2857142857142865,
+        "p_one_sided_hits_fixed_ticket": 0.19736875643360285
+      },
+      "selected_full_data_ticket": [
+        2,
+        11,
+        13,
+        14,
+        35
+      ],
+      "selected_full_data_marginals": {
+        "1": 0.13015873,
+        "2": 0.17460318,
+        "3": 0.13015873,
+        "4": 0.09312169,
+        "5": 0.10793651,
+        "6": 0.15238095,
+        "7": 0.13756614,
+        "8": 0.15238095,
+        "9": 0.14497355,
+        "10": 0.12275132,
+        "11": 0.15978836,
+        "12": 0.15238095,
+        "13": 0.16719577,
+        "14": 0.16719577,
+        "15": 0.15978836,
+        "16": 0.15978836,
+        "17": 0.12275132,
+        "18": 0.15238095,
+        "19": 0.14497355,
+        "20": 0.14497355,
+        "21": 0.11534392,
+        "22": 0.15238095,
+        "23": 0.13756614,
+        "24": 0.15978836,
+        "25": 0.15978836,
+        "26": 0.15238095,
+        "27": 0.11534392,
+        "28": 0.13015873,
+        "29": 0.13756614,
+        "30": 0.12275132,
+        "31": 0.14497355,
+        "32": 0.14497355,
+        "33": 0.13756614,
+        "34": 0.14497355,
+        "35": 0.16719577
+      },
+      "holdout_ticket_rows": [
+        {
+          "draw_id": 14316,
+          "target_index": 60,
+          "prefix_count": 60,
+          "hits": 3,
+          "brier": 4.099533042379057,
+          "ticket": [
+            2,
+            7,
+            9,
+            19,
+            25
+          ]
+        },
+        {
+          "draw_id": 14317,
+          "target_index": 61,
+          "prefix_count": 61,
+          "hits": 1,
+          "brier": 4.27219742066105,
+          "ticket": [
+            2,
+            7,
+            9,
+            19,
+            25
+          ]
+        },
+        {
+          "draw_id": 14318,
+          "target_index": 62,
+          "prefix_count": 62,
+          "hits": 2,
+          "brier": 4.154441795334441,
+          "ticket": [
+            2,
+            7,
+            9,
+            19,
+            25
+          ]
+        },
+        {
+          "draw_id": 14319,
+          "target_index": 63,
+          "prefix_count": 63,
+          "hits": 1,
+          "brier": 4.221574343809649,
+          "ticket": [
+            2,
+            6,
+            9,
+            19,
+            25
+          ]
+        },
+        {
+          "draw_id": 14320,
+          "target_index": 64,
+          "prefix_count": 64,
+          "hits": 0,
+          "brier": 4.267844389051436,
+          "ticket": [
+            2,
+            6,
+            7,
+            9,
+            19
+          ]
+        },
+        {
+          "draw_id": 14321,
+          "target_index": 65,
+          "prefix_count": 65,
+          "hits": 2,
+          "brier": 4.173657142419493,
+          "ticket": [
+            2,
+            6,
+            7,
+            9,
+            19
+          ]
+        },
+        {
+          "draw_id": 14322,
+          "target_index": 66,
+          "prefix_count": 66,
+          "hits": 0,
+          "brier": 4.2784320865270695,
+          "ticket": [
+            2,
+            6,
+            7,
+            9,
+            16
+          ]
+        },
+        {
+          "draw_id": 14323,
+          "target_index": 67,
+          "prefix_count": 67,
+          "hits": 1,
+          "brier": 4.3429724834429875,
+          "ticket": [
+            2,
+            6,
+            7,
+            9,
+            16
+          ]
+        },
+        {
+          "draw_id": 14324,
+          "target_index": 68,
+          "prefix_count": 68,
+          "hits": 2,
+          "brier": 4.154451072010383,
+          "ticket": [
+            2,
+            6,
+            7,
+            16,
+            19
+          ]
+        },
+        {
+          "draw_id": 14325,
+          "target_index": 69,
+          "prefix_count": 69,
+          "hits": 1,
+          "brier": 4.256207734504149,
+          "ticket": [
+            2,
+            6,
+            7,
+            19,
+            31
+          ]
+        },
+        {
+          "draw_id": 14326,
+          "target_index": 70,
+          "prefix_count": 70,
+          "hits": 0,
+          "brier": 4.43319727965195,
+          "ticket": [
+            2,
+            6,
+            7,
+            19,
+            31
+          ]
+        },
+        {
+          "draw_id": 14327,
+          "target_index": 71,
+          "prefix_count": 71,
+          "hits": 1,
+          "brier": 4.193408940298182,
+          "ticket": [
+            2,
+            6,
+            7,
+            19,
+            31
+          ]
+        },
+        {
+          "draw_id": 14328,
+          "target_index": 72,
+          "prefix_count": 72,
+          "hits": 1,
+          "brier": 4.292302509361741,
+          "ticket": [
+            2,
+            6,
+            7,
+            15,
+            31
+          ]
+        },
+        {
+          "draw_id": 14329,
+          "target_index": 73,
+          "prefix_count": 73,
+          "hits": 0,
+          "brier": 4.260655496718809,
+          "ticket": [
+            2,
+            6,
+            7,
+            15,
+            31
+          ]
+        },
+        {
+          "draw_id": 14330,
+          "target_index": 74,
+          "prefix_count": 74,
+          "hits": 1,
+          "brier": 4.376086669471036,
+          "ticket": [
+            2,
+            6,
+            7,
+            15,
+            31
+          ]
+        },
+        {
+          "draw_id": 14331,
+          "target_index": 75,
+          "prefix_count": 75,
+          "hits": 2,
+          "brier": 4.272278630468236,
+          "ticket": [
+            2,
+            7,
+            15,
+            24,
+            31
+          ]
+        },
+        {
+          "draw_id": 14332,
+          "target_index": 76,
+          "prefix_count": 76,
+          "hits": 0,
+          "brier": 4.313541340764348,
+          "ticket": [
+            2,
+            6,
+            15,
+            24,
+            31
+          ]
+        },
+        {
+          "draw_id": 14333,
+          "target_index": 77,
+          "prefix_count": 77,
+          "hits": 0,
+          "brier": 4.283003826587579,
+          "ticket": [
+            2,
+            6,
+            15,
+            24,
+            31
+          ]
+        },
+        {
+          "draw_id": 14334,
+          "target_index": 78,
+          "prefix_count": 78,
+          "hits": 0,
+          "brier": 4.39432554345496,
+          "ticket": [
+            2,
+            6,
+            15,
+            24,
+            31
+          ]
+        },
+        {
+          "draw_id": 14335,
+          "target_index": 79,
+          "prefix_count": 79,
+          "hits": 0,
+          "brier": 4.346766038254441,
+          "ticket": [
+            2,
+            6,
+            15,
+            24,
+            31
+          ]
+        },
+        {
+          "draw_id": 14336,
+          "target_index": 80,
+          "prefix_count": 80,
+          "hits": 2,
+          "brier": 4.264823116371432,
+          "ticket": [
+            2,
+            6,
+            15,
+            24,
+            31
+          ]
+        },
+        {
+          "draw_id": 14337,
+          "target_index": 81,
+          "prefix_count": 81,
+          "hits": 1,
+          "brier": 4.235306607622678,
+          "ticket": [
+            2,
+            15,
+            24,
+            26,
+            31
+          ]
+        },
+        {
+          "draw_id": 14338,
+          "target_index": 82,
+          "prefix_count": 82,
+          "hits": 1,
+          "brier": 4.188952547554996,
+          "ticket": [
+            2,
+            15,
+            24,
+            26,
+            31
+          ]
+        },
+        {
+          "draw_id": 14339,
+          "target_index": 83,
+          "prefix_count": 83,
+          "hits": 0,
+          "brier": 4.329441457976702,
+          "ticket": [
+            2,
+            15,
+            24,
+            26,
+            31
+          ]
+        },
+        {
+          "draw_id": 14340,
+          "target_index": 84,
+          "prefix_count": 84,
+          "hits": 1,
+          "brier": 4.233458088947207,
+          "ticket": [
+            2,
+            15,
+            24,
+            26,
+            31
+          ]
+        },
+        {
+          "draw_id": 14341,
+          "target_index": 85,
+          "prefix_count": 85,
+          "hits": 1,
+          "brier": 4.254940476115768,
+          "ticket": [
+            2,
+            15,
+            24,
+            26,
+            31
+          ]
+        },
+        {
+          "draw_id": 14342,
+          "target_index": 86,
+          "prefix_count": 86,
+          "hits": 2,
+          "brier": 4.160547190842557,
+          "ticket": [
+            2,
+            15,
+            24,
+            31,
+            35
+          ]
+        },
+        {
+          "draw_id": 14343,
+          "target_index": 87,
+          "prefix_count": 87,
+          "hits": 0,
+          "brier": 4.198084232007691,
+          "ticket": [
+            2,
+            14,
+            15,
+            24,
+            35
+          ]
+        },
+        {
+          "draw_id": 14344,
+          "target_index": 88,
+          "prefix_count": 88,
+          "hits": 1,
+          "brier": 4.267848880554052,
+          "ticket": [
+            2,
+            14,
+            15,
+            24,
+            35
+          ]
+        },
+        {
+          "draw_id": 14345,
+          "target_index": 89,
+          "prefix_count": 89,
+          "hits": 1,
+          "brier": 4.208023635793231,
+          "ticket": [
+            2,
+            14,
+            15,
+            24,
+            26
+          ]
+        },
+        {
+          "draw_id": 14346,
+          "target_index": 90,
+          "prefix_count": 90,
+          "hits": 1,
+          "brier": 4.228681142648746,
+          "ticket": [
+            2,
+            14,
+            15,
+            24,
+            26
+          ]
+        },
+        {
+          "draw_id": 14347,
+          "target_index": 91,
+          "prefix_count": 91,
+          "hits": 0,
+          "brier": 4.360292265446568,
+          "ticket": [
+            2,
+            6,
+            14,
+            15,
+            26
+          ]
+        },
+        {
+          "draw_id": 14348,
+          "target_index": 92,
+          "prefix_count": 92,
+          "hits": 0,
+          "brier": 4.396375650454534,
+          "ticket": [
+            2,
+            6,
+            14,
+            15,
+            26
+          ]
+        },
+        {
+          "draw_id": 14349,
+          "target_index": 93,
+          "prefix_count": 93,
+          "hits": 1,
+          "brier": 4.338413783780896,
+          "ticket": [
+            2,
+            6,
+            14,
+            15,
+            26
+          ]
+        },
+        {
+          "draw_id": 14350,
+          "target_index": 94,
+          "prefix_count": 94,
+          "hits": 1,
+          "brier": 4.249881960972128,
+          "ticket": [
+            2,
+            13,
+            14,
+            15,
+            26
+          ]
+        },
+        {
+          "draw_id": 14351,
+          "target_index": 95,
+          "prefix_count": 95,
+          "hits": 0,
+          "brier": 4.34664412544238,
+          "ticket": [
+            2,
+            13,
+            14,
+            15,
+            24
+          ]
+        },
+        {
+          "draw_id": 14352,
+          "target_index": 96,
+          "prefix_count": 96,
+          "hits": 2,
+          "brier": 4.137321334300365,
+          "ticket": [
+            2,
+            13,
+            14,
+            15,
+            24
+          ]
+        },
+        {
+          "draw_id": 14353,
+          "target_index": 97,
+          "prefix_count": 97,
+          "hits": 1,
+          "brier": 4.293224452403994,
+          "ticket": [
+            2,
+            13,
+            14,
+            15,
+            24
+          ]
+        },
+        {
+          "draw_id": 14354,
+          "target_index": 98,
+          "prefix_count": 98,
+          "hits": 1,
+          "brier": 4.2675108824403285,
+          "ticket": [
+            2,
+            13,
+            14,
+            15,
+            35
+          ]
+        },
+        {
+          "draw_id": 14355,
+          "target_index": 99,
+          "prefix_count": 99,
+          "hits": 2,
+          "brier": 4.3016898451448045,
+          "ticket": [
+            2,
+            13,
+            14,
+            15,
+            35
+          ]
+        }
+      ]
+    },
+    "2": {
+      "selected_model": "cold",
+      "selection_30": {
+        "uniform": {
+          "draws": 30,
+          "hits": 22,
+          "brier_mean": 4.285714285714287
+        },
+        "frequency": {
+          "draws": 30,
+          "hits": 19,
+          "brier_mean": 4.335489130833156
+        },
+        "exp_5": {
+          "draws": 30,
+          "hits": 18,
+          "brier_mean": 4.379860495590046
+        },
+        "exp_20": {
+          "draws": 30,
+          "hits": 13,
+          "brier_mean": 4.377130565951386
+        },
+        "exp_60": {
+          "draws": 30,
+          "hits": 15,
+          "brier_mean": 4.376438592308352
+        },
+        "cold": {
+          "draws": 30,
+          "hits": 24,
+          "brier_mean": 4.2925127431186025
+        },
+        "markov_10": {
+          "draws": 30,
+          "hits": 16,
+          "brier_mean": 4.374350143138729
+        },
+        "markov_30": {
+          "draws": 30,
+          "hits": 17,
+          "brier_mean": 4.348208136055494
+        },
+        "neighbor_5": {
+          "draws": 30,
+          "hits": 22,
+          "brier_mean": 4.532812026518937
+        },
+        "neighbor_15": {
+          "draws": 30,
+          "hits": 19,
+          "brier_mean": 4.466700239253929
+        },
+        "ridge_20": {
+          "draws": 30,
+          "hits": 18,
+          "brier_mean": 4.385733647204897
+        },
+        "ridge_80": {
+          "draws": 30,
+          "hits": 18,
+          "brier_mean": 4.369894621297161
+        }
+      },
+      "test_40": {
+        "uniform": {
+          "draws": 40,
+          "hits": 33,
+          "brier_mean": 4.2857142857142865,
+          "p_one_sided_hits_fixed_ticket": 0.19736875643360285
+        },
+        "frequency": {
+          "draws": 40,
+          "hits": 25,
+          "brier_mean": 4.335168779383025,
+          "p_one_sided_hits_fixed_ticket": 0.8083089031438784
+        },
+        "exp_5": {
+          "draws": 40,
+          "hits": 32,
+          "brier_mean": 4.312964380509355,
+          "p_one_sided_hits_fixed_ticket": 0.26052311290057784
+        },
+        "exp_20": {
+          "draws": 40,
+          "hits": 26,
+          "brier_mean": 4.33351407703441,
+          "p_one_sided_hits_fixed_ticket": 0.7420535634817669
+        },
+        "exp_60": {
+          "draws": 40,
+          "hits": 25,
+          "brier_mean": 4.342673973360691,
+          "p_one_sided_hits_fixed_ticket": 0.8083089031438784
+        },
+        "cold": {
+          "draws": 40,
+          "hits": 39,
+          "brier_mean": 4.2660659931853,
+          "p_one_sided_hits_fixed_ticket": 0.018859113353468404
+        },
+        "markov_10": {
+          "draws": 40,
+          "hits": 28,
+          "brier_mean": 4.380655327873484,
+          "p_one_sided_hits_fixed_ticket": 0.5839042097984992
+        },
+        "markov_30": {
+          "draws": 40,
+          "hits": 30,
+          "brier_mean": 4.353662215493176,
+          "p_one_sided_hits_fixed_ticket": 0.4135806208313081
+        },
+        "neighbor_5": {
+          "draws": 40,
+          "hits": 28,
+          "brier_mean": 4.533646506236754,
+          "p_one_sided_hits_fixed_ticket": 0.5839042097984992
+        },
+        "neighbor_15": {
+          "draws": 40,
+          "hits": 29,
+          "brier_mean": 4.479316693787799,
+          "p_one_sided_hits_fixed_ticket": 0.49835476821699254
+        },
+        "ridge_20": {
+          "draws": 40,
+          "hits": 26,
+          "brier_mean": 4.405262528291791,
+          "p_one_sided_hits_fixed_ticket": 0.7420535634817669
+        },
+        "ridge_80": {
+          "draws": 40,
+          "hits": 28,
+          "brier_mean": 4.36370563210501,
+          "p_one_sided_hits_fixed_ticket": 0.5839042097984992
+        }
+      },
+      "selected_test_score": {
+        "draws": 40,
+        "hits": 39,
+        "brier_mean": 4.2660659931853,
+        "p_one_sided_hits_fixed_ticket": 0.018859113353468404
+      },
+      "uniform_baseline_test": {
+        "draws": 40,
+        "hits": 33,
+        "brier_mean": 4.2857142857142865,
+        "p_one_sided_hits_fixed_ticket": 0.19736875643360285
+      },
+      "selected_full_data_ticket": [
+        2,
+        11,
+        13,
+        14,
+        35
+      ],
+      "selected_full_data_marginals": {
+        "1": 0.13015873,
+        "2": 0.17460318,
+        "3": 0.13015873,
+        "4": 0.09312169,
+        "5": 0.10793651,
+        "6": 0.15238095,
+        "7": 0.13756614,
+        "8": 0.15238095,
+        "9": 0.14497355,
+        "10": 0.12275132,
+        "11": 0.15978836,
+        "12": 0.15238095,
+        "13": 0.16719577,
+        "14": 0.16719577,
+        "15": 0.15978836,
+        "16": 0.15978836,
+        "17": 0.12275132,
+        "18": 0.15238095,
+        "19": 0.14497355,
+        "20": 0.14497355,
+        "21": 0.11534392,
+        "22": 0.15238095,
+        "23": 0.13756614,
+        "24": 0.15978836,
+        "25": 0.15978836,
+        "26": 0.15238095,
+        "27": 0.11534392,
+        "28": 0.13015873,
+        "29": 0.13756614,
+        "30": 0.12275132,
+        "31": 0.14497355,
+        "32": 0.14497355,
+        "33": 0.13756614,
+        "34": 0.14497355,
+        "35": 0.16719577
+      },
+      "holdout_ticket_rows": [
+        {
+          "draw_id": 14316,
+          "target_index": 60,
+          "prefix_count": 59,
+          "hits": 3,
+          "brier": 4.092608160637,
+          "ticket": [
+            2,
+            7,
+            9,
+            19,
+            25
+          ]
+        },
+        {
+          "draw_id": 14317,
+          "target_index": 61,
+          "prefix_count": 60,
+          "hits": 1,
+          "brier": 4.289006727457499,
+          "ticket": [
+            2,
+            7,
+            9,
+            19,
+            25
+          ]
+        },
+        {
+          "draw_id": 14318,
+          "target_index": 62,
+          "prefix_count": 61,
+          "hits": 2,
+          "brier": 4.1471974200884665,
+          "ticket": [
+            2,
+            7,
+            9,
+            19,
+            25
+          ]
+        },
+        {
+          "draw_id": 14319,
+          "target_index": 63,
+          "prefix_count": 62,
+          "hits": 1,
+          "brier": 4.195678908925396,
+          "ticket": [
+            2,
+            7,
+            9,
+            19,
+            25
+          ]
+        },
+        {
+          "draw_id": 14320,
+          "target_index": 64,
+          "prefix_count": 63,
+          "hits": 1,
+          "brier": 4.241982507168438,
+          "ticket": [
+            2,
+            6,
+            9,
+            19,
+            25
+          ]
+        },
+        {
+          "draw_id": 14321,
+          "target_index": 65,
+          "prefix_count": 64,
+          "hits": 2,
+          "brier": 4.1870363078732,
+          "ticket": [
+            2,
+            6,
+            7,
+            9,
+            19
+          ]
+        },
+        {
+          "draw_id": 14322,
+          "target_index": 66,
+          "prefix_count": 65,
+          "hits": 0,
+          "brier": 4.293657142969173,
+          "ticket": [
+            2,
+            6,
+            7,
+            9,
+            19
+          ]
+        },
+        {
+          "draw_id": 14323,
+          "target_index": 67,
+          "prefix_count": 66,
+          "hits": 1,
+          "brier": 4.357640007681974,
+          "ticket": [
+            2,
+            6,
+            7,
+            9,
+            16
+          ]
+        },
+        {
+          "draw_id": 14324,
+          "target_index": 68,
+          "prefix_count": 67,
+          "hits": 2,
+          "brier": 4.146894051172269,
+          "ticket": [
+            2,
+            6,
+            7,
+            9,
+            16
+          ]
+        },
+        {
+          "draw_id": 14325,
+          "target_index": 69,
+          "prefix_count": 68,
+          "hits": 1,
+          "brier": 4.270955926912986,
+          "ticket": [
+            2,
+            6,
+            7,
+            16,
+            19
+          ]
+        },
+        {
+          "draw_id": 14326,
+          "target_index": 70,
+          "prefix_count": 69,
+          "hits": 0,
+          "brier": 4.42928465837388,
+          "ticket": [
+            2,
+            6,
+            7,
+            19,
+            31
+          ]
+        },
+        {
+          "draw_id": 14327,
+          "target_index": 71,
+          "prefix_count": 70,
+          "hits": 1,
+          "brier": 4.204625850033511,
+          "ticket": [
+            2,
+            6,
+            7,
+            19,
+            31
+          ]
+        },
+        {
+          "draw_id": 14328,
+          "target_index": 72,
+          "prefix_count": 71,
+          "hits": 1,
+          "brier": 4.306616487986561,
+          "ticket": [
+            2,
+            6,
+            7,
+            19,
+            31
+          ]
+        },
+        {
+          "draw_id": 14329,
+          "target_index": 73,
+          "prefix_count": 72,
+          "hits": 0,
+          "brier": 4.254919331620408,
+          "ticket": [
+            2,
+            6,
+            7,
+            15,
+            31
+          ]
+        },
+        {
+          "draw_id": 14330,
+          "target_index": 74,
+          "prefix_count": 73,
+          "hits": 1,
+          "brier": 4.353248089735537,
+          "ticket": [
+            2,
+            6,
+            7,
+            15,
+            31
+          ]
+        },
+        {
+          "draw_id": 14331,
+          "target_index": 75,
+          "prefix_count": 74,
+          "hits": 2,
+          "brier": 4.265994925847475,
+          "ticket": [
+            2,
+            6,
+            7,
+            15,
+            31
+          ]
+        },
+        {
+          "draw_id": 14332,
+          "target_index": 76,
+          "prefix_count": 75,
+          "hits": 0,
+          "brier": 4.326824085263545,
+          "ticket": [
+            2,
+            7,
+            15,
+            24,
+            31
+          ]
+        },
+        {
+          "draw_id": 14333,
+          "target_index": 77,
+          "prefix_count": 76,
+          "hits": 0,
+          "brier": 4.2955233226637946,
+          "ticket": [
+            2,
+            6,
+            15,
+            24,
+            31
+          ]
+        },
+        {
+          "draw_id": 14334,
+          "target_index": 78,
+          "prefix_count": 77,
+          "hits": 0,
+          "brier": 4.408003827160162,
+          "ticket": [
+            2,
+            6,
+            15,
+            24,
+            31
+          ]
+        },
+        {
+          "draw_id": 14335,
+          "target_index": 79,
+          "prefix_count": 78,
+          "hits": 0,
+          "brier": 4.358927313204316,
+          "ticket": [
+            2,
+            6,
+            15,
+            24,
+            31
+          ]
+        },
+        {
+          "draw_id": 14336,
+          "target_index": 80,
+          "prefix_count": 79,
+          "hits": 2,
+          "brier": 4.276590599336499,
+          "ticket": [
+            2,
+            6,
+            15,
+            24,
+            31
+          ]
+        },
+        {
+          "draw_id": 14337,
+          "target_index": 81,
+          "prefix_count": 80,
+          "hits": 1,
+          "brier": 4.247431811943941,
+          "ticket": [
+            2,
+            6,
+            15,
+            24,
+            31
+          ]
+        },
+        {
+          "draw_id": 14338,
+          "target_index": 82,
+          "prefix_count": 81,
+          "hits": 1,
+          "brier": 4.166341090065391,
+          "ticket": [
+            2,
+            15,
+            24,
+            26,
+            31
+          ]
+        },
+        {
+          "draw_id": 14339,
+          "target_index": 83,
+          "prefix_count": 82,
+          "hits": 0,
+          "brier": 4.325704684933548,
+          "ticket": [
+            2,
+            15,
+            24,
+            26,
+            31
+          ]
+        },
+        {
+          "draw_id": 14340,
+          "target_index": 84,
+          "prefix_count": 83,
+          "hits": 1,
+          "brier": 4.227746542256633,
+          "ticket": [
+            2,
+            15,
+            24,
+            26,
+            31
+          ]
+        },
+        {
+          "draw_id": 14341,
+          "target_index": 85,
+          "prefix_count": 84,
+          "hits": 1,
+          "brier": 4.2334580889472075,
+          "ticket": [
+            2,
+            15,
+            24,
+            26,
+            31
+          ]
+        },
+        {
+          "draw_id": 14342,
+          "target_index": 86,
+          "prefix_count": 85,
+          "hits": 2,
+          "brier": 4.171607142400712,
+          "ticket": [
+            2,
+            15,
+            24,
+            26,
+            31
+          ]
+        },
+        {
+          "draw_id": 14343,
+          "target_index": 87,
+          "prefix_count": 86,
+          "hits": 1,
+          "brier": 4.177076116538106,
+          "ticket": [
+            2,
+            15,
+            24,
+            31,
+            35
+          ]
+        },
+        {
+          "draw_id": 14344,
+          "target_index": 88,
+          "prefix_count": 87,
+          "hits": 1,
+          "brier": 4.28005144549791,
+          "ticket": [
+            2,
+            14,
+            15,
+            24,
+            35
+          ]
+        },
+        {
+          "draw_id": 14345,
+          "target_index": 89,
+          "prefix_count": 88,
+          "hits": 1,
+          "brier": 4.202808229849618,
+          "ticket": [
+            2,
+            14,
+            15,
+            24,
+            35
+          ]
+        },
+        {
+          "draw_id": 14346,
+          "target_index": 90,
+          "prefix_count": 89,
+          "hits": 1,
+          "brier": 4.224152668125178,
+          "ticket": [
+            2,
+            14,
+            15,
+            24,
+            26
+          ]
+        },
+        {
+          "draw_id": 14347,
+          "target_index": 91,
+          "prefix_count": 90,
+          "hits": 0,
+          "brier": 4.372681143308362,
+          "ticket": [
+            2,
+            14,
+            15,
+            24,
+            26
+          ]
+        },
+        {
+          "draw_id": 14348,
+          "target_index": 92,
+          "prefix_count": 91,
+          "hits": 0,
+          "brier": 4.392038297338018,
+          "ticket": [
+            2,
+            6,
+            14,
+            15,
+            26
+          ]
+        },
+        {
+          "draw_id": 14349,
+          "target_index": 93,
+          "prefix_count": 92,
+          "hits": 1,
+          "brier": 4.333383524181736,
+          "ticket": [
+            2,
+            6,
+            14,
+            15,
+            26
+          ]
+        },
+        {
+          "draw_id": 14350,
+          "target_index": 94,
+          "prefix_count": 93,
+          "hits": 1,
+          "brier": 4.244663783351458,
+          "ticket": [
+            2,
+            6,
+            14,
+            15,
+            26
+          ]
+        },
+        {
+          "draw_id": 14351,
+          "target_index": 95,
+          "prefix_count": 94,
+          "hits": 0,
+          "brier": 4.3429052172121905,
+          "ticket": [
+            2,
+            13,
+            14,
+            15,
+            26
+          ]
+        },
+        {
+          "draw_id": 14352,
+          "target_index": 96,
+          "prefix_count": 95,
+          "hits": 2,
+          "brier": 4.146644124526246,
+          "ticket": [
+            2,
+            13,
+            14,
+            15,
+            24
+          ]
+        },
+        {
+          "draw_id": 14353,
+          "target_index": 97,
+          "prefix_count": 96,
+          "hits": 1,
+          "brier": 4.305260266367347,
+          "ticket": [
+            2,
+            13,
+            14,
+            15,
+            24
+          ]
+        },
+        {
+          "draw_id": 14354,
+          "target_index": 98,
+          "prefix_count": 97,
+          "hits": 1,
+          "brier": 4.262921421962156,
+          "ticket": [
+            2,
+            13,
+            14,
+            15,
+            24
+          ]
+        },
+        {
+          "draw_id": 14355,
+          "target_index": 99,
+          "prefix_count": 98,
+          "hits": 2,
+          "brier": 4.282548476494173,
+          "ticket": [
+            2,
+            13,
+            14,
+            15,
+            35
+          ]
+        }
+      ]
+    }
+  },
+  "precommit_prediction": {
+    "draw_id": 14357,
+    "last_known_draw_id": 14355,
+    "numbers": [
+      2,
+      11,
+      13,
+      14,
+      35
+    ],
+    "model": "cold",
+    "scope": "two-step forecast without knowledge of draw #14356",
+    "data_leakage": false,
+    "selection": "target 14357 numbers frozen independently of #14356 and #14357"
+  }
+}
