@@ -21,6 +21,11 @@ class TestReplay(unittest.TestCase):
         d=evaluate(archive)
         self.assertEqual(d['exact_both_draws'],0)
         self.assertEqual([x['second_hits'] for x in d['replayed_seed_candidates']],[0,0,1,1,1])
+    def test_compact_archive_schema(self):
+        archive=json.loads((E/'extra5_multifamily_blind_14250.json').read_text())
+        compact={'tested':archive.get('total_attempted', archive.get('tested')), 'first_draw_exact_fits':archive.get('total_first_draw_exact_fits', archive.get('first_draw_exact_fits')),
+                 'families':[{'family':f['family'], 'models':[{'seed_index':x['seed_index'], 'second_ticket_pre_reveal':x.get('hidden_next_prediction', x.get('second_ticket_pre_reveal'))} for x in f.get('fits', f.get('models', []))]} for f in archive['families']]}
+        self.assertEqual(evaluate(compact),evaluate(archive))
     def test_archive_corruption_rejected(self):
         archive=json.loads((E/'extra5_multifamily_blind_14250.json').read_text())
         archive['total_first_draw_exact_fits']=10

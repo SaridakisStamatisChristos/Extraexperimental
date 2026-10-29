@@ -7,7 +7,7 @@ User-provided consecutive EXTRA 5 results from **5 September 2026**:
 | #14249 | 2, 4, 30, 32, 35 |
 | #14250 | 2, 5, 9, 30, 33 |
 
-Actual #14250 was revealed **after** the previous multi-family blind prediction was committed; that primary AES prediction **4,6,19,27,31** scored **0/5**. Of the other four precomputed alternatives, two scored 0 and three scored 1? **Correct complete histogram across all five:** two scored **0**, three scored **1**. Never reselect retrospectively.
+Actual #14250 was revealed **after** the previous multi-family blind prediction was committed; that primary AES prediction **4,6,19,27,31** scored **0/5**. Across all five precomputed candidates, two scored **0** and three scored **1**. Never reselect retrospectively.
 
 ## A. Uninterrupted state, no reseeding: archived historical-family test
 

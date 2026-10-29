@@ -28,35 +28,40 @@ def affine_fit(a):
 
 
 def evaluate(archive):
-    if archive['total_attempted'] != 1640000 or archive['total_first_draw_exact_fits'] != 5:
+    """Accept both previous long-form and compact archived result schemas."""
+    attempted = archive.get('total_attempted', archive.get('tested'))
+    fit_count = archive.get('total_first_draw_exact_fits', archive.get('first_draw_exact_fits'))
+    if attempted != 1640000 or fit_count != 5:
         raise ValueError('unexpected historical search archive')
-    fits = [x for f in archive['families'] for x in f['fits']]
+    fits = [(f['family'], x) for f in archive['families']
+            for x in f.get('fits', f.get('models', []))]
     if len(fits) != 5:
         raise ValueError('incomplete first-ticket match list')
     checked = []
-    for candidate in fits:
-        raw = stream(candidate['family'], candidate['seed_index'], 128)
+    for family, candidate in fits:
+        seed = candidate['seed_index']
+        expected_second = candidate.get('hidden_next_prediction', candidate.get('second_ticket_pre_reveal'))
+        raw = stream(family, seed, 128)
         observed1, pos = decode(raw)
         observed2, _ = decode(raw, pos)
-        if observed1 != FIRST or list(observed2) != candidate['hidden_next_prediction']:
+        if observed1 != FIRST or list(observed2) != expected_second:
             raise AssertionError('stored first-ticket fit / continuation fails replay')
-        checked.append({'family': candidate['family'], 'seed': candidate['seed_index'],
+        checked.append({'family': family, 'seed': seed,
                         'first': list(observed1), 'second': list(observed2),
                         'second_hits': len(set(observed2) & set(SECOND)),
                         'double_exact': observed2 == SECOND})
     return {'training':[{'draw_id': 14249, 'numbers': list(FIRST)},
                         {'draw_id': 14250, 'numbers': list(SECOND)}],
             'unseen_draw_id':14251,'unseen_result_not_consulted':True,
-            'previous_seed_hypotheses_tested':archive['total_attempted'],
+            'previous_seed_hypotheses_tested':attempted,
             'exact_first_draw_seed_candidates':len(checked),
             'exact_both_draws':sum(x['double_exact'] for x in checked),
             'replayed_seed_candidates':checked,
             'ideal_uniform_pair_probability':1/(N*N),
-            'ideal_uniform_expected_pair_hits':archive['total_attempted']/(N*N),
+            'ideal_uniform_expected_pair_hits':attempted/(N*N),
             'illustrative_affine_rank_fit':[affine_fit(a) for a in (1,3,5)],
             'locked_primary_choice':'a=1; c=(r2-r1) mod N; predict unrank((r2+c) mod N)',
             'warning':'Affine generator is an exact two-observation interpolation, not actual Allwyn software. Production seed, reseed behavior and mapping unknown.'}
-
 
 def main():
     archive=json.loads(Path(__file__).with_name('extra5_multifamily_blind_14250.json').read_text())
