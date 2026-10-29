@@ -21,7 +21,7 @@ Fixed 5/35 sampler: 32-bit generator words become **continuous big-endian bytes*
 | xorshift96 (16,5,1 shifts; 3×32 state) | 96 bits | unique 96/96 GF(2) inversion | **4/4 exact fit** |
 | xorshift128 (11,19,8 shifts; 4×32 state) | 128 bits | 96 independent constraints | **4/4 exact fit; 2^32 states for fixed raw branch** |
 
-Canonical xorshift96 seed: `92a140efbdfe8769d18dcbdc`. Forward replay of the unchanged fixed transition and 24-bit sampler yields **all four observed lottery tickets exactly**. First fifth ticket is **9,24,25,30,33** for **draw #14253**, locked *before user disclosure* at Git commit `db050505c8a184bed0390fed1aec0f4f494beac9`'s parent or earlier; see [immutable primary lock](../experiments/extra5_draw14253_XORSHIFT96_STATE_LOCK_before_reveal.json). For an independent witness, switch only the first training raw word from rank 55817 to rank+324632 = 380449 and invert the *same algorithm*: seed `2c5afd000d825d1fcaadd647` reproduces all four, yet gives **15,17,22,29,35** for #14253.
+Canonical xorshift96 seed: `92a140efbdfe8769d18dcbdc`. Forward replay of the unchanged fixed transition and 24-bit sampler yields **all four observed lottery tickets exactly**. First fifth ticket is **9,24,25,30,33** for **draw #14253**, locked *before user disclosure* in the separate Git commit `db050505c8a184bed0390fed1aec0f4f494beac9`; see [immutable primary lock](../experiments/extra5_draw14253_XORSHIFT96_STATE_LOCK_before_reveal.json). For an independent witness, switch only the first training raw word from rank 55817 to rank+324632 = 380449 and invert the *same algorithm*: seed `2c5afd000d825d1fcaadd647` reproduces all four, yet gives **15,17,22,29,35** for #14253.
 
 ## Critical non-identifiability
 
