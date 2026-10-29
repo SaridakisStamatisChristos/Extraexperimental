@@ -1,5 +1,3 @@
-<PARSED TEXT FOR SHEET: 1 / 1 TABS
-TAB NAME: extra5_last20_model_comparisons.csv>
 index,draw_id,algorithm,sampler,actual,simulated,matches
 0,14336,BBS,remove,5 6 8 24 30,14 18 20 33 35,0
 1,14337,BBS,remove,7 9 10 15 21,2 15 20 33 35,1

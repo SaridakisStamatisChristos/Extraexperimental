@@ -1,0 +1,436 @@
+{
+  "date_snapshot": "2026-10-29 10:32 Europe/Athens",
+  "source": "https://numerics.gr/extra-5/kliroseis-apotelesmata",
+  "algorithm_specification": "Illustrative RNG variants, not actual lottery generator or seeds",
+  "seed_derivation": "SHA256 counter expansion using ASCII domain EXTRA5-2026-10-29-ALGORITHM-DEMO-V1;no-fitting;",
+  "sampling": "Rejection sampling of 8-bit bytes to unbiased 0..n-1; five distinct choices without replacement",
+  "theoretical_expected_matches_per_20_draws": 14.285714285714286,
+  "theoretical_sd_matches_per_20_draws": 3.286992809345873,
+  "null_hit_probability_3_or_more_per_draw": 0.013864930136277384,
+  "observed": {
+    "draws": 20,
+    "unique_numbers_seen": 32,
+    "frequencies": {
+      "1": 3,
+      "2": 2,
+      "3": 2,
+      "4": 1,
+      "5": 5,
+      "6": 4,
+      "7": 5,
+      "8": 2,
+      "9": 4,
+      "10": 5,
+      "11": 0,
+      "12": 1,
+      "13": 1,
+      "14": 1,
+      "15": 4,
+      "16": 2,
+      "17": 5,
+      "18": 2,
+      "19": 3,
+      "20": 1,
+      "21": 4,
+      "22": 2,
+      "23": 0,
+      "24": 4,
+      "25": 1,
+      "26": 4,
+      "27": 6,
+      "28": 3,
+      "29": 4,
+      "30": 4,
+      "31": 7,
+      "32": 4,
+      "33": 0,
+      "34": 2,
+      "35": 2
+    },
+    "average_numbers_per_draw": 5,
+    "consecutive_draw_overlap_total": 17,
+    "consecutive_draw_overlap_mean": 0.8947368421052632,
+    "expected_consecutive_draw_overlap_total": 13.571428571428571,
+    "largest_frequency": 7,
+    "min_frequency": 0
+  },
+  "comparison": [
+    {
+      "algorithm": "SHA256-counter",
+      "sampler": "remove",
+      "total_matches": 20,
+      "mean_matches_per_draw": 1,
+      "draws_with_3_or_more": 1,
+      "draws_with_4_or_more": 0,
+      "exact_5_of_5": 0,
+      "max_match_in_one_draw": 3,
+      "one_sided_p_uncorrected": 0.06019587274071339,
+      "bonferroni_p_for_14_predeclared_models": 0.8427422183699875
+    },
+    {
+      "algorithm": "BBS",
+      "sampler": "remove",
+      "total_matches": 18,
+      "mean_matches_per_draw": 0.9,
+      "draws_with_3_or_more": 0,
+      "draws_with_4_or_more": 0,
+      "exact_5_of_5": 0,
+      "max_match_in_one_draw": 2,
+      "one_sided_p_uncorrected": 0.16339583813125116,
+      "bonferroni_p_for_14_predeclared_models": 1
+    },
+    {
+      "algorithm": "SHA256-counter",
+      "sampler": "partial-fisher-yates",
+      "total_matches": 18,
+      "mean_matches_per_draw": 0.9,
+      "draws_with_3_or_more": 1,
+      "draws_with_4_or_more": 0,
+      "exact_5_of_5": 0,
+      "max_match_in_one_draw": 3,
+      "one_sided_p_uncorrected": 0.16339583813125116,
+      "bonferroni_p_for_14_predeclared_models": 1
+    },
+    {
+      "algorithm": "MT19937",
+      "sampler": "remove",
+      "total_matches": 17,
+      "mean_matches_per_draw": 0.85,
+      "draws_with_3_or_more": 1,
+      "draws_with_4_or_more": 0,
+      "exact_5_of_5": 0,
+      "max_match_in_one_draw": 3,
+      "one_sided_p_uncorrected": 0.24546062536579047,
+      "bonferroni_p_for_14_predeclared_models": 1
+    },
+    {
+      "algorithm": "DES-CFB",
+      "sampler": "remove",
+      "total_matches": 16,
+      "mean_matches_per_draw": 0.8,
+      "draws_with_3_or_more": 1,
+      "draws_with_4_or_more": 0,
+      "exact_5_of_5": 0,
+      "max_match_in_one_draw": 3,
+      "one_sided_p_uncorrected": 0.3471622386782702,
+      "bonferroni_p_for_14_predeclared_models": 1
+    },
+    {
+      "algorithm": "DES-CFB",
+      "sampler": "partial-fisher-yates",
+      "total_matches": 16,
+      "mean_matches_per_draw": 0.8,
+      "draws_with_3_or_more": 0,
+      "draws_with_4_or_more": 0,
+      "exact_5_of_5": 0,
+      "max_match_in_one_draw": 2,
+      "one_sided_p_uncorrected": 0.3471622386782702,
+      "bonferroni_p_for_14_predeclared_models": 1
+    },
+    {
+      "algorithm": "AES-192-CFB",
+      "sampler": "partial-fisher-yates",
+      "total_matches": 13,
+      "mean_matches_per_draw": 0.65,
+      "draws_with_3_or_more": 0,
+      "draws_with_4_or_more": 0,
+      "exact_5_of_5": 0,
+      "max_match_in_one_draw": 2,
+      "one_sided_p_uncorrected": 0.6996410978138665,
+      "bonferroni_p_for_14_predeclared_models": 1
+    },
+    {
+      "algorithm": "ChaCha20",
+      "sampler": "remove",
+      "total_matches": 13,
+      "mean_matches_per_draw": 0.65,
+      "draws_with_3_or_more": 0,
+      "draws_with_4_or_more": 0,
+      "exact_5_of_5": 0,
+      "max_match_in_one_draw": 2,
+      "one_sided_p_uncorrected": 0.6996410978138665,
+      "bonferroni_p_for_14_predeclared_models": 1
+    },
+    {
+      "algorithm": "MT19937",
+      "sampler": "partial-fisher-yates",
+      "total_matches": 13,
+      "mean_matches_per_draw": 0.65,
+      "draws_with_3_or_more": 0,
+      "draws_with_4_or_more": 0,
+      "exact_5_of_5": 0,
+      "max_match_in_one_draw": 2,
+      "one_sided_p_uncorrected": 0.6996410978138665,
+      "bonferroni_p_for_14_predeclared_models": 1
+    },
+    {
+      "algorithm": "RSA-Rabin-style",
+      "sampler": "remove",
+      "total_matches": 13,
+      "mean_matches_per_draw": 0.65,
+      "draws_with_3_or_more": 0,
+      "draws_with_4_or_more": 0,
+      "exact_5_of_5": 0,
+      "max_match_in_one_draw": 2,
+      "one_sided_p_uncorrected": 0.6996410978138665,
+      "bonferroni_p_for_14_predeclared_models": 1
+    },
+    {
+      "algorithm": "RSA-Rabin-style",
+      "sampler": "partial-fisher-yates",
+      "total_matches": 13,
+      "mean_matches_per_draw": 0.65,
+      "draws_with_3_or_more": 0,
+      "draws_with_4_or_more": 0,
+      "exact_5_of_5": 0,
+      "max_match_in_one_draw": 2,
+      "one_sided_p_uncorrected": 0.6996410978138665,
+      "bonferroni_p_for_14_predeclared_models": 1
+    },
+    {
+      "algorithm": "BBS",
+      "sampler": "partial-fisher-yates",
+      "total_matches": 12,
+      "mean_matches_per_draw": 0.6,
+      "draws_with_3_or_more": 0,
+      "draws_with_4_or_more": 0,
+      "exact_5_of_5": 0,
+      "max_match_in_one_draw": 2,
+      "one_sided_p_uncorrected": 0.7995994052404132,
+      "bonferroni_p_for_14_predeclared_models": 1
+    },
+    {
+      "algorithm": "ChaCha20",
+      "sampler": "partial-fisher-yates",
+      "total_matches": 12,
+      "mean_matches_per_draw": 0.6,
+      "draws_with_3_or_more": 0,
+      "draws_with_4_or_more": 0,
+      "exact_5_of_5": 0,
+      "max_match_in_one_draw": 2,
+      "one_sided_p_uncorrected": 0.7995994052404132,
+      "bonferroni_p_for_14_predeclared_models": 1
+    },
+    {
+      "algorithm": "AES-192-CFB",
+      "sampler": "remove",
+      "total_matches": 7,
+      "mean_matches_per_draw": 0.35,
+      "draws_with_3_or_more": 0,
+      "draws_with_4_or_more": 0,
+      "exact_5_of_5": 0,
+      "max_match_in_one_draw": 1,
+      "one_sided_p_uncorrected": 0.9945836330699294,
+      "bonferroni_p_for_14_predeclared_models": 1
+    }
+  ],
+  "draws_actual": [
+    {
+      "draw_id": 14336,
+      "numbers": [
+        5,
+        6,
+        8,
+        24,
+        30
+      ]
+    },
+    {
+      "draw_id": 14337,
+      "numbers": [
+        7,
+        9,
+        10,
+        15,
+        21
+      ]
+    },
+    {
+      "draw_id": 14338,
+      "numbers": [
+        1,
+        7,
+        9,
+        31,
+        32
+      ]
+    },
+    {
+      "draw_id": 14339,
+      "numbers": [
+        5,
+        8,
+        18,
+        27,
+        32
+      ]
+    },
+    {
+      "draw_id": 14340,
+      "numbers": [
+        1,
+        7,
+        13,
+        31,
+        32
+      ]
+    },
+    {
+      "draw_id": 14341,
+      "numbers": [
+        6,
+        7,
+        20,
+        26,
+        32
+      ]
+    },
+    {
+      "draw_id": 14342,
+      "numbers": [
+        2,
+        19,
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "draw_id": 14343,
+      "numbers": [
+        9,
+        16,
+        29,
+        31,
+        34
+      ]
+    },
+    {
+      "draw_id": 14344,
+      "numbers": [
+        17,
+        18,
+        21,
+        28,
+        35
+      ]
+    },
+    {
+      "draw_id": 14345,
+      "numbers": [
+        17,
+        19,
+        24,
+        25,
+        34
+      ]
+    },
+    {
+      "draw_id": 14346,
+      "numbers": [
+        21,
+        24,
+        27,
+        31,
+        35
+      ]
+    },
+    {
+      "draw_id": 14347,
+      "numbers": [
+        1,
+        5,
+        10,
+        16,
+        28
+      ]
+    },
+    {
+      "draw_id": 14348,
+      "numbers": [
+        3,
+        9,
+        10,
+        17,
+        21
+      ]
+    },
+    {
+      "draw_id": 14349,
+      "numbers": [
+        5,
+        6,
+        17,
+        22,
+        30
+      ]
+    },
+    {
+      "draw_id": 14350,
+      "numbers": [
+        12,
+        26,
+        27,
+        30,
+        31
+      ]
+    },
+    {
+      "draw_id": 14351,
+      "numbers": [
+        6,
+        10,
+        17,
+        28,
+        31
+      ]
+    },
+    {
+      "draw_id": 14352,
+      "numbers": [
+        2,
+        7,
+        15,
+        26,
+        27
+      ]
+    },
+    {
+      "draw_id": 14353,
+      "numbers": [
+        3,
+        5,
+        22,
+        24,
+        29
+      ]
+    },
+    {
+      "draw_id": 14354,
+      "numbers": [
+        10,
+        15,
+        26,
+        27,
+        29
+      ]
+    },
+    {
+      "draw_id": 14355,
+      "numbers": [
+        4,
+        14,
+        15,
+        19,
+        27
+      ]
+    }
+  ],
+  "draw_level_diagnostics": {
+    "frequency_chi2_monte_carlo_upper_tail": 0.13565,
+    "max_frequency_monte_carlo_upper_tail": 0.47686,
+    "missing_numbers_mc_upper_tail": 0.20119,
+    "consecutive_overlap_monte_carlo_upper_tail": 0.179
+  },
+  "archive_note": "Reconstructed from archived candidate predictions CSV and observed 20-draw CSV. Diagnostic MC values taken from original research report."
+}
