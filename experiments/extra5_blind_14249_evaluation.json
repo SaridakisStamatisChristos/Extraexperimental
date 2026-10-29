@@ -1,0 +1,220 @@
+{
+  "title": "EXTRA 5 draw #14249 blinded historical evaluation",
+  "evaluation_date": "2026-10-29",
+  "actual_source": "User-provided result in conversation; not independently verified against an operator publication",
+  "actual_draw": {
+    "id": 14249,
+    "draw_date": "2026-09-05",
+    "numbers": [
+      2,
+      4,
+      30,
+      32,
+      35
+    ],
+    "total_columns_metadata": 10010
+  },
+  "prior_commitment": {
+    "path": "experiments/extra5_draw14249_LOCKED_before_reveal.json",
+    "pre_reveal_commit": "f218295f669fd9d556328d8ec57b4c2d86399915",
+    "prediction": [
+      8,
+      18,
+      24,
+      27,
+      34
+    ],
+    "seed_index": 1231545,
+    "choice_rule": "lowest numerical seed among exactly matching training tickets"
+  },
+  "primary_outcome": {
+    "hits": 0,
+    "overlap": [],
+    "perfect_match": false,
+    "uniform_null_p_zero_overlap": 0.4389770570984992
+  },
+  "exploratory_post_reveal_all_fitted_seeds": {
+    "models": [
+      {
+        "seed_index": 1231545,
+        "locked_before_reveal": true,
+        "next_numbers": [
+          8,
+          18,
+          24,
+          27,
+          34
+        ],
+        "overlapping_numbers": [],
+        "hit_count": 0
+      },
+      {
+        "seed_index": 1490414,
+        "locked_before_reveal": false,
+        "next_numbers": [
+          9,
+          10,
+          11,
+          16,
+          17
+        ],
+        "overlapping_numbers": [],
+        "hit_count": 0
+      },
+      {
+        "seed_index": 1532809,
+        "locked_before_reveal": false,
+        "next_numbers": [
+          2,
+          15,
+          21,
+          23,
+          33
+        ],
+        "overlapping_numbers": [
+          2
+        ],
+        "hit_count": 1
+      },
+      {
+        "seed_index": 1828592,
+        "locked_before_reveal": false,
+        "next_numbers": [
+          2,
+          14,
+          18,
+          27,
+          29
+        ],
+        "overlapping_numbers": [
+          2
+        ],
+        "hit_count": 1
+      },
+      {
+        "seed_index": 2090880,
+        "locked_before_reveal": false,
+        "next_numbers": [
+          4,
+          7,
+          17,
+          21,
+          25
+        ],
+        "overlapping_numbers": [
+          4
+        ],
+        "hit_count": 1
+      },
+      {
+        "seed_index": 2466460,
+        "locked_before_reveal": false,
+        "next_numbers": [
+          12,
+          14,
+          26,
+          30,
+          33
+        ],
+        "overlapping_numbers": [
+          30
+        ],
+        "hit_count": 1
+      },
+      {
+        "seed_index": 2783003,
+        "locked_before_reveal": false,
+        "next_numbers": [
+          7,
+          9,
+          19,
+          26,
+          34
+        ],
+        "overlapping_numbers": [],
+        "hit_count": 0
+      },
+      {
+        "seed_index": 2802749,
+        "locked_before_reveal": false,
+        "next_numbers": [
+          6,
+          23,
+          26,
+          27,
+          28
+        ],
+        "overlapping_numbers": [],
+        "hit_count": 0
+      },
+      {
+        "seed_index": 2844983,
+        "locked_before_reveal": false,
+        "next_numbers": [
+          1,
+          13,
+          14,
+          15,
+          29
+        ],
+        "overlapping_numbers": [],
+        "hit_count": 0
+      },
+      {
+        "seed_index": 3657902,
+        "locked_before_reveal": false,
+        "next_numbers": [
+          3,
+          18,
+          21,
+          28,
+          32
+        ],
+        "overlapping_numbers": [
+          32
+        ],
+        "hit_count": 1
+      },
+      {
+        "seed_index": 3719509,
+        "locked_before_reveal": false,
+        "next_numbers": [
+          1,
+          4,
+          9,
+          10,
+          32
+        ],
+        "overlapping_numbers": [
+          4,
+          32
+        ],
+        "hit_count": 2
+      },
+      {
+        "seed_index": 3771097,
+        "locked_before_reveal": false,
+        "next_numbers": [
+          9,
+          15,
+          22,
+          24,
+          28
+        ],
+        "overlapping_numbers": [],
+        "hit_count": 0
+      }
+    ],
+    "histogram_hits": {
+      "0": 6,
+      "1": 5,
+      "2": 1,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    "best_posthoc_hits": 2,
+    "note": "These 12 candidate outcomes were computed before reveal, but selecting the best of them after reveal is retrospective and is NOT a valid blind predictor"
+  },
+  "interpretation": "The exact-fit seed chosen by the prior lowest-index rule missed all five numbers. One fitted result did not identify a persistent operator seed. No live RNG state, current cryptographic configuration, or predictive advantage established."
+}

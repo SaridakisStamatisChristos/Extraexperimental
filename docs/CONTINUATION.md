@@ -233,3 +233,12 @@ python -m unittest discover -s tests -p 'test_historical_engine.py' -v
 - Details and all seed candidates are in [research report](BLIND_ONE_DRAW_FIT.md) and [machine-readable results](../experiments/extra5_blind_14249_fitting_seeds.json).
 - **Critical distinction:** #14249 was publicly drawn long before this exercise; this is researcher-blinded retrospective evaluation, not truly prospective. Fitting one known lottery ticket by searching millions of seeds is expected under chance. No production seed or actual forecast capacity inferred.
 - **Next step:** user reveals actual five numbers for #14249. Score the frozen first-seed prediction exactly; do not select another fitted seed after reveal. Then repeat on several independent user-hidden sequences without changing the model/seed, if possible.
+
+## 2026-10-29 — Step 13: historical #14249 blind-result reveal (FAILED PREDICTION)
+
+- User supplied **#14249**, drawn **5 September 2026**, numbers **2,4,30,32,35**, column count **10,010**; user-reported, not independently operator-verified in this step.
+- Prior immutable commitment in [extra5_draw14249_LOCKED_before_reveal.json](../experiments/extra5_draw14249_LOCKED_before_reveal.json) at Git commit `f218295f669fd9d556328d8ec57b4c2d86399915`: seed index **1,231,545**, hypothetical AES-192-CFB continuous generator, predicted **8,18,24,27,34**. Predetermined lowest-exact-fit-seed rule preserved. **Blind result: 0/5**, no matching numbers. Chance for zero hits under independent uniform 5/35 = **0.4389770571**.
+- All **12** pre-reveal fitted seeds were scored only *after* revelation: histogram **6×0, 5×1, 1×2** overlaps; seed 3,719,509 retrospectively scored 2/5, **not** a valid replacement for the precommitted prediction. [Full evaluation report](BLIND_14249_REVEAL.md), [machine-readable scores](../experiments/extra5_blind_14249_evaluation.json).
+- Pre-reveal prediction and fitting results were **not edited**. Experiment outcome **FAILED to predict #14249**; no evidence of recovered operator state, cryptographic seed, or forecasting edge. Current status: source-family demonstration only; experimental KDF/CFB/sampler assumptions remain unresolved.
+- NEXT: repeat the exact fixed protocol on a *different* pair of consecutive draw IDs held by user, with the target concealed until the prediction is committed; evaluate multiple independent pairs, report every miss. Avoid any target already included in public evaluation files and avoid picking the best seed after reveal.
+
