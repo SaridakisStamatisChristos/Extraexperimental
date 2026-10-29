@@ -1,0 +1,1410 @@
+{
+  "title": "Extra 5 four-draw strict seeded model search",
+  "research_date": "2026-10-29",
+  "training_draws": [
+    {
+      "id": 14249,
+      "numbers": [
+        2,
+        4,
+        30,
+        32,
+        35
+      ]
+    },
+    {
+      "id": 14250,
+      "numbers": [
+        2,
+        5,
+        9,
+        30,
+        33
+      ]
+    },
+    {
+      "id": 14251,
+      "numbers": [
+        10,
+        18,
+        21,
+        25,
+        29
+      ]
+    },
+    {
+      "id": 14252,
+      "numbers": [
+        1,
+        7,
+        9,
+        14,
+        18
+      ]
+    }
+  ],
+  "tested_families": [
+    "aes192-cfb128",
+    "des-cfb64",
+    "cast128-cfb64",
+    "bbs-parity-toy",
+    "rsa-parity-toy",
+    "xor-aes192-des",
+    "m-aes192-bbs",
+    "b-bbs",
+    "splitmix64",
+    "xorshift64star",
+    "lcg64"
+  ],
+  "synthetic_seed_ranges": {
+    "previous_cryptographic": {
+      "aes192-cfb128": [
+        0,
+        400000
+      ],
+      "des-cfb64": [
+        0,
+        400000
+      ],
+      "cast128-cfb64": [
+        0,
+        400000
+      ],
+      "bbs-parity-toy": [
+        0,
+        80000
+      ],
+      "rsa-parity-toy": [
+        0,
+        80000
+      ],
+      "xor-aes192-des": [
+        0,
+        100000
+      ],
+      "m-aes192-bbs": [
+        0,
+        100000
+      ],
+      "b-bbs": [
+        0,
+        80000
+      ]
+    },
+    "new_cryptographic": {
+      "aes192-cfb128": [
+        400000,
+        800000
+      ],
+      "des-cfb64": [
+        400000,
+        800000
+      ],
+      "cast128-cfb64": [
+        400000,
+        800000
+      ],
+      "bbs-parity-toy": [
+        80000,
+        160000
+      ],
+      "rsa-parity-toy": [
+        80000,
+        160000
+      ],
+      "xor-aes192-des": [
+        100000,
+        200000
+      ],
+      "m-aes192-bbs": [
+        100000,
+        200000
+      ],
+      "b-bbs": [
+        80000,
+        160000
+      ]
+    },
+    "previous_arithmetic": {
+      "splitmix64": [
+        0,
+        1000000
+      ],
+      "xorshift64star": [
+        0,
+        1000000
+      ],
+      "lcg64": [
+        0,
+        1000000
+      ]
+    },
+    "new_arithmetic": {
+      "splitmix64": [
+        1000000,
+        2000000
+      ],
+      "xorshift64star": [
+        1000000,
+        2000000
+      ],
+      "lcg64": [
+        1000000,
+        2000000
+      ]
+    }
+  },
+  "counts": {
+    "archived_previous_seed_hypotheses": 4640000,
+    "new_executed_seed_hypotheses": 4640000,
+    "distinct_total_seed_hypotheses": 9280000,
+    "first_draw_exact": 29,
+    "first_two_exact": 0,
+    "first_three_exact": 0,
+    "all_four_exact": 0
+  },
+  "earlier_results_were_replayed_only_for_first_draw_matches": true,
+  "new_cryptographic_family_results": {
+    "aes192-cfb128": {
+      "range": [
+        400000,
+        800000
+      ],
+      "attempts": 400000,
+      "first_exact": 1,
+      "exact_two": 0,
+      "exact_three": 0,
+      "exact_four": 0,
+      "preview_rejections_replayed": 55,
+      "unresolved_first_ticket_after_1024_bytes": 0,
+      "seconds": 4.02
+    },
+    "des-cfb64": {
+      "range": [
+        400000,
+        800000
+      ],
+      "attempts": 400000,
+      "first_exact": 0,
+      "exact_two": 0,
+      "exact_three": 0,
+      "exact_four": 0,
+      "preview_rejections_replayed": 74,
+      "unresolved_first_ticket_after_1024_bytes": 0,
+      "seconds": 4.07
+    },
+    "cast128-cfb64": {
+      "range": [
+        400000,
+        800000
+      ],
+      "attempts": 400000,
+      "first_exact": 1,
+      "exact_two": 0,
+      "exact_three": 0,
+      "exact_four": 0,
+      "preview_rejections_replayed": 72,
+      "unresolved_first_ticket_after_1024_bytes": 0,
+      "seconds": 3.75
+    },
+    "bbs-parity-toy": {
+      "range": [
+        80000,
+        160000
+      ],
+      "attempts": 80000,
+      "first_exact": 0,
+      "exact_two": 0,
+      "exact_three": 0,
+      "exact_four": 0,
+      "preview_rejections_replayed": 14,
+      "unresolved_first_ticket_after_1024_bytes": 0,
+      "seconds": 1.22
+    },
+    "rsa-parity-toy": {
+      "range": [
+        80000,
+        160000
+      ],
+      "attempts": 80000,
+      "first_exact": 0,
+      "exact_two": 0,
+      "exact_three": 0,
+      "exact_four": 0,
+      "preview_rejections_replayed": 203,
+      "unresolved_first_ticket_after_1024_bytes": 152,
+      "seconds": 2.2
+    },
+    "xor-aes192-des": {
+      "range": [
+        100000,
+        200000
+      ],
+      "attempts": 100000,
+      "first_exact": 0,
+      "exact_two": 0,
+      "exact_three": 0,
+      "exact_four": 0,
+      "preview_rejections_replayed": 20,
+      "unresolved_first_ticket_after_1024_bytes": 0,
+      "seconds": 1.81
+    },
+    "m-aes192-bbs": {
+      "range": [
+        100000,
+        200000
+      ],
+      "attempts": 100000,
+      "first_exact": 1,
+      "exact_two": 0,
+      "exact_three": 0,
+      "exact_four": 0,
+      "preview_rejections_replayed": 17,
+      "unresolved_first_ticket_after_1024_bytes": 0,
+      "seconds": 3.68
+    },
+    "b-bbs": {
+      "range": [
+        80000,
+        160000
+      ],
+      "attempts": 80000,
+      "first_exact": 0,
+      "exact_two": 0,
+      "exact_three": 0,
+      "exact_four": 0,
+      "preview_rejections_replayed": 26,
+      "unresolved_first_ticket_after_1024_bytes": 2,
+      "seconds": 2.17
+    }
+  },
+  "new_arithmetic_family_results": {
+    "splitmix64": {
+      "range": [
+        1000000,
+        2000000
+      ],
+      "attempts": 1000000,
+      "first_exact": 4,
+      "exact_two": 0,
+      "exact_three": 0,
+      "exact_four": 0,
+      "rejected_first_words_replayed": 13069,
+      "seconds": 0.74
+    },
+    "xorshift64star": {
+      "range": [
+        1000000,
+        2000000
+      ],
+      "attempts": 1000000,
+      "first_exact": 1,
+      "exact_two": 0,
+      "exact_three": 0,
+      "exact_four": 0,
+      "rejected_first_words_replayed": 13205,
+      "seconds": 0.43
+    },
+    "lcg64": {
+      "range": [
+        1000000,
+        2000000
+      ],
+      "attempts": 1000000,
+      "first_exact": 5,
+      "exact_two": 0,
+      "exact_three": 0,
+      "exact_four": 0,
+      "rejected_first_words_replayed": 13171,
+      "seconds": 0.31
+    }
+  },
+  "all_exact_first_match_seed_candidates": [
+    {
+      "family": "aes192-cfb128",
+      "seed": 43315,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          1,
+          10,
+          22,
+          25,
+          27
+        ],
+        [
+          4,
+          15,
+          19,
+          31,
+          32
+        ],
+        [
+          9,
+          10,
+          11,
+          16,
+          19
+        ]
+      ],
+      "prefix": 1,
+      "source": "earlier full enumeration"
+    },
+    {
+      "family": "aes192-cfb128",
+      "seed": 236403,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          4,
+          6,
+          19,
+          27,
+          31
+        ],
+        [
+          1,
+          7,
+          8,
+          30,
+          32
+        ],
+        [
+          8,
+          11,
+          16,
+          18,
+          31
+        ]
+      ],
+      "prefix": 1,
+      "source": "earlier full enumeration"
+    },
+    {
+      "family": "cast128-cfb64",
+      "seed": 78501,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          1,
+          14,
+          24,
+          30,
+          31
+        ],
+        [
+          8,
+          12,
+          14,
+          16,
+          19
+        ],
+        [
+          1,
+          5,
+          12,
+          20,
+          21
+        ]
+      ],
+      "prefix": 1,
+      "source": "earlier full enumeration"
+    },
+    {
+      "family": "cast128-cfb64",
+      "seed": 251682,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          11,
+          23,
+          27,
+          30,
+          31
+        ],
+        [
+          8,
+          20,
+          26,
+          28,
+          34
+        ],
+        [
+          3,
+          4,
+          7,
+          8,
+          14
+        ]
+      ],
+      "prefix": 1,
+      "source": "earlier full enumeration"
+    },
+    {
+      "family": "xor-aes192-des",
+      "seed": 29267,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          9,
+          16,
+          19,
+          26,
+          32
+        ],
+        [
+          3,
+          5,
+          13,
+          26,
+          31
+        ],
+        [
+          9,
+          11,
+          16,
+          26,
+          35
+        ]
+      ],
+      "prefix": 1,
+      "source": "earlier full enumeration"
+    },
+    {
+      "family": "splitmix64",
+      "seed": 182912,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          2,
+          20,
+          21,
+          28,
+          30
+        ],
+        [
+          5,
+          11,
+          23,
+          31,
+          32
+        ],
+        [
+          3,
+          19,
+          22,
+          29,
+          31
+        ]
+      ],
+      "prefix": 1,
+      "source": "earlier full enumeration"
+    },
+    {
+      "family": "splitmix64",
+      "seed": 487015,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          7,
+          22,
+          25,
+          27,
+          35
+        ],
+        [
+          3,
+          4,
+          10,
+          12,
+          33
+        ],
+        [
+          5,
+          9,
+          10,
+          12,
+          22
+        ]
+      ],
+      "prefix": 1,
+      "source": "earlier full enumeration"
+    },
+    {
+      "family": "splitmix64",
+      "seed": 544468,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          4,
+          7,
+          15,
+          19,
+          24
+        ],
+        [
+          13,
+          30,
+          32,
+          33,
+          35
+        ],
+        [
+          2,
+          5,
+          14,
+          24,
+          28
+        ]
+      ],
+      "prefix": 1,
+      "source": "earlier full enumeration"
+    },
+    {
+      "family": "xorshift64star",
+      "seed": 399686,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          3,
+          6,
+          11,
+          17,
+          27
+        ],
+        [
+          1,
+          10,
+          22,
+          29,
+          35
+        ],
+        [
+          1,
+          20,
+          25,
+          27,
+          30
+        ]
+      ],
+      "prefix": 1,
+      "source": "earlier full enumeration"
+    },
+    {
+      "family": "xorshift64star",
+      "seed": 595793,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          7,
+          13,
+          14,
+          29,
+          35
+        ],
+        [
+          7,
+          9,
+          15,
+          19,
+          27
+        ],
+        [
+          12,
+          18,
+          29,
+          31,
+          35
+        ]
+      ],
+      "prefix": 1,
+      "source": "earlier full enumeration"
+    },
+    {
+      "family": "lcg64",
+      "seed": 14251,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          8,
+          21,
+          28,
+          30,
+          34
+        ],
+        [
+          3,
+          9,
+          22,
+          26,
+          31
+        ],
+        [
+          2,
+          22,
+          23,
+          33,
+          34
+        ]
+      ],
+      "prefix": 1,
+      "source": "earlier full enumeration"
+    },
+    {
+      "family": "lcg64",
+      "seed": 180242,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          10,
+          20,
+          23,
+          31,
+          35
+        ],
+        [
+          2,
+          6,
+          12,
+          13,
+          33
+        ],
+        [
+          7,
+          13,
+          28,
+          29,
+          33
+        ]
+      ],
+      "prefix": 1,
+      "source": "earlier full enumeration"
+    },
+    {
+      "family": "lcg64",
+      "seed": 346233,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          13,
+          21,
+          22,
+          26,
+          27
+        ],
+        [
+          1,
+          5,
+          6,
+          14,
+          30
+        ],
+        [
+          1,
+          8,
+          12,
+          23,
+          26
+        ]
+      ],
+      "prefix": 1,
+      "source": "earlier full enumeration"
+    },
+    {
+      "family": "lcg64",
+      "seed": 512224,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          24,
+          26,
+          29,
+          33,
+          35
+        ],
+        [
+          13,
+          15,
+          25,
+          26,
+          33
+        ],
+        [
+          5,
+          7,
+          11,
+          28,
+          35
+        ]
+      ],
+      "prefix": 1,
+      "source": "earlier full enumeration"
+    },
+    {
+      "family": "lcg64",
+      "seed": 678215,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          1,
+          8,
+          10,
+          22,
+          34
+        ],
+        [
+          9,
+          11,
+          14,
+          26,
+          30
+        ],
+        [
+          6,
+          9,
+          10,
+          26,
+          28
+        ]
+      ],
+      "prefix": 1,
+      "source": "earlier full enumeration"
+    },
+    {
+      "family": "lcg64",
+      "seed": 844206,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          2,
+          4,
+          10,
+          27,
+          35
+        ],
+        [
+          6,
+          15,
+          19,
+          24,
+          34
+        ],
+        [
+          20,
+          24,
+          26,
+          32,
+          34
+        ]
+      ],
+      "prefix": 1,
+      "source": "earlier full enumeration"
+    },
+    {
+      "family": "aes192-cfb128",
+      "seed": 537497,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          8,
+          10,
+          13,
+          25,
+          26
+        ],
+        [
+          1,
+          6,
+          13,
+          16,
+          30
+        ],
+        [
+          2,
+          9,
+          17,
+          21,
+          26
+        ]
+      ],
+      "prefix": 1,
+      "source": "new disjoint seed sweep"
+    },
+    {
+      "family": "cast128-cfb64",
+      "seed": 752421,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          2,
+          15,
+          23,
+          26,
+          27
+        ],
+        [
+          13,
+          17,
+          22,
+          28,
+          34
+        ],
+        [
+          7,
+          10,
+          18,
+          20,
+          23
+        ]
+      ],
+      "prefix": 1,
+      "source": "new disjoint seed sweep"
+    },
+    {
+      "family": "m-aes192-bbs",
+      "seed": 137874,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          5,
+          6,
+          12,
+          15,
+          22
+        ],
+        [
+          3,
+          5,
+          15,
+          19,
+          26
+        ],
+        [
+          2,
+          9,
+          10,
+          23,
+          34
+        ]
+      ],
+      "prefix": 1,
+      "source": "new disjoint seed sweep"
+    },
+    {
+      "family": "splitmix64",
+      "seed": 1369831,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          5,
+          15,
+          25,
+          30,
+          32
+        ],
+        [
+          3,
+          8,
+          10,
+          29,
+          35
+        ],
+        [
+          11,
+          16,
+          26,
+          29,
+          32
+        ]
+      ],
+      "prefix": 1,
+      "source": "new disjoint seed sweep"
+    },
+    {
+      "family": "splitmix64",
+      "seed": 1477990,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          1,
+          17,
+          22,
+          25,
+          28
+        ],
+        [
+          2,
+          13,
+          16,
+          21,
+          31
+        ],
+        [
+          14,
+          19,
+          27,
+          32,
+          33
+        ]
+      ],
+      "prefix": 1,
+      "source": "new disjoint seed sweep"
+    },
+    {
+      "family": "splitmix64",
+      "seed": 1650185,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          7,
+          8,
+          10,
+          11,
+          26
+        ],
+        [
+          4,
+          6,
+          12,
+          24,
+          25
+        ],
+        [
+          4,
+          16,
+          21,
+          27,
+          35
+        ]
+      ],
+      "prefix": 1,
+      "source": "new disjoint seed sweep"
+    },
+    {
+      "family": "splitmix64",
+      "seed": 1738235,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          1,
+          5,
+          12,
+          24,
+          35
+        ],
+        [
+          3,
+          5,
+          9,
+          29,
+          32
+        ],
+        [
+          4,
+          8,
+          11,
+          18,
+          27
+        ]
+      ],
+      "prefix": 1,
+      "source": "new disjoint seed sweep"
+    },
+    {
+      "family": "xorshift64star",
+      "seed": 1715370,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          1,
+          12,
+          25,
+          26,
+          35
+        ],
+        [
+          2,
+          10,
+          11,
+          19,
+          20
+        ],
+        [
+          2,
+          3,
+          17,
+          26,
+          32
+        ]
+      ],
+      "prefix": 1,
+      "source": "new disjoint seed sweep"
+    },
+    {
+      "family": "lcg64",
+      "seed": 1010197,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          2,
+          14,
+          18,
+          23,
+          29
+        ],
+        [
+          4,
+          22,
+          29,
+          31,
+          32
+        ],
+        [
+          4,
+          6,
+          13,
+          14,
+          20
+        ]
+      ],
+      "prefix": 1,
+      "source": "new disjoint seed sweep"
+    },
+    {
+      "family": "lcg64",
+      "seed": 1176188,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          3,
+          9,
+          18,
+          30,
+          34
+        ],
+        [
+          3,
+          9,
+          18,
+          22,
+          25
+        ],
+        [
+          10,
+          12,
+          17,
+          34,
+          35
+        ]
+      ],
+      "prefix": 1,
+      "source": "new disjoint seed sweep"
+    },
+    {
+      "family": "lcg64",
+      "seed": 1342179,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          4,
+          8,
+          10,
+          15,
+          25
+        ],
+        [
+          2,
+          6,
+          10,
+          18,
+          25
+        ],
+        [
+          2,
+          9,
+          10,
+          14,
+          24
+        ]
+      ],
+      "prefix": 1,
+      "source": "new disjoint seed sweep"
+    },
+    {
+      "family": "lcg64",
+      "seed": 1508170,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          5,
+          8,
+          9,
+          13,
+          17
+        ],
+        [
+          1,
+          4,
+          23,
+          27,
+          32
+        ],
+        [
+          6,
+          17,
+          21,
+          33,
+          35
+        ]
+      ],
+      "prefix": 1,
+      "source": "new disjoint seed sweep"
+    },
+    {
+      "family": "lcg64",
+      "seed": 1674161,
+      "tickets": [
+        [
+          2,
+          4,
+          30,
+          32,
+          35
+        ],
+        [
+          13,
+          15,
+          19,
+          26,
+          30
+        ],
+        [
+          8,
+          11,
+          12,
+          23,
+          26
+        ],
+        [
+          8,
+          15,
+          26,
+          27,
+          33
+        ]
+      ],
+      "prefix": 1,
+      "source": "new disjoint seed sweep"
+    }
+  ],
+  "fixed_polynomial_rank_model_impossibility": {
+    "encoding": "0-indexed lexicographic 5/35 rank",
+    "ranks": [
+      55817,
+      57278,
+      268706,
+      23073
+    ],
+    "modulus": 324632,
+    "obstruction_modulus": 28,
+    "congruent_inputs": [
+      57278,
+      268706
+    ],
+    "required_outputs": [
+      268706,
+      23073
+    ],
+    "input_residues": [
+      18,
+      18
+    ],
+    "output_residues": [
+      18,
+      1
+    ],
+    "theorem": "No integer-coefficient polynomial P on rank mod 324632 can map all four consecutive results via x_(t+1) = P(x_t) mod 324632.",
+    "proof": "Because 57278 = 268706 (mod 28), polynomial congruence implies P(57278) = P(268706) (mod 28). But required outputs 268706 = 18 (mod 28), 23073 = 1 (mod 28). Contradiction.",
+    "scope": "Only deterministic autonomous one-rank-state polynomial maps with integer coefficients under this encoding; not arbitrary internal-state or cryptographic generators"
+  },
+  "ideal_uniform_match_expectation": {
+    "first": 28.586214544468813,
+    "ordered_four": 8.355696688330852e-16
+  },
+  "scope": "Only named synthetic seeds/initializations, fixed transformations, continuous stream and experimental bit-to-ticket decoder. Other parameterizations and hidden reseeding not tested.",
+  "conclusion": "No algorithm/seed in this finite fixed-seed catalog recovered all four. The broader integer-polynomial one-state rank recurrence family is algebraically impossible given the four ranks.",
+  "reproducibility": {
+    "python": "3.13.5",
+    "elapsed_seconds": 24.41,
+    "crypto_archive_sha256": "afd15e32a7b991ba6e8c11ee43eb5ea618d8c2824652f3a3a4c489451d4cd88b",
+    "control_archive_sha256": "d8b9067cb8e490cdb1ab99e9a771ee4e73d249010678c66c12b6d32509d0fc1a"
+  }
+}
