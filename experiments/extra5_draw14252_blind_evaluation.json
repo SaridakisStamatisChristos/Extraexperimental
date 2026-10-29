@@ -1,0 +1,78 @@
+{
+  "experiment": "extra5_14252_blinded_historical_reveal",
+  "evaluated_date": "2026-10-29",
+  "actual_source": "user supplied in this conversation; no independent operator verification",
+  "target_draw_id": 14252,
+  "actual_numbers": [
+    1,
+    7,
+    9,
+    14,
+    18
+  ],
+  "training_draws": [
+    {
+      "draw_id": 14249,
+      "numbers": [
+        2,
+        4,
+        30,
+        32,
+        35
+      ]
+    },
+    {
+      "draw_id": 14250,
+      "numbers": [
+        2,
+        5,
+        9,
+        30,
+        33
+      ]
+    },
+    {
+      "draw_id": 14251,
+      "numbers": [
+        10,
+        18,
+        21,
+        25,
+        29
+      ]
+    }
+  ],
+  "previous_lock": "experiments/extra5_draw14252_THREE_DRAW_FIT_LOCK.json",
+  "prior_predicted_candidates": [
+    {
+      "role": "primary",
+      "family": "affine congruential rank recurrence",
+      "predicted": [
+        13,
+        16,
+        21,
+        26,
+        32
+      ],
+      "intersection": [],
+      "hits": 0
+    },
+    {
+      "role": "secondary",
+      "family": "quadratic congruential rank recurrence",
+      "predicted": [
+        3,
+        12,
+        17,
+        18,
+        33
+      ],
+      "intersection": [
+        18
+      ],
+      "hits": 1
+    }
+  ],
+  "primary_holds_predictive_claim": false,
+  "conclusion": "Primary failed with zero overlaps; secondary matched only 18. Three historical training draws fitted exactly by free recurrence parameters do not establish actual production generator identification or predictive advantage."
+}
