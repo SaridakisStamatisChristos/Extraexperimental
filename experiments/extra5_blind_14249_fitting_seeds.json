@@ -1,0 +1,255 @@
+{
+  "experiment": "extra5_blind_one_draw_fit_v1",
+  "training_draw": {
+    "id": 14248,
+    "date": "2026-09-05",
+    "numbers": [
+      13,
+      16,
+      22,
+      30,
+      31
+    ],
+    "total_columns_metadata": 10566
+  },
+  "hidden_target_draw_id": 14249,
+  "search": {
+    "seed_range": [
+      0,
+      4000000
+    ],
+    "tested": 4000000,
+    "exact_matches": 12,
+    "expected_exact_matches_under_uniformity": 12.321644200202075
+  },
+  "models": [
+    {
+      "seed_index": 1231545,
+      "training_numbers": [
+        13,
+        16,
+        22,
+        30,
+        31
+      ],
+      "next_numbers": [
+        8,
+        18,
+        24,
+        27,
+        34
+      ]
+    },
+    {
+      "seed_index": 1490414,
+      "training_numbers": [
+        13,
+        16,
+        22,
+        30,
+        31
+      ],
+      "next_numbers": [
+        9,
+        10,
+        11,
+        16,
+        17
+      ]
+    },
+    {
+      "seed_index": 1532809,
+      "training_numbers": [
+        13,
+        16,
+        22,
+        30,
+        31
+      ],
+      "next_numbers": [
+        2,
+        15,
+        21,
+        23,
+        33
+      ]
+    },
+    {
+      "seed_index": 1828592,
+      "training_numbers": [
+        13,
+        16,
+        22,
+        30,
+        31
+      ],
+      "next_numbers": [
+        2,
+        14,
+        18,
+        27,
+        29
+      ]
+    },
+    {
+      "seed_index": 2090880,
+      "training_numbers": [
+        13,
+        16,
+        22,
+        30,
+        31
+      ],
+      "next_numbers": [
+        4,
+        7,
+        17,
+        21,
+        25
+      ]
+    },
+    {
+      "seed_index": 2466460,
+      "training_numbers": [
+        13,
+        16,
+        22,
+        30,
+        31
+      ],
+      "next_numbers": [
+        12,
+        14,
+        26,
+        30,
+        33
+      ]
+    },
+    {
+      "seed_index": 2783003,
+      "training_numbers": [
+        13,
+        16,
+        22,
+        30,
+        31
+      ],
+      "next_numbers": [
+        7,
+        9,
+        19,
+        26,
+        34
+      ]
+    },
+    {
+      "seed_index": 2802749,
+      "training_numbers": [
+        13,
+        16,
+        22,
+        30,
+        31
+      ],
+      "next_numbers": [
+        6,
+        23,
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "seed_index": 2844983,
+      "training_numbers": [
+        13,
+        16,
+        22,
+        30,
+        31
+      ],
+      "next_numbers": [
+        1,
+        13,
+        14,
+        15,
+        29
+      ]
+    },
+    {
+      "seed_index": 3657902,
+      "training_numbers": [
+        13,
+        16,
+        22,
+        30,
+        31
+      ],
+      "next_numbers": [
+        3,
+        18,
+        21,
+        28,
+        32
+      ]
+    },
+    {
+      "seed_index": 3719509,
+      "training_numbers": [
+        13,
+        16,
+        22,
+        30,
+        31
+      ],
+      "next_numbers": [
+        1,
+        4,
+        9,
+        10,
+        32
+      ]
+    },
+    {
+      "seed_index": 3771097,
+      "training_numbers": [
+        13,
+        16,
+        22,
+        30,
+        31
+      ],
+      "next_numbers": [
+        9,
+        15,
+        22,
+        24,
+        28
+      ]
+    }
+  ],
+  "locked_prediction": {
+    "draw_id": 14249,
+    "seed_index": 1231545,
+    "numbers": [
+      8,
+      18,
+      24,
+      27,
+      34
+    ],
+    "choice_rule": "smallest fitting seed"
+  },
+  "assumptions": {
+    "generator": "AES-192-CFB128 continuous zero stream",
+    "KDF": "public synthetic SHA512(domain || big_endian_u64_seed)",
+    "sampling": "24-bit rejection, lexicographic combination rank",
+    "paper_attribution": "AES family only; other details unknown"
+  },
+  "verification": {
+    "tests_passed_locally": 8,
+    "training_exact": true,
+    "hidden_draw_looked_up": false,
+    "published_before_experiment": true
+  }
+}
