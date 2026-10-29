@@ -1,0 +1,84 @@
+{
+  "research_date": "2026-10-29",
+  "status": "EXECUTED_RETROSPECTIVE_TARGET_NOT_REACHED",
+  "goal": {
+    "metric": "individual number overlaps across 40 five-number tickets",
+    "requested_hits": 180,
+    "maximum_hits": 200
+  },
+  "historical_dataset": {
+    "source": "experiments/extra5_last100_data.csv",
+    "training_draw_ids": [
+      14256,
+      14315
+    ],
+    "retrospective_test_ids": [
+      14316,
+      14355
+    ],
+    "true_forward_test": false
+  },
+  "synthetic_candidate_library": {
+    "seed_indices": [
+      0,
+      127
+    ],
+    "attempted": 25344,
+    "completed": 23343,
+    "sampler_budget_failures": 2001
+  },
+  "best_training_selected": {
+    "seed_index": 0,
+    "policy": "previous_state_fixture",
+    "operation": "m",
+    "sources": "aes-bbs",
+    "sampler": "distinct_rejection",
+    "train_hits_60": 66,
+    "holdout_hits_40": 35
+  },
+  "best_posthoc_test": {
+    "seed_index": 23,
+    "policy": "previous_state_fixture",
+    "operation": "xor",
+    "sources": "bbs-rsa-aes",
+    "sampler": "sequential",
+    "train_hits_60": 43,
+    "holdout_hits_40": 48
+  },
+  "observed": {
+    "mean_holdout_hits_40": 28.562652615345073,
+    "configs_achieving_target": 0,
+    "candidates_with_any_exact_5_of_5_on_last40": 1
+  },
+  "fair_independent_draw_null": {
+    "fixed_model_mean_matches_40": 28.571428571428573,
+    "p_ge180_of_200": "2.407762919e-165",
+    "p_ge35_of_200": "0.1028802571",
+    "p_ge48_of_200": "6.087767322e-5",
+    "union_upper_bound_23343_models_ge180": "5.62044098e-161",
+    "posthoc_48_familywise_monte_carlo": "not run",
+    "bonferroni_48": "not significant"
+  },
+  "verified_replay": {
+    "all_23343_prior_80_20_scores_exactly_match_archived": true,
+    "independent_simple_replay_seed_indices": [
+      0,
+      1
+    ],
+    "completed_models_verified": 368,
+    "full_independent_replay_run": false
+  },
+  "scores": {
+    "path": "experiments/extra5_target_180_scores.csv",
+    "sha256": "059e32d34970301ee2d821d0e2a8ff51fe89ec00a007e9977561d7789ab8878b",
+    "git_blob_sha": "faa8e603fbca3e549c879a4347556ba66b127742"
+  },
+  "caveats": [
+    "All 40 comparison draws were public before execution",
+    "All seeding fixtures use public synthetic values",
+    "Operator's entropy, keys, IVs, switching policy and final sampling mapping unknown",
+    "No production system identified or prospective prediction validated",
+    "Parallel whole-range run stalled; finished in five disjoint verified batches",
+    "No CI requested or added"
+  ]
+}
