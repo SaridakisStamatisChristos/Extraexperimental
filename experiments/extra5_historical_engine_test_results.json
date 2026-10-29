@@ -1,0 +1,44 @@
+{
+  "research_date": "2026-10-29",
+  "scope": "Local historical generator-family reconstruction, not a verified operator implementation",
+  "test_command": "python -m unittest discover -s tests -p 'test_historical_engine.py' -v",
+  "python": "3.13.5",
+  "cryptography": "46.0.4",
+  "tests_run": 17,
+  "errors": 0,
+  "failures": 0,
+  "result": "PASS",
+  "coverage": [
+    "BBS/RSA modular arithmetic",
+    "AES-192/DES compatible/CAST-128 full-block CFB",
+    "M and B exhaustive differential reference up to length 7",
+    "Naor-Reingold algebra example",
+    "XOR and switching",
+    "rejection sampling for hypothetical 5/35",
+    "deterministic reproducibility"
+  ],
+  "demo_example": {
+    "operation": "m",
+    "sources": [
+      "bbs",
+      "aes"
+    ],
+    "draws": [
+      [
+        1,
+        6,
+        20,
+        23,
+        34
+      ],
+      [
+        6,
+        11,
+        26,
+        31,
+        35
+      ]
+    ]
+  },
+  "limitations": "No current 2026 production seeds, secrets, full entropy pathway, switching schedule, CFB legacy mode details or official five-number mapping. Tests executed on local implementation, not in GitHub CI."
+}
