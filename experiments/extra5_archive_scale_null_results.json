@@ -1,0 +1,45 @@
+{
+  "research_date": "2026-10-29",
+  "status": "executed simulation, exploratory look-elsewhere calibration",
+  "empirical_window_from_prior_100_draw_archive": [
+    14264,
+    14343
+  ],
+  "empirical_min_80_window_appearance_sd": 2.0182837728513547,
+  "sum_of_35_squared_appearance_counts_integer_threshold": 4714,
+  "scan_horizon_hypothetical_draws": 14355,
+  "possible_overlapping_80_windows": 14276,
+  "disjoint_80_windows": 179,
+  "fixed_80_window": {
+    "replicates": 200000,
+    "extreme_count": 188,
+    "plus_one_p": 0.0009449952750236249
+  },
+  "independent_disjoint_window_reference": {
+    "windows": 179,
+    "probability_any_extreme": 0.15568879796349855,
+    "note": "uses simulated fixed-window p as plug-in; reference for a prespecified set of disjoint blocks, not the actual dataset"
+  },
+  "full_sliding_scan_null": {
+    "replicates": 5000,
+    "extreme_count": 4795,
+    "plus_one_p": 0.9590081983603279,
+    "null_min_threshold_quantiles": [
+      4634,
+      4668,
+      4684,
+      4694,
+      4702,
+      4714,
+      4736
+    ]
+  },
+  "null_model": "independent uniformly random unordered 5-of-35 sets; each 5-vector sampled uniformly conditional on distinctness",
+  "selection_limitation": "This calculates what would happen *if* 14,355 draws were eligible to be scanned. We have not obtained or audited the true earlier draws. The observed 80-window was found by post-hoc inspection. It is not a prospectively selected observation or evidence of predictive power.",
+  "python": "3.13.5",
+  "numpy": "2.3.5",
+  "seed_fixed": 202610291,
+  "seed_global": 202610292,
+  "elapsed_seconds": 22.458459615707397,
+  "data_sha256_normalized_csv": "ce441d15bc83a0af097e46a90bb0ad4c4f9614ed555b156d91f95d012d04468f"
+}

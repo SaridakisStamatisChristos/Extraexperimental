@@ -34,3 +34,7 @@ The benchmark generates `extra5_mass_algorithm_results.json`, 9,360-row scores C
 - [Serial and 80-window audit](extra5_serial_window_report.md) — program: \`extra5_serial_window_audit.py\`; recorded results: \`extra5_serial_window_results.json\`.
 - Reproduce the recorded 50,000-history Monte Carlo: \`python extra5_serial_window_audit.py --iterations 50000 --seed 20261029\`. Scripts expect the archived \`extra5_last100_data.csv\`.
 - Lower-tail **underdispersion** and a 21-window scan are exploratory; no future-draw predictions or live RNG identification.
+
+### Step 3 — Archive-length look-elsewhere calibration
+
+Run `python extra5_archive_scale_null.py --replicates 5000 --fixed-replicates 200000 --seed 202610291 --scan-horizon 14355` to recreate the [simulation results](extra5_archive_scale_null_results.json) and [report](extra5_archive_scale_null_report.md). **This is 14,355 simulated fair draws per replicate, not 14,355 obtained historical records.** The older independent archival replication remains pending.

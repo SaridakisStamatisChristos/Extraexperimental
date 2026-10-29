@@ -55,3 +55,16 @@
 - **Priority next:** obtain an independently selected **non-overlapping prior 100-draw window**, preferably operator-verified, and apply the frozen script with the same statistic and directional hypotheses. The current script intentionally pins IDs 14256–14355 and must be parameterized for the new control window **without changing the statistical test**.
 
 **Step 2 evidence label:** local experiment EXECUTED, 50,000 randomized null replicates; significance descriptive and selection-limited, prospective prediction NOT DONE.
+
+## 2026-10-29 continuation — Step 3: archive-scale look-elsewhere correction (EXECUTED)
+
+- Previous minimum in the 21 80-draw windows within 100 archived records: **#14264–14343**, appearance-count population SD **2.01828377**, integer squared-count sum **4714**.
+- New reproducible code: [extra5_archive_scale_null.py](../experiments/extra5_archive_scale_null.py), [results](../experiments/extra5_archive_scale_null_results.json), [report](../experiments/extra5_archive_scale_null_report.md).
+- **Fixed single 80-draw window:** under iid uniform 5/35, **188/200,000** null simulations as evenly balanced; smoothed lower-tail **p=0.000944995**. Independent second sampler using 120,000 generated windows obtained 128 extremes, consistent within sampling error.
+- **Hypothetical full-lifetime retrospective search:** in a sequence of **14,355 independent synthetic draws**, there are **14,276 overlapping 80-draw windows**. Searching all such windows, **4,795/5,000** synthetic complete histories contained at least one window with squared-count sum <=4714 (smoothed **p=0.959008**; binomial 95% interval for observed fraction ~0.9531–0.9643).
+- **Scientific correction:** the previously highlighted short-window underdispersion is rare for one fixed window but **very common somewhere within a sufficiently long lottery history**. The latest-100 sample's 21-window local p≈0.0059 is not a global search-corrected p. This severely limits interpreting the retrospective anomaly as evidence of RNG bias, algorithm identification or forecastability.
+- **Important limitation:** no 14,355-draw actual archival dataset was obtained or analyzed for Step 3. The long-horizon run uses *synthetic* fair draws and an illustrative number of possible search windows, not an asserted reconstruction of the historical selection process. The true selection/search space is unknown. The actual independently selected older 100-draw control remains **not retrieved**.
+- **Future checkpoint:** acquire 100 non-overlapping, source-verified earlier results; freeze the existing statistic and compare the new 80-window scan with the same null. After that, extend the real archive and perform one unified prespecified scan under proper correction. Continue pursuing documentation of current certified draw implementation. No CI.
+
+**Step 3 evidence label:** simulations EXECUTED; independent sampling implementation cross-check EXECUTED; actual older-block replication NOT DONE; predictive claim NOT SUPPORTED.
+
