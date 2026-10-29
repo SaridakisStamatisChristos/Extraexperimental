@@ -68,3 +68,17 @@
 
 **Step 3 evidence label:** simulations EXECUTED; independent sampling implementation cross-check EXECUTED; actual older-block replication NOT DONE; predictive claim NOT SUPPORTED.
 
+## 2026-10-29 continuation — Step 4: implementation forensics, published M/B mixers (EXECUTED)
+
+**Research priority changed at user direction:** identify the actual algorithms and code-level mechanisms; do NOT continue broad statistical distribution/seed-search sweeps unless they directly distinguish an implementation. The historical public results alone do not disclose per-draw secret entropy or configuration.
+
+- Re-inspected primary source [Bikos et al. (2023), §§3.2–3.2.4, 5.2–5.3.5](https://doi.org/10.3390/cryptography7040054). Documented original eLottery sequence: physical entropy and/or evolving internal state; closed coupon file hash; Naor–Reingold processing; BBS, RSA/Rabin, DES-CFB and AES-CFB bit sources; selectable **XOR**, bitwise **M** and **B**, dynamic optional switching; generator/verifier cryptographic commitment.
+- **New algorithm-level source evidence:** section 5.3.5 publishes precise pseudocode for binary M and B mixers. Committed literal [Python reconstruction](../experiments/extra5_published_mixers.py), [exhaustive results](../experiments/extra5_published_mixers_results.json), and [technical note](../experiments/extra5_published_mixers_report.md).
+- **B observation and proof:** in its main loop, `i=X[j]`, `out[j-2]=V[i]`, `V[i]=X[j]`. Since bits are only 0 or 1, each slot `V[b]` becomes `b` after its first use and stays there. The principal output is consequently a 2-position shift of X except at most two startup mismatches. Exhaustive B tests cover **32,764 possible inputs over lengths 2–14**, no violation.
+- **M concrete counterexample:** X=001, Y=001 gives output 000 under published variant; input and output have different Hamming weights, so this bit-level construction is **not always a strict permutation**. That does not prove any compromised generator.
+- **Outstanding implementation gap:** neither the inspected publication nor archived experiments establish the current 2026 generator revision, keys, seed, M/B selection, switching schedule, or *exact map from bits to five distinct integers in [1,35]*. Do not mislabel this historical reconstruction as a verified Allwyn production clone.
+- **New documentary lead:** Vasiliki Liagkou's University of Patras thesis, [repository record](https://www.openarchives.gr/aggregator-openarchives/edm/nemertes/000009-10889_143), specifically studies the real lottery generation protocol; full text not yet acquired. This is a better next research source than random-number frequency testing.
+
+**Next step:** seek thesis/full 2004 implementation specification and source-level final 5/35 sampler; construct a versioned module-by-module historical simulator with unambiguously labeled *source-confirmed* versus *hypothetical* transitions; only then consider tests that could distinguish implementations. User requested no CI.
+
+**Evidence classification:** historical algorithm description SOURCE-VERIFIED; mixer analysis PROVED for main loop and EXHAUSTIVELY TESTED for finite lengths; 2026 deployment UNVERIFIED; prediction NOT CLAIMED.

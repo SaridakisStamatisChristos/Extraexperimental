@@ -62,3 +62,7 @@ Executed fixed Python diagnostic over #14256–14355, using 50,000 independent n
 ## Phase 7 — Selection-effect refutation of underdispersion (29 Oct 2026)
 
 A new 5,000-history null simulation shows that an 80-draw window as evenly balanced as the previously highlighted segment is present somewhere in **95.9%** of hypothetical histories of length 14,355. It is rare for a single prespecified 80-draw window (p≈0.000945), but not rare when searching 14,276 overlapping positions. **This substantially weakens the suggested anomaly; it is not evidence of a broken RNG.** [Research report](experiments/extra5_archive_scale_null_report.md); [continued checkpoint](docs/CONTINUATION.md). An older verified 100-draw control has not yet been acquired.
+
+## Phase 7 — Algorithm implementation reconstruction (29 Oct 2026)
+
+Stopped generic probability-only checks at user request. Reconstructed **published binary M and B mixers** from Bikos et al. (2023), §5.3.5; wrote executable code, exhaustive binary tests (32,764 B cases lengths 2–14), proof that B main-loop is shifted-input after at most two mismatches, and M counterexample X=001,Y=001 -> 000. Still no 2026 production implementation or final 5-from-35 bit mapping. See docs/CONTINUATION.md Step 4 and experiments/extra5_published_mixers_report.md.

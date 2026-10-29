@@ -33,3 +33,7 @@ Primary: https://media.opap.gr/OPAPIntegratedReport202327082024.pdf
 - Current operator/regulatory independent assessment documents.
 
 The mathematical identifiability obstacle: unbiased sampling schemes may produce identical distributions over unordered five-element sets. Matching ticket frequencies is not implementation attribution.
+
+## Verified published binary M/B source algorithm (2026-10-29 forensic checkpoint)
+
+The paper **§5.3.5** contains literal pseudocode (rather than just names) for the two-slot **binary** versions of M and B. Python reconstruction and exhaustive tests: [experiments/extra5_published_mixers.py](../experiments/extra5_published_mixers.py). Important: B's main loop becomes almost a shifted identity because `V[X[j]]=X[j]` writes a bit into its own index. M can change total bit counts (example X=001,Y=001 => 000). These facts concern the printed mixer, not claimed 2026 production internals. See [technical report](../experiments/extra5_published_mixers_report.md).
