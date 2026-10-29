@@ -1,0 +1,785 @@
+{
+  "data_source": "https://numerics.gr/extra-5/kliroseis-apotelesmata",
+  "data_cutoff": "2026-10-28 draw #14355",
+  "dataset": {
+    "total": 100,
+    "training_draws": 80,
+    "training_range": [
+      14256,
+      14335
+    ],
+    "holdout_draws": 20,
+    "holdout_range": [
+      14336,
+      14355
+    ]
+  },
+  "specification": {
+    "families_requested": 60,
+    "families_successful": 60,
+    "samplers": [
+      "remove",
+      "with-rejection",
+      "reservoir",
+      "combinadic",
+      "keysort"
+    ],
+    "fixed_seeds_per_family": 32,
+    "fixed_seeds_for_BBS_and_RSA": 8,
+    "seed_domain": "EXTRA5-BENCH-2026-10-29-v2.0|SEEDS-NOT-FITTED|",
+    "total_configs": 9360,
+    "errors": [],
+    "error_count": 0
+  },
+  "baseline": {
+    "expected_hits_on_80": 57.142857142857146,
+    "expected_hits_on_20": 14.285714285714286,
+    "sd_hits_on_20": 3.286992809345873,
+    "tail_train_selected_uncorrected": 0.000005534846844920416,
+    "tail_train_selected_bonferroni": 0.05180616646845509,
+    "tail_holdout_preselected": 0.24546062536579144,
+    "tail_holdout_best_among_all_uncorrected": 0.00001040349866643499,
+    "tail_holdout_best_among_all_bonferroni": 0.0973767475178315
+  },
+  "best_train_selected": {
+    "family": "HASH-sha3_224",
+    "seed_index": 0,
+    "sampler": "remove",
+    "train_hits_80": 88,
+    "holdout_hits_20": 17,
+    "holdout_three_plus": 1,
+    "holdout_exact": 0
+  },
+  "best_holdout_posthoc": {
+    "family": "MATH-SPLITMIX64",
+    "seed_index": 25,
+    "sampler": "reservoir",
+    "train_hits_80": 56,
+    "holdout_hits_20": 30,
+    "holdout_three_plus": 1,
+    "holdout_exact": 0
+  },
+  "top10_by_training": [
+    {
+      "family": "HASH-sha3_224",
+      "seed_index": 0,
+      "sampler": "remove",
+      "train_hits_80": 88,
+      "holdout_hits_20": 17,
+      "holdout_three_plus": 1,
+      "holdout_exact": 0
+    },
+    {
+      "family": "NP-PCG64",
+      "seed_index": 17,
+      "sampler": "remove",
+      "train_hits_80": 82,
+      "holdout_hits_20": 15,
+      "holdout_three_plus": 1,
+      "holdout_exact": 0
+    },
+    {
+      "family": "CFB-IDEA",
+      "seed_index": 29,
+      "sampler": "combinadic",
+      "train_hits_80": 81,
+      "holdout_hits_20": 12,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HASH-sha256",
+      "seed_index": 31,
+      "sampler": "with-rejection",
+      "train_hits_80": 81,
+      "holdout_hits_20": 9,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HASH-sha3_512",
+      "seed_index": 16,
+      "sampler": "with-rejection",
+      "train_hits_80": 80,
+      "holdout_hits_20": 19,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HASH-shake_256",
+      "seed_index": 17,
+      "sampler": "with-rejection",
+      "train_hits_80": 80,
+      "holdout_hits_20": 14,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HMAC-sha1",
+      "seed_index": 12,
+      "sampler": "keysort",
+      "train_hits_80": 80,
+      "holdout_hits_20": 19,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "MATH-XORSHIFT32",
+      "seed_index": 30,
+      "sampler": "remove",
+      "train_hits_80": 80,
+      "holdout_hits_20": 16,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "CFB-Camellia128",
+      "seed_index": 25,
+      "sampler": "combinadic",
+      "train_hits_80": 79,
+      "holdout_hits_20": 13,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "CFB-IDEA",
+      "seed_index": 19,
+      "sampler": "remove",
+      "train_hits_80": 79,
+      "holdout_hits_20": 14,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    }
+  ],
+  "family_winners": [
+    {
+      "family": "HASH-sha3_224",
+      "seed_index": 0,
+      "sampler": "remove",
+      "train_hits_80": 88,
+      "holdout_hits_20": 17,
+      "holdout_three_plus": 1,
+      "holdout_exact": 0
+    },
+    {
+      "family": "NP-PCG64",
+      "seed_index": 17,
+      "sampler": "remove",
+      "train_hits_80": 82,
+      "holdout_hits_20": 15,
+      "holdout_three_plus": 1,
+      "holdout_exact": 0
+    },
+    {
+      "family": "CFB-IDEA",
+      "seed_index": 29,
+      "sampler": "combinadic",
+      "train_hits_80": 81,
+      "holdout_hits_20": 12,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HASH-sha256",
+      "seed_index": 31,
+      "sampler": "with-rejection",
+      "train_hits_80": 81,
+      "holdout_hits_20": 9,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HASH-sha3_512",
+      "seed_index": 16,
+      "sampler": "with-rejection",
+      "train_hits_80": 80,
+      "holdout_hits_20": 19,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HASH-shake_256",
+      "seed_index": 17,
+      "sampler": "with-rejection",
+      "train_hits_80": 80,
+      "holdout_hits_20": 14,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HMAC-sha1",
+      "seed_index": 12,
+      "sampler": "keysort",
+      "train_hits_80": 80,
+      "holdout_hits_20": 19,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "MATH-XORSHIFT32",
+      "seed_index": 30,
+      "sampler": "remove",
+      "train_hits_80": 80,
+      "holdout_hits_20": 16,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "CFB-Camellia128",
+      "seed_index": 25,
+      "sampler": "combinadic",
+      "train_hits_80": 79,
+      "holdout_hits_20": 13,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "DES-CFB64",
+      "seed_index": 8,
+      "sampler": "with-rejection",
+      "train_hits_80": 79,
+      "holdout_hits_20": 17,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "ECB-Camellia128",
+      "seed_index": 1,
+      "sampler": "reservoir",
+      "train_hits_80": 79,
+      "holdout_hits_20": 10,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HMAC-sha3_256",
+      "seed_index": 1,
+      "sampler": "keysort",
+      "train_hits_80": 79,
+      "holdout_hits_20": 12,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "NP-MT19937",
+      "seed_index": 20,
+      "sampler": "keysort",
+      "train_hits_80": 79,
+      "holdout_hits_20": 9,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "AES-128-CFB",
+      "seed_index": 10,
+      "sampler": "combinadic",
+      "train_hits_80": 78,
+      "holdout_hits_20": 13,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "CFB-SEED",
+      "seed_index": 16,
+      "sampler": "reservoir",
+      "train_hits_80": 78,
+      "holdout_hits_20": 19,
+      "holdout_three_plus": 1,
+      "holdout_exact": 0
+    },
+    {
+      "family": "KEYED-blake2s",
+      "seed_index": 31,
+      "sampler": "combinadic",
+      "train_hits_80": 78,
+      "holdout_hits_20": 12,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "MATH-XOROSHIRO128PLUS",
+      "seed_index": 12,
+      "sampler": "remove",
+      "train_hits_80": 78,
+      "holdout_hits_20": 10,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "NP-PCG64DXSM",
+      "seed_index": 5,
+      "sampler": "reservoir",
+      "train_hits_80": 78,
+      "holdout_hits_20": 11,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "AES-128-CTR",
+      "seed_index": 27,
+      "sampler": "with-rejection",
+      "train_hits_80": 77,
+      "holdout_hits_20": 8,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "AES-128-ECB-COUNTER",
+      "seed_index": 31,
+      "sampler": "reservoir",
+      "train_hits_80": 77,
+      "holdout_hits_20": 10,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "CFB-Camellia256",
+      "seed_index": 25,
+      "sampler": "combinadic",
+      "train_hits_80": 77,
+      "holdout_hits_20": 16,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HASH-shake_128",
+      "seed_index": 29,
+      "sampler": "reservoir",
+      "train_hits_80": 77,
+      "holdout_hits_20": 15,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "KEYED-blake2b",
+      "seed_index": 3,
+      "sampler": "keysort",
+      "train_hits_80": 77,
+      "holdout_hits_20": 13,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "MATH-LCG64-PCG",
+      "seed_index": 7,
+      "sampler": "keysort",
+      "train_hits_80": 77,
+      "holdout_hits_20": 15,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "CFB-Blowfish",
+      "seed_index": 3,
+      "sampler": "reservoir",
+      "train_hits_80": 76,
+      "holdout_hits_20": 17,
+      "holdout_three_plus": 1,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HASH-sha224",
+      "seed_index": 3,
+      "sampler": "with-rejection",
+      "train_hits_80": 76,
+      "holdout_hits_20": 16,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "MATH-MULBERRY32",
+      "seed_index": 19,
+      "sampler": "keysort",
+      "train_hits_80": 76,
+      "holdout_hits_20": 16,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "MATH-XORSHIFT64STAR",
+      "seed_index": 13,
+      "sampler": "keysort",
+      "train_hits_80": 76,
+      "holdout_hits_20": 9,
+      "holdout_three_plus": 1,
+      "holdout_exact": 0
+    },
+    {
+      "family": "AES-256-CFB",
+      "seed_index": 12,
+      "sampler": "reservoir",
+      "train_hits_80": 75,
+      "holdout_hits_20": 11,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "DES-ECB-COUNTER",
+      "seed_index": 10,
+      "sampler": "reservoir",
+      "train_hits_80": 75,
+      "holdout_hits_20": 14,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "ECB-Camellia256",
+      "seed_index": 12,
+      "sampler": "combinadic",
+      "train_hits_80": 75,
+      "holdout_hits_20": 19,
+      "holdout_three_plus": 1,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HASH-sha3_384",
+      "seed_index": 5,
+      "sampler": "combinadic",
+      "train_hits_80": 75,
+      "holdout_hits_20": 16,
+      "holdout_three_plus": 1,
+      "holdout_exact": 0
+    },
+    {
+      "family": "MATH-LCG64-MMIX",
+      "seed_index": 30,
+      "sampler": "reservoir",
+      "train_hits_80": 75,
+      "holdout_hits_20": 15,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "MATH-XOSHIRO256SS",
+      "seed_index": 17,
+      "sampler": "remove",
+      "train_hits_80": 75,
+      "holdout_hits_20": 12,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "AES-256-ECB-COUNTER",
+      "seed_index": 2,
+      "sampler": "with-rejection",
+      "train_hits_80": 74,
+      "holdout_hits_20": 10,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "CFB-CAST5",
+      "seed_index": 20,
+      "sampler": "with-rejection",
+      "train_hits_80": 74,
+      "holdout_hits_20": 16,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "ECB-Blowfish",
+      "seed_index": 29,
+      "sampler": "combinadic",
+      "train_hits_80": 74,
+      "holdout_hits_20": 14,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HMAC-sha512",
+      "seed_index": 12,
+      "sampler": "keysort",
+      "train_hits_80": 74,
+      "holdout_hits_20": 12,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "MATH-BBS",
+      "seed_index": 4,
+      "sampler": "combinadic",
+      "train_hits_80": 74,
+      "holdout_hits_20": 14,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "NP-SFC64",
+      "seed_index": 0,
+      "sampler": "with-rejection",
+      "train_hits_80": 74,
+      "holdout_hits_20": 7,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "AES-192-CFB",
+      "seed_index": 5,
+      "sampler": "combinadic",
+      "train_hits_80": 73,
+      "holdout_hits_20": 10,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "AES-256-CTR",
+      "seed_index": 4,
+      "sampler": "keysort",
+      "train_hits_80": 73,
+      "holdout_hits_20": 11,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "CHACHA20",
+      "seed_index": 30,
+      "sampler": "with-rejection",
+      "train_hits_80": 73,
+      "holdout_hits_20": 10,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HASH-blake2b",
+      "seed_index": 27,
+      "sampler": "remove",
+      "train_hits_80": 73,
+      "holdout_hits_20": 10,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HASH-blake2s",
+      "seed_index": 3,
+      "sampler": "keysort",
+      "train_hits_80": 73,
+      "holdout_hits_20": 11,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HASH-sha3_256",
+      "seed_index": 29,
+      "sampler": "combinadic",
+      "train_hits_80": 73,
+      "holdout_hits_20": 19,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HMAC-sha256",
+      "seed_index": 26,
+      "sampler": "combinadic",
+      "train_hits_80": 73,
+      "holdout_hits_20": 13,
+      "holdout_three_plus": 1,
+      "holdout_exact": 0
+    },
+    {
+      "family": "MATH-LCG32-NR",
+      "seed_index": 19,
+      "sampler": "reservoir",
+      "train_hits_80": 73,
+      "holdout_hits_20": 13,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "MATH-MINSTD",
+      "seed_index": 3,
+      "sampler": "combinadic",
+      "train_hits_80": 73,
+      "holdout_hits_20": 12,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "MATH-SPLITMIX64",
+      "seed_index": 22,
+      "sampler": "keysort",
+      "train_hits_80": 73,
+      "holdout_hits_20": 12,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "AES-192-ECB-COUNTER",
+      "seed_index": 22,
+      "sampler": "with-rejection",
+      "train_hits_80": 72,
+      "holdout_hits_20": 15,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HASH-sha1",
+      "seed_index": 21,
+      "sampler": "reservoir",
+      "train_hits_80": 72,
+      "holdout_hits_20": 9,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "MATH-RSA",
+      "seed_index": 5,
+      "sampler": "keysort",
+      "train_hits_80": 72,
+      "holdout_hits_20": 19,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "MATH-XORSHIFT128PLUS",
+      "seed_index": 6,
+      "sampler": "combinadic",
+      "train_hits_80": 72,
+      "holdout_hits_20": 17,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "NP-Philox",
+      "seed_index": 18,
+      "sampler": "keysort",
+      "train_hits_80": 72,
+      "holdout_hits_20": 12,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "AES-192-CTR",
+      "seed_index": 15,
+      "sampler": "reservoir",
+      "train_hits_80": 71,
+      "holdout_hits_20": 12,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HASH-sha384",
+      "seed_index": 17,
+      "sampler": "keysort",
+      "train_hits_80": 71,
+      "holdout_hits_20": 15,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HASH-md5",
+      "seed_index": 31,
+      "sampler": "with-rejection",
+      "train_hits_80": 70,
+      "holdout_hits_20": 14,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    },
+    {
+      "family": "HASH-sha512",
+      "seed_index": 9,
+      "sampler": "with-rejection",
+      "train_hits_80": 70,
+      "holdout_hits_20": 13,
+      "holdout_three_plus": 1,
+      "holdout_exact": 0
+    },
+    {
+      "family": "PY-MT19937",
+      "seed_index": 10,
+      "sampler": "reservoir",
+      "train_hits_80": 70,
+      "holdout_hits_20": 12,
+      "holdout_three_plus": 0,
+      "holdout_exact": 0
+    }
+  ],
+  "families": [
+    "HASH-md5",
+    "HASH-sha1",
+    "HASH-sha224",
+    "HASH-sha256",
+    "HASH-sha384",
+    "HASH-sha512",
+    "HASH-sha3_224",
+    "HASH-sha3_256",
+    "HASH-sha3_384",
+    "HASH-sha3_512",
+    "HASH-blake2s",
+    "HASH-blake2b",
+    "HASH-shake_128",
+    "HASH-shake_256",
+    "HMAC-sha1",
+    "HMAC-sha256",
+    "HMAC-sha512",
+    "HMAC-sha3_256",
+    "KEYED-blake2s",
+    "KEYED-blake2b",
+    "AES-128-CFB",
+    "AES-128-CTR",
+    "AES-128-ECB-COUNTER",
+    "AES-192-CFB",
+    "AES-192-CTR",
+    "AES-192-ECB-COUNTER",
+    "AES-256-CFB",
+    "AES-256-CTR",
+    "AES-256-ECB-COUNTER",
+    "DES-CFB64",
+    "DES-ECB-COUNTER",
+    "CHACHA20",
+    "CFB-Camellia128",
+    "CFB-Camellia256",
+    "CFB-Blowfish",
+    "CFB-CAST5",
+    "CFB-IDEA",
+    "CFB-SEED",
+    "ECB-Camellia128",
+    "ECB-Camellia256",
+    "ECB-Blowfish",
+    "NP-PCG64",
+    "NP-PCG64DXSM",
+    "NP-Philox",
+    "NP-SFC64",
+    "NP-MT19937",
+    "PY-MT19937",
+    "MATH-LCG32-NR",
+    "MATH-LCG64-MMIX",
+    "MATH-LCG64-PCG",
+    "MATH-SPLITMIX64",
+    "MATH-XORSHIFT32",
+    "MATH-XORSHIFT64STAR",
+    "MATH-XORSHIFT128PLUS",
+    "MATH-XOROSHIRO128PLUS",
+    "MATH-XOSHIRO256SS",
+    "MATH-MINSTD",
+    "MATH-MULBERRY32",
+    "MATH-BBS",
+    "MATH-RSA"
+  ],
+  "holdout_scores_summary": {
+    "min": 3,
+    "mean": 14.261538461538462,
+    "max": 30
+  },
+  "interpretation": "All seeds are independent synthetic deterministic test seeds. Retrospective holdout comparisons are not forecasts or evidence of production RNG.",
+  "family_wise_null_calibration": {
+    "replications": 3000,
+    "null_seed": 123456789,
+    "null_simulation": "20 independent uniform 5-subsets of 1..35 per replicate; score all 9360 fixed candidate sequences and take maximum",
+    "actual_search_max": 30,
+    "mc_count_at_or_above_max": 280,
+    "mc_p_plus_one": 0.09363545484838387,
+    "mc_max_median": 28,
+    "mc_max_p05": 26,
+    "mc_max_p95": 30,
+    "mc_max_min": 25,
+    "mc_max_max": 34,
+    "preselected_score": 17,
+    "preselected_mc_p_plus_one": 0.25558147284238586,
+    "preselected_exact_one_sided_p": 0.24546062536579144,
+    "all_candidate_average_score": 14.261538461538462,
+    "all_candidate_train_vs_test_corr": -0.02843639276786802,
+    "exact_5of5_among_9360_configurations": 0,
+    "seconds": 1.8
+  },
+  "archive_note": "Reconstituted from committed 9360-row score CSV and independently re-run Monte Carlo calibration (3000 replicates, 29 Oct 2026). Wall-clock time of original mass benchmark intentionally omitted."
+}
