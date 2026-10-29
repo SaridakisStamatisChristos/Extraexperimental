@@ -1,0 +1,167 @@
+{
+  "draws": [
+    14249,
+    14250,
+    14251,
+    14252
+  ],
+  "ranks": [
+    55817,
+    57278,
+    268706,
+    23073
+  ],
+  "model": "fixed 32-bit reversible generator; one word per ticket; no reseeding; rejection-based ticket-rank sampler",
+  "results": [
+    {
+      "family": "xorshift32_13_17_5",
+      "mapping": "high24",
+      "first": 13056,
+      "two": 0,
+      "three": 0,
+      "four": 0,
+      "two_draw_witnesses": []
+    },
+    {
+      "family": "xorshift32_13_17_5",
+      "mapping": "low24",
+      "first": 13056,
+      "two": 0,
+      "three": 0,
+      "four": 0,
+      "two_draw_witnesses": []
+    },
+    {
+      "family": "xorshift32_13_17_5",
+      "mapping": "full32",
+      "first": 13230,
+      "two": 0,
+      "three": 0,
+      "four": 0,
+      "two_draw_witnesses": []
+    },
+    {
+      "family": "xorshift32_5_13_6",
+      "mapping": "high24",
+      "first": 13056,
+      "two": 0,
+      "three": 0,
+      "four": 0,
+      "two_draw_witnesses": []
+    },
+    {
+      "family": "xorshift32_5_13_6",
+      "mapping": "low24",
+      "first": 13056,
+      "two": 0,
+      "three": 0,
+      "four": 0,
+      "two_draw_witnesses": []
+    },
+    {
+      "family": "xorshift32_5_13_6",
+      "mapping": "full32",
+      "first": 13230,
+      "two": 0,
+      "three": 0,
+      "four": 0,
+      "two_draw_witnesses": []
+    },
+    {
+      "family": "lcg32_nr",
+      "mapping": "high24",
+      "first": 13056,
+      "two": 0,
+      "three": 0,
+      "four": 0,
+      "two_draw_witnesses": []
+    },
+    {
+      "family": "lcg32_nr",
+      "mapping": "low24",
+      "first": 13056,
+      "two": 0,
+      "three": 0,
+      "four": 0,
+      "two_draw_witnesses": []
+    },
+    {
+      "family": "lcg32_nr",
+      "mapping": "full32",
+      "first": 13230,
+      "two": 0,
+      "three": 0,
+      "four": 0,
+      "two_draw_witnesses": []
+    },
+    {
+      "family": "lcg32_ansi",
+      "mapping": "high24",
+      "first": 13056,
+      "two": 0,
+      "three": 0,
+      "four": 0,
+      "two_draw_witnesses": []
+    },
+    {
+      "family": "lcg32_ansi",
+      "mapping": "low24",
+      "first": 13056,
+      "two": 0,
+      "three": 0,
+      "four": 0,
+      "two_draw_witnesses": []
+    },
+    {
+      "family": "lcg32_ansi",
+      "mapping": "full32",
+      "first": 13230,
+      "two": 0,
+      "three": 0,
+      "four": 0,
+      "two_draw_witnesses": []
+    },
+    {
+      "family": "splitmix32_fmix",
+      "mapping": "high24",
+      "first": 13056,
+      "two": 0,
+      "three": 0,
+      "four": 0,
+      "two_draw_witnesses": []
+    },
+    {
+      "family": "splitmix32_fmix",
+      "mapping": "low24",
+      "first": 13056,
+      "two": 0,
+      "three": 0,
+      "four": 0,
+      "two_draw_witnesses": []
+    },
+    {
+      "family": "splitmix32_fmix",
+      "mapping": "full32",
+      "first": 13230,
+      "two": 1,
+      "three": 0,
+      "four": 0,
+      "two_draw_witnesses": [
+        {
+          "first_accepted_word": 414935513,
+          "next_two_ranks": [
+            216364,
+            59123
+          ]
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "first_output_states": 196710,
+    "two": 1,
+    "three": 0,
+    "four": 0
+  },
+  "caveat": "Exhaustive only for these five synthetic 32-bit mechanisms and three ticket mappings. Not an Allwyn RNG recovery."
+}
