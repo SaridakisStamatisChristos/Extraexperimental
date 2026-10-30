@@ -1,0 +1,31 @@
+group x=0 t=0 a=19 b=97 c=77 best train=43 / 2192
+group x=0 t=1 a=102 b=76 c=1 best train=43 / 2192
+group x=1 t=0 a=37 b=115 c=99 best train=45 / 2192
+group x=1 t=1 a=5 b=94 c=94 best train=43 / 2192
+group x=2 t=0 a=95 b=92 c=42 best train=44 / 2192
+group x=2 t=1 a=96 b=105 c=56 best train=41 / 2192
+In file included from joint_smoke.cpp:2:
+joint_generator3d.cpp: In function 'int replaced_joint_main(int, char**)':
+joint_generator3d.cpp:172:1: warning: control reaches end of non-void function [-Wreturn-type]
+  172 | }
+      | ^
+test_affine_evaluation (test_3d.Test3D.test_affine_evaluation) ... ok
+test_combinadic_rank (test_3d.Test3D.test_combinadic_rank) ... ok
+test_full_library_oracle (test_3d.Test3D.test_full_library_oracle) ... ok
+test_future_order_labels_excluded (test_3d.Test3D.test_future_order_labels_excluded) ... ok
+test_future_predictions_count_and_valid (test_3d.Test3D.test_future_predictions_count_and_valid) ... ok
+test_future_seed_uses_prior_outputs_only (test_3d.Test3D.test_future_seed_uses_prior_outputs_only) ... ok
+test_independent_replay (test_3d.Test3D.test_independent_replay) ... ok
+test_interaction_revised (test_3d.Test3D.test_interaction_revised) ... ok
+test_invalidated_parser_preserved (test_3d.Test3D.test_invalidated_parser_preserved) ... ok
+test_joint_evaluation (test_3d.Test3D.test_joint_evaluation) ... ok
+test_null_runs (test_3d.Test3D.test_null_runs) ... ok
+test_permutations_all_120 (test_3d.Test3D.test_permutations_all_120) ... ok
+test_source_sha (test_3d.Test3D.test_source_sha) ... ok
+test_split_and_sequence (test_3d.Test3D.test_split_and_sequence) ... ok
+test_valid_draws (test_3d.Test3D.test_valid_draws) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.139s
+
+OK

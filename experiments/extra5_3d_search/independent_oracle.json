@@ -1,0 +1,10 @@
+{
+  "models": [
+    "rare4",
+    "overall_hits",
+    "joint4_order"
+  ],
+  "cases": 4002,
+  "mismatches": 0,
+  "first_three": []
+}

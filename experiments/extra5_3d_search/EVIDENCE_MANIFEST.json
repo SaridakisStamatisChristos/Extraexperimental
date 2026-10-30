@@ -1,0 +1,210 @@
+{
+  "experiment": "EXTRA5 three-dimensional set x permutation x time",
+  "file_count": 38,
+  "python_version": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "n_draws": 3526,
+  "train": 2192,
+  "heldout": 1334,
+  "affine_parameter_configs": 10368000,
+  "joint_prng_parameter_configs": 20160,
+  "nonlinear_interactions": 768,
+  "full_search_affine_null_reps_completed": 48,
+  "full_search_affine_null_reps_planned": 80,
+  "nonlinear_maxT_null_reps": 1000,
+  "oracle_fixture_comparisons": 40320,
+  "regression_tests_passed": 15,
+  "claim": "No deployed RNG or predictive advantage identified",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 6519,
+      "sha256": "6783ddfebe7f8c738aae38dcf1f76c83dfa77e6879d2206f9e3e12e46ed50bac"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 9655,
+      "sha256": "ec8d074c46ef25bec43f3a426ce887d0e1b4cd2bf318d685c55ce8b860522b6d"
+    },
+    {
+      "path": "prepare.py",
+      "bytes": 3375,
+      "sha256": "23896aae241c5892111c615f54037584ec2362f73098a2f6aecd048dabd29dbb"
+    },
+    {
+      "path": "affine3d.cpp",
+      "bytes": 3640,
+      "sha256": "aceadad1c00e79def45f6867a90c401139c03380af79ebe0865c9199f660bbd0"
+    },
+    {
+      "path": "null3d.cpp",
+      "bytes": 2704,
+      "sha256": "0b3640e6b29a6e7e9984dad7cfe7cb3bcac20a50b71ff2551a50619881709ed7"
+    },
+    {
+      "path": "joint_generator3d.cpp",
+      "bytes": 10561,
+      "sha256": "a51f9d8dc3841f825e9ab5f364aad8bb8e0fb8aa406bf43849c5323675738f0b"
+    },
+    {
+      "path": "joint_smoke.cpp",
+      "bytes": 923,
+      "sha256": "760eba5ba23bde4abe3198353da1132fd25fb43ebb6956744a76f566c0fed7ff"
+    },
+    {
+      "path": "interaction3d.py",
+      "bytes": 6089,
+      "sha256": "943a435acbf7e65d210316cb45d866be3af1d0d56a38783137e69cfc6d8cd67e"
+    },
+    {
+      "path": "oracle_joint.py",
+      "bytes": 7040,
+      "sha256": "247e6462067300f5d6adbe5ba2d5566293cac111fbf32c500482e4c69db0d13d"
+    },
+    {
+      "path": "smoke_verify.py",
+      "bytes": 1330,
+      "sha256": "ed2fd936e3d125cc1386f455d5ab4fbe14ba9f89a09001d44fd44b18e4e4e516"
+    },
+    {
+      "path": "evaluate.py",
+      "bytes": 1912,
+      "sha256": "a24d266cbbf97780b563e08575a40e076a2d2077bd6d5eb462ef55e50c846002"
+    },
+    {
+      "path": "evaluate_joint.py",
+      "bytes": 2806,
+      "sha256": "8d7444dfc531f3ca70890b7cbaa238263464e926db78afa8a9d86543fe125724"
+    },
+    {
+      "path": "test_3d.py",
+      "bytes": 4856,
+      "sha256": "d730bd17ac7b9fdefa0bf4b84562a337b46401d9d8a0c5e5fd45055bd706ce5e"
+    },
+    {
+      "path": "reproduce.sh",
+      "bytes": 1089,
+      "sha256": "38563be22e150d72118c11e0699dc0713c6c17af2e3f10ad147ae24b025d845b"
+    },
+    {
+      "path": "extra5_2022_2026_authoritative.csv",
+      "bytes": 264795,
+      "sha256": "61fc2a3a57656a8188f7defc422ea5efbb1a33756455a41b97891cf0004c8307"
+    },
+    {
+      "path": "source_manifest.json",
+      "bytes": 385,
+      "sha256": "859d66c025d9dd6000d11aafb40ef53b890456218a5788fee2a00f1b0fcbea17"
+    },
+    {
+      "path": "train_labeled.csv",
+      "bytes": 198586,
+      "sha256": "8093f1d7b7ed6c79894f6fe026960369146ad129921a3648f9c271dc49f1e856"
+    },
+    {
+      "path": "future_features_only.csv",
+      "bytes": 95613,
+      "sha256": "8c22a7a2f3549580ef970a4b6c08de54031fca67162ebfdcb7471a251e1b34a3"
+    },
+    {
+      "path": "sealed/future_labels.csv",
+      "bytes": 120745,
+      "sha256": "014c252992db1bd2ed62fade3a12c806968131a032b85542b094b126aaef2840"
+    },
+    {
+      "path": "FROZEN_AFFINE3D_models.csv",
+      "bytes": 427,
+      "sha256": "adf9a2efe90d346270a3d12ca8d922ae8aea64d7a5c6b627f57a7df921a75ce8"
+    },
+    {
+      "path": "FROZEN_AFFINE3D_future.csv",
+      "bytes": 386232,
+      "sha256": "fc6497448b63d6ea67ad9d1a0c93ca799d698055ff1d6fa418ddf8edbd852ca3"
+    },
+    {
+      "path": "FROZEN_JOINT3D_models.csv",
+      "bytes": 426,
+      "sha256": "7fac295acdc2083e9d09968627a95fc1603d0078ba0e161e1bca21ced66abce5"
+    },
+    {
+      "path": "FROZEN_JOINT3D_future.csv",
+      "bytes": 132447,
+      "sha256": "cf0242c88f3bcbf64b4667aad114adea0742c0dfa87c8f52ba41d3f130084939"
+    },
+    {
+      "path": "FROZEN_INTERACTION3D.json",
+      "bytes": 520,
+      "sha256": "48a065251dbb48fb7284633d02e8102bf480f06e7ac564c7cef80161a1e73ffc"
+    },
+    {
+      "path": "evaluation.json",
+      "bytes": 2505,
+      "sha256": "3b9419c3fea01357a336eee503a234230a155810684fbeed7da0dfb017e33cb9"
+    },
+    {
+      "path": "joint_evaluation.json",
+      "bytes": 3457,
+      "sha256": "6fa1b0a54e0c67bb82f651e4ce59b040b4df40f8ba561892416b83b3280adbae"
+    },
+    {
+      "path": "interaction_evaluation.json",
+      "bytes": 472,
+      "sha256": "da0a21356765c18d270343f28d27e10639ebd5335bff0c5fe319b81907bc1fe3"
+    },
+    {
+      "path": "null_48_partial.csv",
+      "bytes": 300,
+      "sha256": "01077883578ba018801e587c7806608544ccf8b79893695578e3ee87e46d74f5"
+    },
+    {
+      "path": "all_20160_config_smoke.csv",
+      "bytes": 3470635,
+      "sha256": "74ab80333e1e01d24aea39fced47d7ecec2a950fc34bfb0d5b5b97e37dfba243"
+    },
+    {
+      "path": "full_library_oracle.json",
+      "bytes": 406,
+      "sha256": "f607b6b1f7d7a3717447be91a6278fe24c4152e122816efb8c75819946f21c2e"
+    },
+    {
+      "path": "independent_oracle.json",
+      "bytes": 131,
+      "sha256": "141a294e9d8209d20e9dabf29169b96b7bacee1a6a1918688bf29c7c162b9449"
+    },
+    {
+      "path": "reproduce_stdout.log",
+      "bytes": 8553,
+      "sha256": "7ed1959991b97a1a053dabf790128b29aba0843b971234bb05d8596d79ef46c1"
+    },
+    {
+      "path": "reproduce_stderr.log",
+      "bytes": 1765,
+      "sha256": "2347e9de68c33f664614e76577bd6f31b0b35a39cb962f55fe7eacc759216699"
+    },
+    {
+      "path": "invalidated_parser_run/FROZEN_JOINT3D_models.csv",
+      "bytes": 405,
+      "sha256": "7ed1e68146445fc4fc6b965bf51c71be02d721c11d8cc1ce8e6fe7c6ecf51b8c"
+    },
+    {
+      "path": "invalidated_parser_run/FROZEN_JOINT3D_future.csv",
+      "bytes": 132436,
+      "sha256": "c6a5761f79983daf9c290e24ad18be4d3c71bcd9b395b23da04fb88fe5a7601c"
+    },
+    {
+      "path": "invalidated_parser_run/joint_evaluation.json",
+      "bytes": 3392,
+      "sha256": "121579bd099a3f4564201eff813753d11bf560bd270681f285ae10df46216e73"
+    },
+    {
+      "path": "invalidated_parser_run/independent_oracle.json",
+      "bytes": 1100,
+      "sha256": "c81d74c0715330204f03d654b973b48337271cf0344772160e80cec2bacb95ff"
+    },
+    {
+      "path": "manifest.py",
+      "bytes": 1985,
+      "sha256": "33cc30cc4993199559c74cf2791fb309d6944671021d5826ec86aa6ea310c9f6"
+    }
+  ]
+}

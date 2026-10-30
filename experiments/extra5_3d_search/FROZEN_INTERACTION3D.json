@@ -1,0 +1,20 @@
+{
+  "train_n": 2192,
+  "hypotheses": 768,
+  "feature": {
+    "set": "sum_ge90",
+    "time": "evening",
+    "permutation": "first_rel_zero"
+  },
+  "train_correlation": 0.07023264459145355,
+  "train_abs_correlation": 0.07023264459145355,
+  "maxT_null_replicates": 1000,
+  "maxT_exceedances": 517,
+  "maxT_p": 0.5174825174825175,
+  "null_max_q50_q95_q99": [
+    0.07044350871761854,
+    0.0863483240849543,
+    0.09442250049844286
+  ],
+  "train_sha256": "8093f1d7b7ed6c79894f6fe026960369146ad129921a3648f9c271dc49f1e856"
+}

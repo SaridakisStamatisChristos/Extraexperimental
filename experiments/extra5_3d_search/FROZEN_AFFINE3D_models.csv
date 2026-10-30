@@ -1,0 +1,7 @@
+family,x_axis,t_axis,a,b,c,train_exact,train_n
+affine,current_set_rank_conditional,draw_id,19,97,77,43,2192
+affine,current_set_rank_conditional,date_ordinal,102,76,1,43,2192
+affine,previous_set_rank_forecast,draw_id,37,115,99,45,2192
+affine,previous_set_rank_forecast,date_ordinal,5,94,94,43,2192
+affine,previous_permutation_forecast,draw_id,95,92,42,44,2192
+affine,previous_permutation_forecast,date_ordinal,96,105,56,41,2192

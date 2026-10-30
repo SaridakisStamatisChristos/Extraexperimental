@@ -1,0 +1,64 @@
+{
+  "frozen_models_sha256": "adf9a2efe90d346270a3d12ca8d922ae8aea64d7a5c6b627f57a7df921a75ce8",
+  "frozen_predictions_sha256": "fc6497448b63d6ea67ad9d1a0c93ca799d698055ff1d6fa418ddf8edbd852ca3",
+  "holdout_draws": 1334,
+  "description": "Retrospective execution-time split; 2025/2026 already used in older research, NOT untouched globally",
+  "current_set_models": "conditional order reconstruction only, current set unknown before draw",
+  "previous_*_models": "one-step-ahead order forecasts using previously revealed outcomes",
+  "results": [
+    {
+      "model": "current_set_rank_conditional/date_ordinal",
+      "2025_exact_permutation": 9,
+      "2026_exact_permutation": 5,
+      "combined_exact_permutation": 14,
+      "expected_combined": 11.116666666666667,
+      "binomial_one_sided_p": 0.2288776997660446,
+      "relative_to_baseline": 1.2593703148425786
+    },
+    {
+      "model": "previous_set_rank_forecast/draw_id",
+      "2025_exact_permutation": 4,
+      "2026_exact_permutation": 9,
+      "combined_exact_permutation": 13,
+      "expected_combined": 11.116666666666667,
+      "binomial_one_sided_p": 0.32372522887943816,
+      "relative_to_baseline": 1.169415292353823
+    },
+    {
+      "model": "previous_set_rank_forecast/date_ordinal",
+      "2025_exact_permutation": 7,
+      "2026_exact_permutation": 6,
+      "combined_exact_permutation": 13,
+      "expected_combined": 11.116666666666667,
+      "binomial_one_sided_p": 0.32372522887943816,
+      "relative_to_baseline": 1.169415292353823
+    },
+    {
+      "model": "current_set_rank_conditional/draw_id",
+      "2025_exact_permutation": 7,
+      "2026_exact_permutation": 3,
+      "combined_exact_permutation": 10,
+      "expected_combined": 11.116666666666667,
+      "binomial_one_sided_p": 0.672956280006713,
+      "relative_to_baseline": 0.8995502248875562
+    },
+    {
+      "model": "previous_permutation_forecast/date_ordinal",
+      "2025_exact_permutation": 6,
+      "2026_exact_permutation": 3,
+      "combined_exact_permutation": 9,
+      "expected_combined": 11.116666666666667,
+      "binomial_one_sided_p": 0.7793304018557161,
+      "relative_to_baseline": 0.8095952023988006
+    },
+    {
+      "model": "previous_permutation_forecast/draw_id",
+      "2025_exact_permutation": 3,
+      "2026_exact_permutation": 3,
+      "combined_exact_permutation": 6,
+      "expected_combined": 11.116666666666667,
+      "binomial_one_sided_p": 0.9655488207118096,
+      "relative_to_baseline": 0.5397301349325337
+    }
+  ]
+}

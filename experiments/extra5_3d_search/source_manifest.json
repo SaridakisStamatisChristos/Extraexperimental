@@ -1,0 +1,16 @@
+{
+  "data_source": "/mnt/data/extra5_3d_search/extra5_2022_2026_authoritative.csv",
+  "source_sha256": "61fc2a3a57656a8188f7defc422ea5efbb1a33756455a41b97891cf0004c8307",
+  "train_rows": 2192,
+  "heldout_rows": 1334,
+  "current_set_feature_is_post_draw": true,
+  "all_hidden_outcome_columns": [
+    "perm_rank",
+    "perm_parity",
+    "n1",
+    "n2",
+    "n3",
+    "n4",
+    "n5"
+  ]
+}

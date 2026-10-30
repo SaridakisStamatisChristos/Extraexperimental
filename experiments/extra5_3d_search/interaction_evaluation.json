@@ -1,0 +1,14 @@
+{
+  "heldout_draws": 1334,
+  "train_frozen_feature": {
+    "set": "sum_ge90",
+    "time": "evening",
+    "permutation": "first_rel_zero"
+  },
+  "train_correlation": 0.07023264459145355,
+  "holdout_correlation": -0.037596197161793014,
+  "direction_replicated": false,
+  "holdout_two_sided_permutation_p": 0.16976604679064186,
+  "holdout_shuffle_reps": 5000,
+  "statement": "Not an exact ticket predictor; three-way observation-only dependence test, retrospective split."
+}

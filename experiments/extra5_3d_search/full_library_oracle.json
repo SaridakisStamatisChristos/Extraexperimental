@@ -1,0 +1,17 @@
+{
+  "cases": 40320,
+  "distinct_generators": 8,
+  "per_generator": {
+    "splitmix64": 5040,
+    "xorshift64star": 5040,
+    "pcg32": 5040,
+    "xoroshiro128plus": 5040,
+    "xoshiro256starstar": 5040,
+    "lcg64high": 5040,
+    "jsf32": 5040,
+    "xorshift32": 5040
+  },
+  "mismatches": 0,
+  "first_mismatches": [],
+  "fixture_sha256": "74ab80333e1e01d24aea39fced47d7ecec2a950fc34bfb0d5b5b97e37dfba243"
+}

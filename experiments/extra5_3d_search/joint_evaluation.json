@@ -1,0 +1,120 @@
+{
+  "models_sha256": "7fac295acdc2083e9d09968627a95fc1603d0078ba0e161e1bca21ced66abce5",
+  "frozen_forecasts_sha256": "cf0242c88f3bcbf64b4667aad114adea0742c0dfa87c8f52ba41d3f130084939",
+  "forecast_contract": "one-step ahead: previous known actual outcome may influence seed, NO current outcome used",
+  "development_years": "2022-2024",
+  "evaluation_years": "2025-2026",
+  "globally_blind": false,
+  "results": [
+    {
+      "objective": "rare4",
+      "yearly": [
+        {
+          "year": 2025,
+          "draws": 730,
+          "number_matches": 510,
+          "four_plus": 0,
+          "five_exact": 0,
+          "permutation_exact": 2,
+          "joint_four_plus_perm": 0,
+          "four_plus_draws": []
+        },
+        {
+          "year": 2026,
+          "draws": 604,
+          "number_matches": 467,
+          "four_plus": 2,
+          "five_exact": 0,
+          "permutation_exact": 7,
+          "joint_four_plus_perm": 0,
+          "four_plus_draws": [
+            14137,
+            14293
+          ]
+        }
+      ],
+      "combined_four_plus": 2,
+      "combined_number_hits": 977,
+      "combined_perm_correct": 9,
+      "combined_joint_four_plus_correct_perm": 0,
+      "expected_number_hits": 952.8571428571429,
+      "expected_four_plus": 0.6204995194558761,
+      "one_sided_four_plus_p": 0.12866717296431696,
+      "one_sided_permutation_p": 0.7793304018557161,
+      "one_sided_joint_p": 1.0
+    },
+    {
+      "objective": "overall_hits",
+      "yearly": [
+        {
+          "year": 2025,
+          "draws": 730,
+          "number_matches": 536,
+          "four_plus": 2,
+          "five_exact": 0,
+          "permutation_exact": 9,
+          "joint_four_plus_perm": 0,
+          "four_plus_draws": [
+            13047,
+            13750
+          ]
+        },
+        {
+          "year": 2026,
+          "draws": 604,
+          "number_matches": 434,
+          "four_plus": 0,
+          "five_exact": 0,
+          "permutation_exact": 2,
+          "joint_four_plus_perm": 0,
+          "four_plus_draws": []
+        }
+      ],
+      "combined_four_plus": 2,
+      "combined_number_hits": 970,
+      "combined_perm_correct": 11,
+      "combined_joint_four_plus_correct_perm": 0,
+      "expected_number_hits": 952.8571428571429,
+      "expected_four_plus": 0.6204995194558761,
+      "one_sided_four_plus_p": 0.12866717296431696,
+      "one_sided_permutation_p": 0.5545145056790417,
+      "one_sided_joint_p": 1.0
+    },
+    {
+      "objective": "joint4_order",
+      "yearly": [
+        {
+          "year": 2025,
+          "draws": 730,
+          "number_matches": 530,
+          "four_plus": 0,
+          "five_exact": 0,
+          "permutation_exact": 6,
+          "joint_four_plus_perm": 0,
+          "four_plus_draws": []
+        },
+        {
+          "year": 2026,
+          "draws": 604,
+          "number_matches": 428,
+          "four_plus": 1,
+          "five_exact": 0,
+          "permutation_exact": 3,
+          "joint_four_plus_perm": 0,
+          "four_plus_draws": [
+            14178
+          ]
+        }
+      ],
+      "combined_four_plus": 1,
+      "combined_number_hits": 958,
+      "combined_perm_correct": 9,
+      "combined_joint_four_plus_correct_perm": 0,
+      "expected_number_hits": 952.8571428571429,
+      "expected_four_plus": 0.6204995194558761,
+      "one_sided_four_plus_p": 0.4624018195918247,
+      "one_sided_permutation_p": 0.7793304018557161,
+      "one_sided_joint_p": 1.0
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+prepare OK train 2192 holdout 1334 p distinct 120
+TOTAL_AFFINE_PARAMETER_TRIPLES=10368000
+PAIRS_FULLY_ENUMERATED=86400
+BEST_DEVELOPMENT_MATCHES=45
+rare4 xoroshiro128plus,minute_control,0,rank32_rejection,same_stream_rank rare4=7 hits=1631 exact=0 perm=21 joint=0
+overall_hits xoshiro256starstar,prevsum_xor_minute,3600,rank32_rejection,same_stream_rank rare4=1 hits=1689 exact=0 perm=25 joint=0
+joint4_order xoshiro256starstar,minute_control,3600,fisher_high,sorted_control rare4=2 hits=1523 exact=0 perm=22 joint=2
+GENERATOR_CONFIGS=20160 TRAIN_ONE_STEP_TARGETS=2191
+FROZEN_JOINT_FORECASTS=4002
+3-way null 200 / 1000
+3-way null 400 / 1000
+3-way null 600 / 1000
+3-way null 800 / 1000
+3-way null 1000 / 1000
+INTERACTION LOCK {
+  "train_n": 2192,
+  "hypotheses": 768,
+  "feature": {
+    "set": "sum_ge90",
+    "time": "evening",
+    "permutation": "first_rel_zero"
+  },
+  "train_correlation": 0.07023264459145355,
+  "train_abs_correlation": 0.07023264459145355,
+  "maxT_null_replicates": 1000,
+  "maxT_exceedances": 517,
+  "maxT_p": 0.5174825174825175,
+  "null_max_q50_q95_q99": [
+    0.07044350871761854,
+    0.0863483240849543,
+    0.09442250049844286
+  ],
+  "train_sha256": "8093f1d7b7ed6c79894f6fe026960369146ad129921a3648f9c271dc49f1e856"
+}
+FROZEN_AFFINE3D_models.csv: OK
+FROZEN_AFFINE3D_future.csv: OK
+FROZEN_JOINT3D_models.csv: OK
+FROZEN_JOINT3D_future.csv: OK
+FROZEN_INTERACTION3D.json: OK
+{'models': ['rare4', 'overall_hits', 'joint4_order'], 'cases': 4002, 'mismatches': 0, 'first_three': []}
+{
+  "frozen_models_sha256": "adf9a2efe90d346270a3d12ca8d922ae8aea64d7a5c6b627f57a7df921a75ce8",
+  "frozen_predictions_sha256": "fc6497448b63d6ea67ad9d1a0c93ca799d698055ff1d6fa418ddf8edbd852ca3",
+  "holdout_draws": 1334,
+  "description": "Retrospective execution-time split; 2025/2026 already used in older research, NOT untouched globally",
+  "current_set_models": "conditional order reconstruction only, current set unknown before draw",
+  "previous_*_models": "one-step-ahead order forecasts using previously revealed outcomes",
+  "results": [
+    {
+      "model": "current_set_rank_conditional/date_ordinal",
+      "2025_exact_permutation": 9,
+      "2026_exact_permutation": 5,
+      "combined_exact_permutation": 14,
+      "expected_combined": 11.116666666666667,
+      "binomial_one_sided_p": 0.2288776997660446,
+      "relative_to_baseline": 1.2593703148425786
+    },
+    {
+      "model": "previous_set_rank_forecast/draw_id",
+      "2025_exact_permutation": 4,
+      "2026_exact_permutation": 9,
+      "combined_exact_permutation": 13,
+      "expected_combined": 11.116666666666667,
+      "binomial_one_sided_p": 0.32372522887943816,
+      "relative_to_baseline": 1.169415292353823
+    },
+    {
+      "model": "previous_set_rank_forecast/date_ordinal",
+      "2025_exact_permutation": 7,
+      "2026_exact_permutation": 6,
+      "combined_exact_permutation": 13,
+      "expected_combined": 11.116666666666667,
+      "binomial_one_sided_p": 0.32372522887943816,
+      "relative_to_baseline": 1.169415292353823
+    },
+    {
+      "model": "current_set_rank_conditional/draw_id",
+      "2025_exact_permutation": 7,
+      "2026_exact_permutation": 3,
+      "combined_exact_permutation": 10,
+      "expected_combined": 11.116666666666667,
+      "binomial_one_sided_p": 0.672956280006713,
+      "relative_to_baseline": 0.8995502248875562
+    },
+    {
+      "model": "previous_permutation_forecast/date_ordinal",
+      "2025_exact_permutation": 6,
+      "2026_exact_permutation": 3,
+      "combined_exact_permutation": 9,
+      "expected_combined": 11.116666666666667,
+      "binomial_one_sided_p": 0.7793304018557161,
+      "relative_to_baseline": 0.8095952023988006
+    },
+    {
+      "model": "previous_permutation_forecast/draw_id",
+      "2025_exact_permutation": 3,
+      "2026_exact_permutation": 3,
+      "combined_exact_permutation": 6,
+      "expected_combined": 11.116666666666667,
+      "binomial_one_sided_p": 0.9655488207118096,
+      "relative_to_baseline": 0.5397301349325337
+    }
+  ]
+}
+{
+  "models_sha256": "7fac295acdc2083e9d09968627a95fc1603d0078ba0e161e1bca21ced66abce5",
+  "frozen_forecasts_sha256": "cf0242c88f3bcbf64b4667aad114adea0742c0dfa87c8f52ba41d3f130084939",
+  "forecast_contract": "one-step ahead: previous known actual outcome may influence seed, NO current outcome used",
+  "development_years": "2022-2024",
+  "evaluation_years": "2025-2026",
+  "globally_blind": false,
+  "results": [
+    {
+      "objective": "rare4",
+      "yearly": [
+        {
+          "year": 2025,
+          "draws": 730,
+          "number_matches": 510,
+          "four_plus": 0,
+          "five_exact": 0,
+          "permutation_exact": 2,
+          "joint_four_plus_perm": 0,
+          "four_plus_draws": []
+        },
+        {
+          "year": 2026,
+          "draws": 604,
+          "number_matches": 467,
+          "four_plus": 2,
+          "five_exact": 0,
+          "permutation_exact": 7,
+          "joint_four_plus_perm": 0,
+          "four_plus_draws": [
+            14137,
+            14293
+          ]
+        }
+      ],
+      "combined_four_plus": 2,
+      "combined_number_hits": 977,
+      "combined_perm_correct": 9,
+      "combined_joint_four_plus_correct_perm": 0,
+      "expected_number_hits": 952.8571428571429,
+      "expected_four_plus": 0.6204995194558761,
+      "one_sided_four_plus_p": 0.12866717296431696,
+      "one_sided_permutation_p": 0.7793304018557161,
+      "one_sided_joint_p": 1.0
+    },
+    {
+      "objective": "overall_hits",
+      "yearly": [
+        {
+          "year": 2025,
+          "draws": 730,
+          "number_matches": 536,
+          "four_plus": 2,
+          "five_exact": 0,
+          "permutation_exact": 9,
+          "joint_four_plus_perm": 0,
+          "four_plus_draws": [
+            13047,
+            13750
+          ]
+        },
+        {
+          "year": 2026,
+          "draws": 604,
+          "number_matches": 434,
+          "four_plus": 0,
+          "five_exact": 0,
+          "permutation_exact": 2,
+          "joint_four_plus_perm": 0,
+          "four_plus_draws": []
+        }
+      ],
+      "combined_four_plus": 2,
+      "combined_number_hits": 970,
+      "combined_perm_correct": 11,
+      "combined_joint_four_plus_correct_perm": 0,
+      "expected_number_hits": 952.8571428571429,
+      "expected_four_plus": 0.6204995194558761,
+      "one_sided_four_plus_p": 0.12866717296431696,
+      "one_sided_permutation_p": 0.5545145056790417,
+      "one_sided_joint_p": 1.0
+    },
+    {
+      "objective": "joint4_order",
+      "yearly": [
+        {
+          "year": 2025,
+          "draws": 730,
+          "number_matches": 530,
+          "four_plus": 0,
+          "five_exact": 0,
+          "permutation_exact": 6,
+          "joint_four_plus_perm": 0,
+          "four_plus_draws": []
+        },
+        {
+          "year": 2026,
+          "draws": 604,
+          "number_matches": 428,
+          "four_plus": 1,
+          "five_exact": 0,
+          "permutation_exact": 3,
+          "joint_four_plus_perm": 0,
+          "four_plus_draws": [
+            14178
+          ]
+        }
+      ],
+      "combined_four_plus": 1,
+      "combined_number_hits": 958,
+      "combined_perm_correct": 9,
+      "combined_joint_four_plus_correct_perm": 0,
+      "expected_number_hits": 952.8571428571429,
+      "expected_four_plus": 0.6204995194558761,
+      "one_sided_four_plus_p": 0.4624018195918247,
+      "one_sided_permutation_p": 0.7793304018557161,
+      "one_sided_joint_p": 1.0
+    }
+  ]
+}
+INTERACTION TEST {
+  "heldout_draws": 1334,
+  "train_frozen_feature": {
+    "set": "sum_ge90",
+    "time": "evening",
+    "permutation": "first_rel_zero"
+  },
+  "train_correlation": 0.07023264459145355,
+  "holdout_correlation": -0.037596197161793014,
+  "direction_replicated": false,
+  "holdout_two_sided_permutation_p": 0.16976604679064186,
+  "holdout_shuffle_reps": 5000,
+  "statement": "Not an exact ticket predictor; three-way observation-only dependence test, retrospective split."
+}
+{
+  "cases": 40320,
+  "distinct_generators": 8,
+  "per_generator": {
+    "splitmix64": 5040,
+    "xorshift64star": 5040,
+    "pcg32": 5040,
+    "xoroshiro128plus": 5040,
+    "xoshiro256starstar": 5040,
+    "lcg64high": 5040,
+    "jsf32": 5040,
+    "xorshift32": 5040
+  },
+  "mismatches": 0,
+  "first_mismatches": [],
+  "fixture_sha256": "74ab80333e1e01d24aea39fced47d7ecec2a950fc34bfb0d5b5b97e37dfba243"
+}
+{'models': ['rare4', 'overall_hits', 'joint4_order'], 'cases': 4002, 'mismatches': 0, 'first_three': []}
+
+NOTE: preserved interrupted 48-run affine null calibration is not reexecuted by default.

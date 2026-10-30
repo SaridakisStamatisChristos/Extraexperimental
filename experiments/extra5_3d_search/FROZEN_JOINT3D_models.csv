@@ -1,0 +1,4 @@
+objective,gen,seed_rule,offset,sampler,permutation,train_4plus,train_total_hits,train_5plus,train_perm_correct,train_joint_4plus_correctperm
+rare4,xoroshiro128plus,minute_control,0,rank32_rejection,same_stream_rank,7,1631,0,21,0
+overall_hits,xoshiro256starstar,prevsum_xor_minute,3600,rank32_rejection,same_stream_rank,1,1689,0,25,0
+joint4_order,xoshiro256starstar,minute_control,3600,fisher_high,sorted_control,2,1523,0,22,2
