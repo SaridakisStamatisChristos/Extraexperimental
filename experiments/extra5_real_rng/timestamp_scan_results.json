@@ -1,0 +1,249 @@
+{
+  "source": "train_599.csv",
+  "dataset_sha256": "cc2e3da23f5edab6f310f68a1204c00aa0113dcd38660b2e732346ce5cf9b8e4",
+  "selection_count": 400,
+  "validation_count": 199,
+  "test_count": 5,
+  "family_count": 1080,
+  "selection_rule": "max first-400 sum of five-number overlaps; stable enumeration ties; only train data",
+  "selection_winner": {
+    "prng": "xorshift64star",
+    "seed_type": "epoch_second_xor_draw_id",
+    "seed_offset": 0,
+    "sampler": "fisher_yates5_modulo",
+    "hits_select400": 325,
+    "hits_validation199": 140,
+    "exact_select400": 0,
+    "exact_validation199": 0,
+    "hits_full599": 465,
+    "exact_full599": 0
+  },
+  "selection_null_calibration": {
+    "repetitions": 1000,
+    "generator_seed": 20261030,
+    "p_max_corrected": 0.974025974025974,
+    "null_max_hits_mean": 333.251,
+    "null_max_hits_95pct": 344.0,
+    "observed_max_hits": 325
+  },
+  "validation_uniform_expected_hits": 142.14285714285714,
+  "validation_expected_exact": 0.0006130017989600532,
+  "full_uniform_expected_hits": 427.85714285714283,
+  "top_selection_candidates": [
+    {
+      "prng": "xorshift64star",
+      "seed_type": "epoch_second_xor_draw_id",
+      "seed_offset": 0,
+      "sampler": "fisher_yates5_modulo",
+      "hits_select400": 325,
+      "hits_validation199": 140,
+      "exact_select400": 0,
+      "exact_validation199": 0,
+      "hits_full599": 465,
+      "exact_full599": 0
+    },
+    {
+      "prng": "xorshift64star",
+      "seed_type": "epoch_second_xor_draw_id",
+      "seed_offset": 0,
+      "sampler": "fisher_yates5_unbiased",
+      "hits_select400": 325,
+      "hits_validation199": 140,
+      "exact_select400": 0,
+      "exact_validation199": 0,
+      "hits_full599": 465,
+      "exact_full599": 0
+    },
+    {
+      "prng": "splitmix64",
+      "seed_type": "epoch_hour",
+      "seed_offset": 1,
+      "sampler": "fisher_yates5_modulo",
+      "hits_select400": 324,
+      "hits_validation199": 131,
+      "exact_select400": 0,
+      "exact_validation199": 0,
+      "hits_full599": 455,
+      "exact_full599": 0
+    },
+    {
+      "prng": "splitmix64",
+      "seed_type": "epoch_hour",
+      "seed_offset": 1,
+      "sampler": "fisher_yates5_unbiased",
+      "hits_select400": 324,
+      "hits_validation199": 131,
+      "exact_select400": 0,
+      "exact_validation199": 0,
+      "hits_full599": 455,
+      "exact_full599": 0
+    },
+    {
+      "prng": "mt19937_python",
+      "seed_type": "ordinal_day",
+      "seed_offset": -1,
+      "sampler": "fisher_yates5_modulo",
+      "hits_select400": 323,
+      "hits_validation199": 133,
+      "exact_select400": 0,
+      "exact_validation199": 0,
+      "hits_full599": 456,
+      "exact_full599": 0
+    },
+    {
+      "prng": "mt19937_python",
+      "seed_type": "ordinal_day",
+      "seed_offset": -1,
+      "sampler": "fisher_yates5_unbiased",
+      "hits_select400": 323,
+      "hits_validation199": 133,
+      "exact_select400": 0,
+      "exact_validation199": 0,
+      "hits_full599": 456,
+      "exact_full599": 0
+    },
+    {
+      "prng": "splitmix64",
+      "seed_type": "epoch_second_plus_draw_id",
+      "seed_offset": 0,
+      "sampler": "rank32_rejection",
+      "hits_select400": 322,
+      "hits_validation199": 124,
+      "exact_select400": 0,
+      "exact_validation199": 0,
+      "hits_full599": 446,
+      "exact_full599": 0
+    },
+    {
+      "prng": "pcg32_fixed_stream",
+      "seed_type": "epoch_second_xor_draw_id",
+      "seed_offset": 0,
+      "sampler": "fisher_yates5_modulo",
+      "hits_select400": 322,
+      "hits_validation199": 154,
+      "exact_select400": 0,
+      "exact_validation199": 0,
+      "hits_full599": 476,
+      "exact_full599": 0
+    },
+    {
+      "prng": "pcg32_fixed_stream",
+      "seed_type": "epoch_second_xor_draw_id",
+      "seed_offset": 0,
+      "sampler": "fisher_yates5_unbiased",
+      "hits_select400": 322,
+      "hits_validation199": 154,
+      "exact_select400": 0,
+      "exact_validation199": 0,
+      "hits_full599": 476,
+      "exact_full599": 0
+    },
+    {
+      "prng": "xorshift32",
+      "seed_type": "epoch_second",
+      "seed_offset": 3600,
+      "sampler": "combinadic24",
+      "hits_select400": 321,
+      "hits_validation199": 145,
+      "exact_select400": 0,
+      "exact_validation199": 0,
+      "hits_full599": 466,
+      "exact_full599": 0
+    },
+    {
+      "prng": "xorshift64star",
+      "seed_type": "ordinal_day",
+      "seed_offset": 0,
+      "sampler": "rank32_rejection",
+      "hits_select400": 321,
+      "hits_validation199": 158,
+      "exact_select400": 0,
+      "exact_validation199": 0,
+      "hits_full599": 479,
+      "exact_full599": 0
+    },
+    {
+      "prng": "splitmix64",
+      "seed_type": "epoch_second",
+      "seed_offset": -60,
+      "sampler": "rank32_rejection",
+      "hits_select400": 321,
+      "hits_validation199": 128,
+      "exact_select400": 0,
+      "exact_validation199": 0,
+      "hits_full599": 449,
+      "exact_full599": 0
+    }
+  ],
+  "max_exact_any_config": 1,
+  "num_models_with_two_or_more_exact": 0,
+  "max_hits_full599_posthoc": 479,
+  "forecasts": [
+    {
+      "draw_id": 14353,
+      "date": "2026-10-27",
+      "time": "19:00",
+      "numbers": [
+        6,
+        13,
+        20,
+        26,
+        35
+      ],
+      "seed": "1793122433"
+    },
+    {
+      "draw_id": 14354,
+      "date": "2026-10-28",
+      "time": "15:00",
+      "numbers": [
+        1,
+        12,
+        19,
+        29,
+        32
+      ],
+      "seed": "1793182146"
+    },
+    {
+      "draw_id": 14355,
+      "date": "2026-10-28",
+      "time": "19:00",
+      "numbers": [
+        2,
+        5,
+        10,
+        32,
+        35
+      ],
+      "seed": "1793200643"
+    },
+    {
+      "draw_id": 14356,
+      "date": "2026-10-29",
+      "time": "15:00",
+      "numbers": [
+        13,
+        22,
+        32,
+        33,
+        35
+      ],
+      "seed": "1793293124"
+    },
+    {
+      "draw_id": 14357,
+      "date": "2026-10-29",
+      "time": "19:00",
+      "numbers": [
+        4,
+        15,
+        17,
+        20,
+        21
+      ],
+      "seed": "1793278853"
+    }
+  ],
+  "conclusion": "family selection is exploratory; a seed-derived model is not recovered production RNG without repeatable validation"
+}

@@ -1,0 +1,547 @@
+{
+  "dataset": "train_599.csv",
+  "dataset_sha256": "cc2e3da23f5edab6f310f68a1204c00aa0113dcd38660b2e732346ce5cf9b8e4",
+  "elapsed_seconds": 14.362,
+  "fifth_matching_states": 26,
+  "fifth_rejection_counts": {
+    "0": 6675549,
+    "1": 88522,
+    "2": 1121,
+    "3": 9
+  },
+  "fifth_ticket_max_multiplicity": 46,
+  "fifth_ticket_min_multiplicity": 5,
+  "fifth_ticket_support": 324632,
+  "first_train_id": 13754,
+  "forward_check_sample": 600,
+  "known_fifth_id": 13758,
+  "known_fifth_ticket": [
+    1,
+    4,
+    21,
+    23,
+    26
+  ],
+  "last_train_id": 13757,
+  "model": "toy xorshift96, continuous big-endian 32-bit output, 24-bit rejection modulo lexicographic combinadic",
+  "raw_fits_exhaustive": 6765201,
+  "seventh_actual_ticket": [
+    16,
+    17,
+    20,
+    21,
+    23
+  ],
+  "seventh_id": 13760,
+  "seventh_matching_states_given_first_six": 0,
+  "sixth_actual_ticket": [
+    1,
+    11,
+    21,
+    33,
+    34
+  ],
+  "sixth_id": 13759,
+  "sixth_matching_states_given_first_five": 0,
+  "state_witnesses": [
+    {
+      "aliases": [
+        0,
+        37,
+        4,
+        28
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        2,
+        17,
+        22,
+        24,
+        30
+      ],
+      "state_hex": "46b8b7c1a4f26e46b697ebb6"
+    },
+    {
+      "aliases": [
+        2,
+        2,
+        3,
+        3
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        2,
+        15,
+        16,
+        24,
+        25
+      ],
+      "state_hex": "2a61eb0ed0255ac6e332b135"
+    },
+    {
+      "aliases": [
+        2,
+        22,
+        33,
+        2
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        5,
+        27,
+        29,
+        30,
+        31
+      ],
+      "state_hex": "d036d550b93e4bf1001620bf"
+    },
+    {
+      "aliases": [
+        4,
+        11,
+        37,
+        39
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        9,
+        10,
+        17,
+        21,
+        22
+      ],
+      "state_hex": "5b4e74202b492c1dbd489f04"
+    },
+    {
+      "aliases": [
+        4,
+        44,
+        26,
+        8
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        8,
+        12,
+        15,
+        29,
+        35
+      ],
+      "state_hex": "3068a593bb6a3669a252d440"
+    },
+    {
+      "aliases": [
+        5,
+        37,
+        46,
+        45
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        9,
+        10,
+        16,
+        19,
+        27
+      ],
+      "state_hex": "ce0b9dfbb274f34b14c237bb"
+    },
+    {
+      "aliases": [
+        15,
+        5,
+        10,
+        18
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        12,
+        19,
+        27,
+        30,
+        31
+      ],
+      "state_hex": "c875ffa54a04b47ccec77137"
+    },
+    {
+      "aliases": [
+        16,
+        19,
+        11,
+        17
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        4,
+        10,
+        20,
+        26,
+        34
+      ],
+      "state_hex": "b69e4cfa767a7674051d8e2b"
+    },
+    {
+      "aliases": [
+        17,
+        20,
+        37,
+        15
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        6,
+        17,
+        19,
+        24,
+        28
+      ],
+      "state_hex": "058a9a246c3aefcb71a39c65"
+    },
+    {
+      "aliases": [
+        18,
+        3,
+        34,
+        12
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        18,
+        19,
+        23,
+        29,
+        34
+      ],
+      "state_hex": "46c5a2d28f191d160f687d59"
+    },
+    {
+      "aliases": [
+        19,
+        32,
+        49,
+        40
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        7,
+        8,
+        11,
+        13,
+        18
+      ],
+      "state_hex": "ddc2f84c7ef72c3f4357004c"
+    },
+    {
+      "aliases": [
+        24,
+        15,
+        30,
+        22
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        4,
+        6,
+        26,
+        31,
+        35
+      ],
+      "state_hex": "43adb6a5df113c17438fe57e"
+    },
+    {
+      "aliases": [
+        29,
+        28,
+        23,
+        44
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        11,
+        18,
+        19,
+        20,
+        21
+      ],
+      "state_hex": "be70aa607ebb4e17d1f61892"
+    },
+    {
+      "aliases": [
+        30,
+        15,
+        1,
+        12
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        16,
+        19,
+        21,
+        34,
+        35
+      ],
+      "state_hex": "fc31c29d4fa99d9a0db9e98a"
+    },
+    {
+      "aliases": [
+        32,
+        19,
+        25,
+        44
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        4,
+        7,
+        11,
+        15,
+        34
+      ],
+      "state_hex": "935957f0092f4751f273e49b"
+    },
+    {
+      "aliases": [
+        35,
+        48,
+        47,
+        21
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        5,
+        10,
+        20,
+        31,
+        34
+      ],
+      "state_hex": "2208ca306f7f6e2c066ba2b1"
+    },
+    {
+      "aliases": [
+        36,
+        34,
+        26,
+        10
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        3,
+        11,
+        13,
+        21,
+        32
+      ],
+      "state_hex": "4243ced46b4cd048578920ea"
+    },
+    {
+      "aliases": [
+        36,
+        37,
+        29,
+        27
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        8,
+        13,
+        14,
+        18,
+        23
+      ],
+      "state_hex": "516d10435f810e882edf440f"
+    },
+    {
+      "aliases": [
+        38,
+        25,
+        7,
+        12
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        3,
+        6,
+        23,
+        24,
+        32
+      ],
+      "state_hex": "fcb3c76437c5936c4eb09b0a"
+    },
+    {
+      "aliases": [
+        39,
+        20,
+        31,
+        1
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        12,
+        13,
+        18,
+        19,
+        29
+      ],
+      "state_hex": "92f7e946483fca126ee19e1f"
+    },
+    {
+      "aliases": [
+        43,
+        1,
+        34,
+        0
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        1,
+        7,
+        14,
+        16,
+        33
+      ],
+      "state_hex": "96c9028217d3403d844db7d6"
+    },
+    {
+      "aliases": [
+        46,
+        31,
+        4,
+        7
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        1,
+        6,
+        11,
+        16,
+        23
+      ],
+      "state_hex": "46a4293c5cfef0fa1126bec0"
+    },
+    {
+      "aliases": [
+        48,
+        18,
+        21,
+        42
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        1,
+        10,
+        23,
+        27,
+        32
+      ],
+      "state_hex": "2bc0bb01b5e55ffd8caca289"
+    },
+    {
+      "aliases": [
+        48,
+        28,
+        44,
+        8
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        7,
+        12,
+        22,
+        25,
+        27
+      ],
+      "state_hex": "babc8dc775e395adfbff1cb8"
+    },
+    {
+      "aliases": [
+        49,
+        25,
+        17,
+        39
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        13,
+        19,
+        25,
+        29,
+        35
+      ],
+      "state_hex": "e5bde9fdd179452c18a75ab0"
+    },
+    {
+      "aliases": [
+        50,
+        32,
+        17,
+        23
+      ],
+      "seventh_matches": false,
+      "sixth_matches": false,
+      "sixth_ticket": [
+        2,
+        8,
+        23,
+        25,
+        31
+      ],
+      "state_hex": "25c88ce03a9849f4d441730b"
+    }
+  ],
+  "status": "RETROSPECTIVE; toy generator; fixed zero-rejection first four branch only; not physical RNG identification",
+  "train_tickets": [
+    [
+      4,
+      8,
+      16,
+      28,
+      35
+    ],
+    [
+      6,
+      7,
+      9,
+      34,
+      35
+    ],
+    [
+      1,
+      6,
+      21,
+      23,
+      25
+    ],
+    [
+      3,
+      12,
+      17,
+      25,
+      28
+    ]
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "training_draws": 599,
+  "holdout_draws": 5,
+  "evaluation": "retrospective, separated code path",
+  "lock_sha256": "676feb8d46917bdf6ca6eb9fe7c3332cb6e4c7fc2847d9beec2862276a9d6180",
+  "holdout_sha256": "0b591617b63c689499cb6233b1e1d0c2b0874ce33e85b3991f8b73e1414961d4",
+  "outcomes": [
+    {
+      "draw_id": 14353,
+      "actual": [
+        3,
+        5,
+        22,
+        24,
+        29
+      ],
+      "prediction": [
+        6,
+        13,
+        20,
+        26,
+        35
+      ],
+      "overlap": 0,
+      "exact": false
+    },
+    {
+      "draw_id": 14354,
+      "actual": [
+        10,
+        15,
+        26,
+        27,
+        29
+      ],
+      "prediction": [
+        1,
+        12,
+        19,
+        29,
+        32
+      ],
+      "overlap": 1,
+      "exact": false
+    },
+    {
+      "draw_id": 14355,
+      "actual": [
+        4,
+        14,
+        15,
+        19,
+        27
+      ],
+      "prediction": [
+        2,
+        5,
+        10,
+        32,
+        35
+      ],
+      "overlap": 0,
+      "exact": false
+    },
+    {
+      "draw_id": 14356,
+      "actual": [
+        5,
+        7,
+        11,
+        18,
+        29
+      ],
+      "prediction": [
+        13,
+        22,
+        32,
+        33,
+        35
+      ],
+      "overlap": 0,
+      "exact": false
+    },
+    {
+      "draw_id": 14357,
+      "actual": [
+        3,
+        4,
+        6,
+        10,
+        22
+      ],
+      "prediction": [
+        4,
+        15,
+        17,
+        20,
+        21
+      ],
+      "overlap": 1,
+      "exact": false
+    }
+  ],
+  "total_number_matches": 2,
+  "exact_ticket_matches": 0,
+  "uniform_expected_total_matches": 3.5714285714285716,
+  "fair_lottery_one_sided_tail_probability": 0.905329926858084,
+  "chance_full_ticket_probability_per_draw": 3.0804110500505186e-06
+}

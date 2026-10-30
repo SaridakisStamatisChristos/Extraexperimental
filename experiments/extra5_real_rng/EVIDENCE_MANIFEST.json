@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-30",
+  "training_records": 599,
+  "training_ids": [
+    13754,
+    14352
+  ],
+  "retrospective_holdout_ids": [
+    14353,
+    14357
+  ],
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "z3": "4.13.3.0"
+  },
+  "files": {
+    "README.md": "60d4d30f39e2b0c452e823f74c38f44f4faee430478123fc216661fcc485fb7a",
+    "algorithm_forecasts_LOCK.json": "676feb8d46917bdf6ca6eb9fe7c3332cb6e4c7fc2847d9beec2862276a9d6180",
+    "exact_state_results.json": "96ae40f614d80ce5f079bd9329b25792b4cf63356fe6fd71b42982d074231bcd",
+    "exact_xorshift96_first_six_results.json": "86c2f872022b1cb962f29746775e294495284df50cfb4d150a1888e2aff5e1ef",
+    "exhaustive_six_training.py": "e5e2d5bc331b4a4165c458dc4836d6db104b38a4ee818f18c479e1c8b19b4e3c",
+    "holdout_5_PRIVATE.csv": "0b591617b63c689499cb6233b1e1d0c2b0874ce33e85b3991f8b73e1414961d4",
+    "holdout_algorithm_results.json": "dfd9d9a6aa46ac213c1f9faad8da56069bf1039b9c643eb14e771dffc47867b2",
+    "lock.py": "d16f7669350beeb5a69e9419a4134af9a5db199d54c55eb8008b676c5f63d182",
+    "recover_exact.py": "e08b2ee7dd5548f89ef90644e26f07632dfeccad99cf3aa139a2aa8cf6cc0787",
+    "score_holdout.py": "c22049c55fd09cdb6c969352f7077c357401b29c4acaac47513a1316d82fa51f",
+    "test_real_generator.py": "91757c1d23c54d592d04b4ff26ec4aa999b26f11f7ae87d8fcd0bd7920ddfdaa",
+    "timestamp_prng_scan.py": "d0746688b6e8ec0aefa3a17dd8eeb27ff86fdf4d36f624bc35de8d09838ddb16",
+    "timestamp_scan_results.json": "a8712c9f79a120738a4451da8ea125c0691609c063a223f34fe6e322bc5b47d0",
+    "train_599.csv": "cc2e3da23f5edab6f310f68a1204c00aa0113dcd38660b2e732346ce5cf9b8e4",
+    "xorshift_linear.py": "92c75dbf6582535d9342575c5d95290b3372572334b4719013171c0b3fbf8678"
+  },
+  "status": "execution evidence; production PRNG unknown; no new CI; historical locks untouched"
+}

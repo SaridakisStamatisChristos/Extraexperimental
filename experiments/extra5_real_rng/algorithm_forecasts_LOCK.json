@@ -1,0 +1,88 @@
+{
+  "chosen_algorithm": {
+    "exact_full599": 0,
+    "exact_select400": 0,
+    "exact_validation199": 0,
+    "hits_full599": 465,
+    "hits_select400": 325,
+    "hits_validation199": 140,
+    "prng": "xorshift64star",
+    "sampler": "fisher_yates5_modulo",
+    "seed_offset": 0,
+    "seed_type": "epoch_second_xor_draw_id"
+  },
+  "fitter_sha256": "d0746688b6e8ec0aefa3a17dd8eeb27ff86fdf4d36f624bc35de8d09838ddb16",
+  "forecasts": [
+    {
+      "date": "2026-10-27",
+      "draw_id": 14353,
+      "numbers": [
+        6,
+        13,
+        20,
+        26,
+        35
+      ],
+      "seed": "1793122433",
+      "time": "19:00"
+    },
+    {
+      "date": "2026-10-28",
+      "draw_id": 14354,
+      "numbers": [
+        1,
+        12,
+        19,
+        29,
+        32
+      ],
+      "seed": "1793182146",
+      "time": "15:00"
+    },
+    {
+      "date": "2026-10-28",
+      "draw_id": 14355,
+      "numbers": [
+        2,
+        5,
+        10,
+        32,
+        35
+      ],
+      "seed": "1793200643",
+      "time": "19:00"
+    },
+    {
+      "date": "2026-10-29",
+      "draw_id": 14356,
+      "numbers": [
+        13,
+        22,
+        32,
+        33,
+        35
+      ],
+      "seed": "1793293124",
+      "time": "15:00"
+    },
+    {
+      "date": "2026-10-29",
+      "draw_id": 14357,
+      "numbers": [
+        4,
+        15,
+        17,
+        20,
+        21
+      ],
+      "seed": "1793278853",
+      "time": "19:00"
+    }
+  ],
+  "full_scan_results_sha256": "a8712c9f79a120738a4451da8ea125c0691609c063a223f34fe6e322bc5b47d0",
+  "holdout_was_not_read_by_fitter": true,
+  "model_caveat": "Best searched time-seeded toy PRNG; 199-draw validation fails to show advantage; not identified lottery RNG",
+  "protocol": "2026-10-30 source-controlled timestamp/ID PRNG search; retrospectively separated five holdout draws",
+  "train_file": "train_599.csv",
+  "train_sha256": "cc2e3da23f5edab6f310f68a1204c00aa0113dcd38660b2e732346ce5cf9b8e4"
+}

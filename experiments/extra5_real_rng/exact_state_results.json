@@ -1,0 +1,105 @@
+{
+  "dataset": "train_599.csv",
+  "training_draws": 599,
+  "first_id": 13754,
+  "last_id": 14352,
+  "sampler": "fixed big-endian continuous 24bit rejection/combinadic; zero rejected chunks for probed prefix",
+  "families": {
+    "nr_lcg32": [
+      {
+        "result": "unsat",
+        "seconds": 0.028,
+        "k": 4
+      }
+    ],
+    "ansi_lcg32": [
+      {
+        "result": "unsat",
+        "seconds": 0.027,
+        "k": 4
+      }
+    ],
+    "msvc_lcg32": [
+      {
+        "result": "unsat",
+        "seconds": 0.019,
+        "k": 4
+      }
+    ],
+    "xorshift32": [
+      {
+        "result": "unsat",
+        "seconds": 0.786,
+        "k": 4
+      }
+    ],
+    "xorshift96": [
+      {
+        "result": "sat",
+        "seconds": 5.109,
+        "state": [
+          1930806890,
+          1902084917,
+          3222435801
+        ],
+        "raw24": [
+          6304188,
+          507433,
+          11708936,
+          8878596
+        ],
+        "k": 4
+      },
+      {
+        "result": "unknown",
+        "seconds": 12.009,
+        "k": 6
+      }
+    ],
+    "xorshift128": [
+      {
+        "result": "sat",
+        "seconds": 0.035,
+        "state": [
+          1113693277,
+          2063999164,
+          3551390143,
+          1617246130
+        ],
+        "raw24": [
+          3057868,
+          9921761,
+          671448,
+          12449548
+        ],
+        "k": 4
+      },
+      {
+        "result": "sat",
+        "seconds": 1.034,
+        "state": [
+          3268163533,
+          3999063870,
+          1400446331,
+          2421021605
+        ],
+        "raw24": [
+          3382500,
+          4078385,
+          6839456,
+          3684484,
+          6182479,
+          13994559
+        ],
+        "k": 6
+      },
+      {
+        "result": "unknown",
+        "seconds": 12.013,
+        "k": 8
+      }
+    ]
+  },
+  "solver": "native libz3.so.4 using exact QF_BV constraints",
+  "timeout_ms": 12000
+}
