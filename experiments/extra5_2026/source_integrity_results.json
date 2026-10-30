@@ -1,0 +1,15 @@
+{
+  "original_xlsx_sha256": "97f6b7ae5e41565d77ed8065a044c57bde539da8d5dca4e44917466c02b4738c",
+  "normalized_csv_sha256": "5fb393513548e1c5853165eeb137c66f1a859071eaf0c4c8203f5d487289d33e",
+  "xlsx_records_verified_against_csv": 604,
+  "identical_all_recorded_positions": true,
+  "first_id": 13754,
+  "last_id": 14357,
+  "corrected_14249_record": [
+    35,
+    2,
+    4,
+    30,
+    33
+  ]
+}

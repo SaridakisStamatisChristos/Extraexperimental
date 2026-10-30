@@ -1,0 +1,20 @@
+{
+  "experiment": "EXTRA5-V1-FROZEN-UNIFORM-NULL-CONTROL",
+  "target_draw_id": 14360,
+  "target_schedule_if_normal": "2026-10-31 15:00 Europe/Athens (scheduled; not operator-confirmed)",
+  "source_last_draw_id": 14357,
+  "source_sha256": "5fb393513548e1c5853165eeb137c66f1a859071eaf0c4c8203f5d487289d33e",
+  "domain_hex": "4558545241352d4e554c4c2d434f4e54524f4c2d56317c696d6d757461626c652d6373762d7368613235367c",
+  "method": "sha256(DOMAIN || decimal_target || b\"|\" || sha256(csv)); interpret first 8 bytes big-endian and reject if >=floor(2^64/C(35,5))*C(35,5); use rank modulo C(35,5) then lexicographic unrank",
+  "ticket_rank": 65241,
+  "ticket": [
+    2,
+    7,
+    13,
+    26,
+    32
+  ],
+  "rejected_words_before_acceptance": 0,
+  "status": "LOCKED NULL CONTROL ONLY; mathematically no advantage over fair chance; unseen results must never be used to alter this ticket",
+  "cannot_be_called_blind_if_committed_after_draw": true
+}

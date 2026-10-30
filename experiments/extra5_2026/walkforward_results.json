@@ -1,0 +1,244 @@
+{
+  "experiment": "EXTRA5-2026-PREQUENTIAL-EXPLORATORY-v1",
+  "source_sha256": "5fb393513548e1c5853165eeb137c66f1a859071eaf0c4c8203f5d487289d33e",
+  "historical_warmup_draws": 200,
+  "first_scored_id": 13954,
+  "last_scored_id": 14357,
+  "scored_draws": 404,
+  "model_definitions": "uniform, shrunk cumulative/cold/recency half-life, last-draw repeats, same-hour, same-weekday; all product weighted, exactly normalized over C(35,5) subsets",
+  "models_fixed_for_this_replay_not_prospective_preregistration": [
+    "uniform:None:0",
+    "cumulative:None:0.2",
+    "cumulative:None:0.6",
+    "cold:None:0.2",
+    "cold:None:0.6",
+    "recency:10:0.2",
+    "recency:10:0.6",
+    "recency:30:0.2",
+    "recency:30:0.6",
+    "recency:100:0.2",
+    "recency:100:0.6",
+    "repeat:None:-0.35",
+    "repeat:None:0.35",
+    "same_hour:None:0.3",
+    "same_weekday:None:0.3"
+  ],
+  "results": {
+    "uniform:None:0": {
+      "forecast_count": 404,
+      "mean_log_probability": -12.690447512074883,
+      "log_likelihood_vs_uniform": 0.0,
+      "likelihood_ratio_vs_uniform": 1.0,
+      "mean_hits_of_deterministic_top_5": 0.7277227722772277,
+      "final_historical_top5": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "cumulative:None:0.2": {
+      "forecast_count": 404,
+      "mean_log_probability": -12.695328134706177,
+      "log_likelihood_vs_uniform": -1.9717715430424505,
+      "likelihood_ratio_vs_uniform": 0.13921002109577513,
+      "mean_hits_of_deterministic_top_5": 0.7029702970297029,
+      "final_historical_top5": [
+        8,
+        17,
+        21,
+        23,
+        33
+      ]
+    },
+    "cumulative:None:0.6": {
+      "forecast_count": 404,
+      "mean_log_probability": -12.712719763964452,
+      "log_likelihood_vs_uniform": -8.997989763385704,
+      "likelihood_ratio_vs_uniform": 0.00012365813651325896,
+      "mean_hits_of_deterministic_top_5": 0.7029702970297029,
+      "final_historical_top5": [
+        8,
+        17,
+        21,
+        23,
+        33
+      ]
+    },
+    "cold:None:0.2": {
+      "forecast_count": 404,
+      "mean_log_probability": -12.688111190762944,
+      "log_likelihood_vs_uniform": 0.9438738100234332,
+      "likelihood_ratio_vs_uniform": 2.569917532892049,
+      "mean_hits_of_deterministic_top_5": 0.7524752475247525,
+      "final_historical_top5": [
+        2,
+        5,
+        6,
+        26,
+        28
+      ]
+    },
+    "cold:None:0.6": {
+      "forecast_count": 404,
+      "mean_log_probability": -12.6912660364745,
+      "log_likelihood_vs_uniform": -0.330683857445365,
+      "likelihood_ratio_vs_uniform": 0.7184322601521536,
+      "mean_hits_of_deterministic_top_5": 0.7524752475247525,
+      "final_historical_top5": [
+        2,
+        5,
+        6,
+        26,
+        28
+      ]
+    },
+    "recency:10:0.2": {
+      "forecast_count": 404,
+      "mean_log_probability": -12.713011816993955,
+      "log_likelihood_vs_uniform": -9.115979187305129,
+      "likelihood_ratio_vs_uniform": 0.00010989566005222214,
+      "mean_hits_of_deterministic_top_5": 0.7153465346534653,
+      "final_historical_top5": [
+        5,
+        7,
+        27,
+        29,
+        31
+      ]
+    },
+    "recency:10:0.6": {
+      "forecast_count": 404,
+      "mean_log_probability": -12.86687486787532,
+      "log_likelihood_vs_uniform": -71.27665174337653,
+      "likelihood_ratio_vs_uniform": 1.1090304214745992e-31,
+      "mean_hits_of_deterministic_top_5": 0.7153465346534653,
+      "final_historical_top5": [
+        5,
+        7,
+        27,
+        29,
+        31
+      ]
+    },
+    "recency:30:0.2": {
+      "forecast_count": 404,
+      "mean_log_probability": -12.699029851843115,
+      "log_likelihood_vs_uniform": -3.4672652663657573,
+      "likelihood_ratio_vs_uniform": 0.03120224391607721,
+      "mean_hits_of_deterministic_top_5": 0.6905940594059405,
+      "final_historical_top5": [
+        5,
+        7,
+        17,
+        27,
+        29
+      ]
+    },
+    "recency:30:0.6": {
+      "forecast_count": 404,
+      "mean_log_probability": -12.751955423947738,
+      "log_likelihood_vs_uniform": -24.849196396633488,
+      "likelihood_ratio_vs_uniform": 1.6148460487848575e-11,
+      "mean_hits_of_deterministic_top_5": 0.6905940594059405,
+      "final_historical_top5": [
+        5,
+        7,
+        17,
+        27,
+        29
+      ]
+    },
+    "recency:100:0.2": {
+      "forecast_count": 404,
+      "mean_log_probability": -12.695221302376225,
+      "log_likelihood_vs_uniform": -1.9286112817426329,
+      "likelihood_ratio_vs_uniform": 0.14534990846363074,
+      "mean_hits_of_deterministic_top_5": 0.7326732673267327,
+      "final_historical_top5": [
+        1,
+        4,
+        5,
+        21,
+        27
+      ]
+    },
+    "recency:100:0.6": {
+      "forecast_count": 404,
+      "mean_log_probability": -12.71757830742976,
+      "log_likelihood_vs_uniform": -10.960841323370005,
+      "likelihood_ratio_vs_uniform": 1.7368691295210844e-05,
+      "mean_hits_of_deterministic_top_5": 0.7326732673267327,
+      "final_historical_top5": [
+        1,
+        4,
+        5,
+        21,
+        27
+      ]
+    },
+    "repeat:None:-0.35": {
+      "forecast_count": 404,
+      "mean_log_probability": -12.705368777012808,
+      "log_likelihood_vs_uniform": -6.028191034921292,
+      "likelihood_ratio_vs_uniform": 0.0024098493714129095,
+      "mean_hits_of_deterministic_top_5": 0.7301980198019802,
+      "final_historical_top5": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    "repeat:None:0.35": {
+      "forecast_count": 404,
+      "mean_log_probability": -12.741707104167787,
+      "log_likelihood_vs_uniform": -20.70887520553333,
+      "likelihood_ratio_vs_uniform": 1.0144946750346977e-09,
+      "mean_hits_of_deterministic_top_5": 0.6683168316831684,
+      "final_historical_top5": [
+        5,
+        7,
+        11,
+        18,
+        29
+      ]
+    },
+    "same_hour:None:0.3": {
+      "forecast_count": 404,
+      "mean_log_probability": -12.699287473132022,
+      "log_likelihood_vs_uniform": -3.571344267083987,
+      "likelihood_ratio_vs_uniform": 0.028118030121154675,
+      "mean_hits_of_deterministic_top_5": 0.7153465346534653,
+      "final_historical_top5": [
+        8,
+        11,
+        19,
+        27,
+        33
+      ]
+    },
+    "same_weekday:None:0.3": {
+      "forecast_count": 404,
+      "mean_log_probability": -12.713892997891108,
+      "log_likelihood_vs_uniform": -9.471976269755032,
+      "likelihood_ratio_vs_uniform": 7.697912553939013e-05,
+      "mean_hits_of_deterministic_top_5": 0.6683168316831684,
+      "final_historical_top5": [
+        1,
+        4,
+        16,
+        22,
+        29
+      ]
+    }
+  },
+  "best_by_mean_log_likelihood": "cold:None:0.2",
+  "best_nonuniform_by_mean_log_likelihood": "cold:None:0.2",
+  "equal_weight_nonuniform_likelihood_ratio_mixture": 0.25964055347544973,
+  "mixture_e_threshold_for_0_05_evidence": 20.0,
+  "uniform_random_expected_hits": 0.7142857142857143,
+  "interpretation": "Entire 2026 dataset is previously exposed; these are one-step-ahead historical simulations, not a virgin holdout nor a blind prediction. A fixed independent-of-data model library would make the mixture a valid e-value under the iid uniform null. This family is informed by prior retrospective research, so this replay has no prospective preregistration claim."
+}
