@@ -447,3 +447,14 @@ Four additional **user-authoritative** spreadsheets (2022, 2023, 2024 and 2025) 
 **Engineering verification:** 4,002/4,002 independent forecast replays and 40,320/40,320 independent C++/Python full-library differential checks passed; 15 Python regression tests pass. The first joint-model run was **invalidated by a CRLF parser defect** that omitted the last `prev2_set_rank` field. The corrected parser, model-selection rerun, corrected prediction locks and results are authoritative. The old failed run is retained under `invalidated_parser_run/` for provenance, never as evidence. The existing historical prediction locks outside this experiment were **not modified**. No new CI workflows.
 
 **Scientific status:** No production RNG algorithm or state was reconstructed; no consistent out-of-sample 4/5 advantage. Direct uniform ordered selection and independent uniform set-plus-shuffle are observationally indistinguishable under the uniform model. Avoid presenting statistical fits or retrospective re-search as future prediction.
+
+
+## 2026-10-30 — Shuffle-invariant exact inverse-state experiment
+
+- Source: `experiments/extra5_shuffle_inversion/`.
+- Exact disjunctive GF(2) inverse solver for UNORDERED 5-of-35 results; supports a post-selection display shuffle, known odd multiplicative 32-bit output scramblers, fixed inter-ticket generator strides, and fully enumerated compatible xorshift32 seeds.
+- Systematic 12³ shift-parameter grid × four stride settings = **6,912/6,912 exhaustively evaluated** models with zero full historical-sequence survivors.
+- Three odd scramblers × 50 shift triples × six strides = **900/900 exhaustively evaluated** models with zero full-sequence survivors.
+- Nine planted-generator controls each recovered the exact state and reproduced all 60 complete synthetic tickets; ten regression tests pass. Nonlinear 128-bit SMT prototype timed out and is NOT a contradiction.
+- All elimination claims are conditional on the specified recurrence and sampler. No actual EXTRA 5 state or reliable next-draw predictor recovered. Existing prediction locks and CI untouched.
+- Full frozen data/code archive: `experiments/extra5_shuffle_inversion/EXTRA5_ShuffleInvariant_Inverse_State_2026.zip`.
