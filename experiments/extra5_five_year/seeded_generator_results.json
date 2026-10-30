@@ -1,0 +1,56 @@
+{
+  "experiment": "fixed-generator-year-split-2022-to-2026",
+  "frozen_file": "selected_generator_PRE_EVALUATION.json",
+  "dataset_sha256": "61fc2a3a57656a8188f7defc422ea5efbb1a33756455a41b97891cf0004c8307",
+  "candidate_family_count": 1080,
+  "selected": {
+    "generator": "splitmix64",
+    "seed_rule": "epoch_minute",
+    "seed_offset": -60,
+    "sampler": "combinadic24",
+    "selection_hits_2022_2024": 1692
+  },
+  "year_boundaries": {
+    "select_2022_2024": 2192,
+    "validation_2025": 730,
+    "test_2026": 604
+  },
+  "selected_train_hits": 1692,
+  "selected_train_expected": 1565.7142857142858,
+  "selected_validation_hits": 538,
+  "selected_validation_expected": 521.4285714285714,
+  "selected_test_hits": 442,
+  "selected_test_expected": 431.42857142857144,
+  "selected_validation_exact_five": 0,
+  "selected_test_exact_five": 0,
+  "validation_match_distribution": [
+    295,
+    336,
+    95,
+    4,
+    0,
+    0
+  ],
+  "test_match_distribution": [
+    261,
+    255,
+    78,
+    9,
+    1,
+    0
+  ],
+  "selection_search_adjusted_p": 0.09725685785536159,
+  "selection_null_max_scores_summary": {
+    "median": 1673.0,
+    "p05": 1657.95,
+    "p95": 1696.05,
+    "max": 1730
+  },
+  "validation_models_above_uniform_expectation": 591,
+  "test_models_above_uniform_expectation": 549,
+  "best_posthoc_validation_hits": 590,
+  "best_posthoc_test_hits": 483,
+  "model_selected_before_test": true,
+  "historical_results_known_in_research": true,
+  "interpretation": "No actual RNG identified by seed schedule; performance of selection should be judged on frozen year-forward 2025 and 2026 scores, never by posthoc max."
+}

@@ -1,0 +1,97 @@
+{
+  "generator_validation_2025": {
+    "draws": 730,
+    "observed_hits": 538,
+    "expected_hits": 521.4285714285714,
+    "variance_per_draw": 0.5402160864345739,
+    "exact_p_at_least_observed": 0.20871693055334534,
+    "exact_p_at_most_observed": 0.8053431496533052,
+    "null_q025_hits": 483,
+    "null_q975_hits": 561
+  },
+  "generator_test_2026": {
+    "draws": 604,
+    "observed_hits": 442,
+    "expected_hits": 431.42857142857144,
+    "variance_per_draw": 0.5402160864345739,
+    "exact_p_at_least_observed": 0.28740174579449923,
+    "exact_p_at_most_observed": 0.7310630088191566,
+    "null_q025_hits": 396,
+    "null_q975_hits": 467
+  },
+  "generator_combined_2025_and_2026": {
+    "draws": 1334,
+    "observed_hits": 980,
+    "expected_hits": 952.8571428571429,
+    "variance_per_draw": 0.5402160864345739,
+    "exact_p_at_least_observed": 0.1604650392831619,
+    "exact_p_at_most_observed": 0.8483895054432049,
+    "null_q025_hits": 901,
+    "null_q975_hits": 1006
+  },
+  "exploratory_pair_year_scan": {
+    "yearwise_results": [
+      {
+        "year": 2022,
+        "draws": 730,
+        "most_frequent_pair": [
+          4,
+          8
+        ],
+        "pair_hits": 29,
+        "single_pair_raw_binomial_p": 2.751591397917762e-05,
+        "bonferroni_595_pairs": 0.016371968817610685
+      },
+      {
+        "year": 2023,
+        "draws": 730,
+        "most_frequent_pair": [
+          12,
+          34
+        ],
+        "pair_hits": 22,
+        "single_pair_raw_binomial_p": 0.007222471932495579,
+        "bonferroni_595_pairs": 1
+      },
+      {
+        "year": 2024,
+        "draws": 732,
+        "most_frequent_pair": [
+          22,
+          25
+        ],
+        "pair_hits": 26,
+        "single_pair_raw_binomial_p": 0.00038935757318323396,
+        "bonferroni_595_pairs": 0.2316677560440242
+      },
+      {
+        "year": 2025,
+        "draws": 730,
+        "most_frequent_pair": [
+          2,
+          33
+        ],
+        "pair_hits": 22,
+        "single_pair_raw_binomial_p": 0.007222471932495579,
+        "bonferroni_595_pairs": 1
+      },
+      {
+        "year": 2026,
+        "draws": 604,
+        "most_frequent_pair": [
+          14,
+          31
+        ],
+        "pair_hits": 19,
+        "single_pair_raw_binomial_p": 0.0078051063038818225,
+        "bonferroni_595_pairs": 1
+      }
+    ],
+    "min_raw_p_across_all_years": 2.751591397917762e-05,
+    "simultaneous_5_year_595_pairs_familywise_p": 0.06477409036385445,
+    "Monte_Carlo_reps": 2500,
+    "Monte_Carlo_seed": 22022026,
+    "interpretation": "Exploratory scan after reviewing main 5-year summaries; not a preregistered discovery."
+  },
+  "note": "Exact overlap tails condition on a fixed selected ticket per draw, independent uniform fair-lottery outcomes. Real-world test years have already happened."
+}

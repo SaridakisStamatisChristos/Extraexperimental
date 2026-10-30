@@ -1,0 +1,54 @@
+{
+  "count": 3526,
+  "id_start": 10832,
+  "id_end": 14357,
+  "first_timestamp": "2022-01-01 15:00",
+  "last_timestamp": "2026-10-29 19:00",
+  "source_files": {
+    "2022": {
+      "workbook": "extra5_2022.xlsx",
+      "sha256": "ccf269186c682fb09e369fccaee93e01152335f839017187ed952c1adf886c9f",
+      "records": 730,
+      "min_id": 10832,
+      "max_id": 11561
+    },
+    "2023": {
+      "workbook": "extra5_2023.xlsx",
+      "sha256": "448eb57b5d5a889313f9e216a2b011012559cc74d6227f1f802b5e69f4039bfc",
+      "records": 730,
+      "min_id": 11562,
+      "max_id": 12291
+    },
+    "2024": {
+      "workbook": "extra5_2024.xlsx",
+      "sha256": "7307344fd1c7e71dc549214c6e6790566be8f79e2faa2946d8e99e9f4b9ae97f",
+      "records": 732,
+      "min_id": 12292,
+      "max_id": 13023
+    },
+    "2025": {
+      "workbook": "extra5_2025.xlsx",
+      "sha256": "eb15167351247720ce1e8e5b48076b7ff6c0e7ff72724a1f22fb3e48d66d8ea9",
+      "records": 730,
+      "min_id": 13024,
+      "max_id": 13753
+    },
+    "2026": {
+      "workbook": "extra5_2026.xlsx",
+      "sha256": "97f6b7ae5e41565d77ed8065a044c57bde539da8d5dca4e44917466c02b4738c",
+      "records": 604,
+      "min_id": 13754,
+      "max_id": 14357
+    }
+  },
+  "csv_sha256": "61fc2a3a57656a8188f7defc422ea5efbb1a33756455a41b97891cf0004c8307",
+  "missing_ids": 0,
+  "duplicates": 0,
+  "date_clock_gaps": 0,
+  "invalid_rows": 0,
+  "extraction_order_verified": false,
+  "train_2022_2024_count": 2192,
+  "validation_2025_count": 730,
+  "heldout_2026_count": 604,
+  "interpretation": "workbooks authoritative by user designation; clock order present; n1..n5 represent workbook column order, not independently authenticated extraction order."
+}

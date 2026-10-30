@@ -1,0 +1,173 @@
+{
+  "dataset": "extra5_2022_2026_authoritative.csv",
+  "dataset_sha256": "61fc2a3a57656a8188f7defc422ea5efbb1a33756455a41b97891cf0004c8307",
+  "draw_count": 3526,
+  "numbers_observed": 17630,
+  "calibration_replicates": 1000,
+  "permutation_replicates": 1500,
+  "seed": 20261030,
+  "test_method": "uniform 5-without-replacement Monte Carlo; familywise Bonferroni across 10 prespecified summary families; paired and column permutation conditional tests",
+  "observed": {
+    "chisq35": 16.84912081678956,
+    "max_number_deviation": 51.28571428571428,
+    "max_pair_occurrence": 91,
+    "serial_overlap_by_lag": {
+      "1": 0.7086524822695035,
+      "2": 0.7020431328036323,
+      "3": 0.7405620210048255,
+      "7": 0.7115657857345837,
+      "14": 0.7249430523917996,
+      "30": 0.7016590389016019
+    },
+    "year_frequency_chisq": 136.92691114306945,
+    "rank_decile_chisq": 4.011344299489506,
+    "repeated_ticket_pairs": 21,
+    "adjacent_pairs": 1979,
+    "number_min_count": 475,
+    "number_max_count": 555,
+    "max_pair_expected": 59.260504201680675,
+    "top_ten_number_counts": [
+      [
+        4,
+        555
+      ],
+      [
+        8,
+        537
+      ],
+      [
+        32,
+        525
+      ],
+      [
+        13,
+        518
+      ],
+      [
+        22,
+        518
+      ],
+      [
+        10,
+        516
+      ],
+      [
+        23,
+        516
+      ],
+      [
+        11,
+        512
+      ],
+      [
+        27,
+        511
+      ],
+      [
+        31,
+        510
+      ]
+    ]
+  },
+  "tests": {
+    "chisq35": {
+      "observed": 16.84912081678956,
+      "null_mean": 30.2370555870675,
+      "null_q05": 19.573879750425412,
+      "null_q95": 43.50709018718094,
+      "p_two_sided_or_upper_as_defined": 0.9760239760239761,
+      "tail": "upper",
+      "bonferroni_adjusted_p_over_all_families": 1.0
+    },
+    "max_number_deviation": {
+      "observed": 51.28571428571428,
+      "null_mean": 49.569,
+      "null_q05": 35.71428571428572,
+      "null_q95": 66.71428571428572,
+      "p_two_sided_or_upper_as_defined": 0.3996003996003996,
+      "tail": "upper",
+      "bonferroni_adjusted_p_over_all_families": 1.0
+    },
+    "max_pair_occurrence": {
+      "observed": 91,
+      "null_mean": 84.164,
+      "null_q05": 80.0,
+      "null_q95": 90.0,
+      "p_two_sided_or_upper_as_defined": 0.04795204795204795,
+      "tail": "upper",
+      "bonferroni_adjusted_p_over_all_families": 0.4795204795204795
+    },
+    "year_frequency_chisq": {
+      "observed": 136.92691114306945,
+      "null_mean": 150.51476807465167,
+      "null_q05": 124.41568045998208,
+      "null_q95": 181.70446509013195,
+      "p_two_sided_or_upper_as_defined": 0.7852147852147852,
+      "tail": "upper",
+      "bonferroni_adjusted_p_over_all_families": 1.0
+    },
+    "rank_decile_chisq": {
+      "observed": 4.011344299489506,
+      "null_mean": 9.127986386840611,
+      "null_q05": 3.239364719228587,
+      "null_q95": 17.209869540555857,
+      "p_two_sided_or_upper_as_defined": 0.9070929070929071,
+      "tail": "upper",
+      "bonferroni_adjusted_p_over_all_families": 1.0
+    },
+    "repeated_ticket_pairs": {
+      "observed": 21,
+      "null_mean": 19.054,
+      "null_q05": 12.0,
+      "null_q95": 27.0,
+      "p_two_sided_or_upper_as_defined": 0.7502497502497503,
+      "tail": "two-sided about simulated mean",
+      "bonferroni_adjusted_p_over_all_families": 1.0
+    },
+    "adjacent_pairs": {
+      "observed": 1979,
+      "null_mean": 2013.702,
+      "null_q05": 1952.0,
+      "null_q95": 2079.0,
+      "p_two_sided_or_upper_as_defined": 0.41358641358641357,
+      "tail": "two-sided about simulated mean",
+      "bonferroni_adjusted_p_over_all_families": 1.0
+    },
+    "max_serial_overlap_across_lags": {
+      "observed": 1.5596266381955501,
+      "null_mean": 1.2017842558453622,
+      "p_upper": 0.1798201798201798,
+      "lags": [
+        1,
+        2,
+        3,
+        7,
+        14,
+        30
+      ],
+      "observed_raw": {
+        "1": 0.7086524822695035,
+        "2": 0.7020431328036323,
+        "3": 0.7405620210048255,
+        "7": 0.7115657857345837,
+        "14": 0.7249430523917996,
+        "30": 0.7016590389016019
+      },
+      "bonferroni_adjusted_p_over_all_families": 1.0
+    },
+    "position_conditional_permutation": {
+      "observed": 169.33825318366476,
+      "null_mean": 139.84314628369216,
+      "p_upper": 0.04463690872751499,
+      "bonferroni_adjusted_p_over_all_families": 0.4463690872751499,
+      "interpretation": "tests workbook column ordering, not independently verified mechanical extraction order"
+    },
+    "afternoon_evening_paired_permutation": {
+      "observed": 35.9931145093298,
+      "null_mean": 30.01453517735736,
+      "p_upper": 0.1972018654230513,
+      "bonferroni_adjusted_p_over_all_families": 1
+    }
+  },
+  "interpretation": "A failure to reject tested nulls does not identify a production RNG or certify cryptographic randomness. Statistical associations are not predictive evidence."
+}

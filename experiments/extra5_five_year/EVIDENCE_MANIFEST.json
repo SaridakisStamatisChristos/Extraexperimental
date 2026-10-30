@@ -1,0 +1,30 @@
+{
+  "experiment": "Extra5 2022-2026 five-year RNG and randomness research",
+  "runtime": "3.13.5",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "artifact_tool": "installed/imported, package version metadata unavailable"
+  },
+  "local_unittest_passed": 16,
+  "ci_added": false,
+  "draw_count": 3526,
+  "files": {
+    "README.md": "ec9eb714d8c4f78a64357d7597e89094c5386d8a1011021e7d9be7aea7473236",
+    "REPORT.md": "1cfb1c4611c4ab93997cfc6ea9d4345e318c425db2b01464eca453a9db70e037",
+    "prepare_five_year.py": "902ba12bd63c20c0ea3e26bcfa6d28ddf80bff5c9b6581c639ad8d5f38d62bb4",
+    "timestamp_prng_scan.py": "d0746688b6e8ec0aefa3a17dd8eeb27ff86fdf4d36f624bc35de8d09838ddb16",
+    "seeded_prng_five_year.py": "c8c62264814718b43b2e6f6781d26fb9902df49d7e73a6caa3f0cb6de6ef7931",
+    "five_year_randomness_audit.py": "11baf66d673b64cab73d1e1e232a120d45fe541d366fdb5dde04458c9e29ff0a",
+    "five_year_followup.py": "de4743716b93a72544ebd0aea768ec2f8fee59430f4264aa28868cdecaf74a3d",
+    "test_five_year.py": "657ccde4e3e65e8aac92ecf4e370db8b8abea12856511bd8ed2ff77f1cbaf57a",
+    "extra5_2022_2026_authoritative.csv": "61fc2a3a57656a8188f7defc422ea5efbb1a33756455a41b97891cf0004c8307",
+    "train_2022_2024.csv": "c1abc2bff3196a113b230d5e8e8f65e7975edb651ab05b509ec2ccc77e810a7a",
+    "evaluation_calendar_2025_2026.csv": "63cfc3109465f6eb30f22d5fbcec6fb9ce9b3f9e1f53688593a5e001459f12cd",
+    "provenance.json": "d61c3cae7f3437b150ffacf6b217ad940f3539313baff510a6de69ce77451e60",
+    "selected_generator_PRE_EVALUATION.json": "2a646293d52f44eeb433757782700e29295e4acf8ba68bd16868efb5c8311b7a",
+    "seeded_generator_results.json": "c422a03a91eb650478c335b01f30ec3b6be79868bfc9db5e82b4b1aef9fe8c08",
+    "five_year_randomness_results.json": "3c23e157d11b271205b5ba3433fc089cef0124c7a380478955a2922c1d8f38c6",
+    "five_year_followup_results.json": "a295fa90bda7a4f01b570ee582de8541071e1a9da50dfd111df1d0ff183fcfc5"
+  }
+}
