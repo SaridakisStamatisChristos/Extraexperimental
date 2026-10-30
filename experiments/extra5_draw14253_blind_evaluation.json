@@ -1,0 +1,40 @@
+{
+  "draw_id": 14253,
+  "actual": [
+    17,
+    23,
+    30,
+    34,
+    35
+  ],
+  "source": "user supplied",
+  "prior_lock_commit": "db050505c8a184bed0390fed1aec0f4f494beac9",
+  "primary": {
+    "numbers": [
+      9,
+      24,
+      25,
+      30,
+      33
+    ],
+    "hits": [
+      30
+    ],
+    "score": 1
+  },
+  "secondary": {
+    "numbers": [
+      15,
+      17,
+      22,
+      29,
+      35
+    ],
+    "hits": [
+      17,
+      35
+    ],
+    "score": 2
+  },
+  "conclusion": "Neither fixed model exactly matched the fifth draw. Secondary candidate cannot replace original primary."
+}
