@@ -1,0 +1,40 @@
+{
+  "experiment": "EXTRA5-14357-IMMUTABLE-PRE-REVEAL-EVALUATION-20261030",
+  "source_authority": "User-supplied 2026 spreadsheet; normalized CSV verified byte-for-byte at record level",
+  "actual_draw_id": 14357,
+  "recorded_original_order": [
+    3,
+    10,
+    4,
+    6,
+    22
+  ],
+  "actual_unordered_ticket": [
+    3,
+    4,
+    6,
+    10,
+    22
+  ],
+  "locked_ticket": [
+    2,
+    11,
+    13,
+    14,
+    35
+  ],
+  "locked_prediction_commit": "6e25f954e3139ae72378ef2efbf4360eb754df78",
+  "locked_prediction_commit_url": "https://github.com/SaridakisStamatisChristos/Extraexperimental/commit/6e25f954e3139ae72378ef2efbf4360eb754df78",
+  "lock_commit_timestamp_utc": "2026-10-29T14:29:49Z",
+  "scheduled_draw_timestamp_utc": "2026-10-29T17:00:00Z",
+  "timing_integrity": "Prior GitHub commit precedes scheduled draw time",
+  "frozen_model": "cold",
+  "frozen_forecast_horizon_draws": 2,
+  "locked_last_known_draw_id": 14355,
+  "exact_correct_numbers": 0,
+  "exact_five_match": false,
+  "fair_null_probability_of_zero_correct": 0.4389770570984992,
+  "fair_null_expected_correct_numbers": 0.7142857142857143,
+  "conclusion": "This one genuinely precommitted cold-model prediction scored zero of five numbers. No prospective edge; one draw cannot settle long-term skill.",
+  "original_lock_not_modified": true
+}
