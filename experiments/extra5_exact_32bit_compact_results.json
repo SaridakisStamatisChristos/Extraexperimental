@@ -1,0 +1,191 @@
+{
+  "experiment": "EXTRA5-32bit-invertible-first-output-states-20261030",
+  "target_draws": [
+    14249,
+    14250,
+    14251,
+    14252
+  ],
+  "ranks": [
+    55817,
+    57278,
+    268706,
+    23073
+  ],
+  "full_search_results": [
+    {
+      "family": "xs13_17_5",
+      "sampler": "hi24",
+      "first_output_compatible": 13056,
+      "exact_first_two": 0,
+      "exact_first_three": 0,
+      "exact_all_four": 0,
+      "unresolved": 0
+    },
+    {
+      "family": "xs13_17_5",
+      "sampler": "lo24",
+      "first_output_compatible": 13056,
+      "exact_first_two": 0,
+      "exact_first_three": 0,
+      "exact_all_four": 0,
+      "unresolved": 0
+    },
+    {
+      "family": "xs13_17_5",
+      "sampler": "full32",
+      "first_output_compatible": 13230,
+      "exact_first_two": 0,
+      "exact_first_three": 0,
+      "exact_all_four": 0,
+      "unresolved": 0
+    },
+    {
+      "family": "xs5_13_6",
+      "sampler": "hi24",
+      "first_output_compatible": 13056,
+      "exact_first_two": 0,
+      "exact_first_three": 0,
+      "exact_all_four": 0,
+      "unresolved": 0
+    },
+    {
+      "family": "xs5_13_6",
+      "sampler": "lo24",
+      "first_output_compatible": 13056,
+      "exact_first_two": 0,
+      "exact_first_three": 0,
+      "exact_all_four": 0,
+      "unresolved": 0
+    },
+    {
+      "family": "xs5_13_6",
+      "sampler": "full32",
+      "first_output_compatible": 13230,
+      "exact_first_two": 0,
+      "exact_first_three": 0,
+      "exact_all_four": 0,
+      "unresolved": 0
+    },
+    {
+      "family": "lcg_nr",
+      "sampler": "hi24",
+      "first_output_compatible": 13056,
+      "exact_first_two": 0,
+      "exact_first_three": 0,
+      "exact_all_four": 0,
+      "unresolved": 0
+    },
+    {
+      "family": "lcg_nr",
+      "sampler": "lo24",
+      "first_output_compatible": 13056,
+      "exact_first_two": 0,
+      "exact_first_three": 0,
+      "exact_all_four": 0,
+      "unresolved": 0
+    },
+    {
+      "family": "lcg_nr",
+      "sampler": "full32",
+      "first_output_compatible": 13230,
+      "exact_first_two": 0,
+      "exact_first_three": 0,
+      "exact_all_four": 0,
+      "unresolved": 0
+    },
+    {
+      "family": "lcg_ansi",
+      "sampler": "hi24",
+      "first_output_compatible": 13056,
+      "exact_first_two": 0,
+      "exact_first_three": 0,
+      "exact_all_four": 0,
+      "unresolved": 0
+    },
+    {
+      "family": "lcg_ansi",
+      "sampler": "lo24",
+      "first_output_compatible": 13056,
+      "exact_first_two": 0,
+      "exact_first_three": 0,
+      "exact_all_four": 0,
+      "unresolved": 0
+    },
+    {
+      "family": "lcg_ansi",
+      "sampler": "full32",
+      "first_output_compatible": 13230,
+      "exact_first_two": 0,
+      "exact_first_three": 0,
+      "exact_all_four": 0,
+      "unresolved": 0
+    },
+    {
+      "family": "fmix_counter",
+      "sampler": "hi24",
+      "first_output_compatible": 13056,
+      "exact_first_two": 0,
+      "exact_first_three": 0,
+      "exact_all_four": 0,
+      "unresolved": 0
+    },
+    {
+      "family": "fmix_counter",
+      "sampler": "lo24",
+      "first_output_compatible": 13056,
+      "exact_first_two": 0,
+      "exact_first_three": 0,
+      "exact_all_four": 0,
+      "unresolved": 0
+    },
+    {
+      "family": "fmix_counter",
+      "sampler": "full32",
+      "first_output_compatible": 13230,
+      "exact_first_two": 1,
+      "exact_first_three": 0,
+      "exact_all_four": 0,
+      "unresolved": 0
+    }
+  ],
+  "totals": {
+    "first_compatible_states": 196710,
+    "exact_2": 1,
+    "exact_3": 0,
+    "exact_4": 0,
+    "unresolved": 0
+  },
+  "only_two_draw_witness": {
+    "family": "fmix_counter",
+    "sampler": "full32",
+    "first_word": 414935513,
+    "initial_state": 291627021,
+    "output_ranks": [
+      55817,
+      57278,
+      216364,
+      59123
+    ],
+    "actual_ranks": [
+      55817,
+      57278,
+      268706,
+      23073
+    ],
+    "third_draw_prediction": [
+      7,
+      12,
+      16,
+      17,
+      25
+    ]
+  },
+  "scope": "Exhaustive only for five fixed 32bit word-output permutations and three specified hypothetical rank samplers. Not operator identification.",
+  "verification": {
+    "local_independent_python_tests": 8,
+    "local_cpp17_independent_verifier": true,
+    "local_compact_tests": 2,
+    "ci": false
+  }
+}

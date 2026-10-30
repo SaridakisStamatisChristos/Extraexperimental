@@ -11,3 +11,8 @@ RESULT: exactly one state matched the first TWO tickets, none matched the first 
 Verification: locally executed a full Python research script (8 passing regression tests including all 324632 rank/unrank inversions), a separately implemented C++17 checker, and the compact Python reproducer. All gave 196710 first-compatible states, 1 exact pair, 0 exact triples, 0 exact quadruples. The committed compact script has four reproducibility tests. No CI was run.
 
 Scope: exhaustive only for precisely the five defined 32-bit generator functions and three output-to-ticket transforms, not the real Allwyn cryptographic or physically reseeded system, other samplers or multistate generators. No production seed recovered and no predictive edge identified.
+
+
+## Source archival correction (30 October 2026)
+
+The prior checkpoint's complete reference scripts were absent from GitHub. A locally executed, standalone compact Python enumerator and two regression tests have now been added to the repository: [source](../experiments/extra5_exact_32bit_compact.py), [tests](../tests/test_exact_32bit_compact.py), [structured counts](../experiments/extra5_exact_32bit_compact_results.json). The independent C++ verifier and comprehensive test suite ran locally (C++ `SUMMARY|196710|1|0|0|0`, 8 Python tests); C++ and comprehensive test source files are also available as locally generated artifacts but are not claimed as committed in this checkpoint. No full-clone CI run. Also distinguish the [separate successful 96-bit xorshift 4/4 reconstruction](FOUR_DRAW_INVERSE_STATE.md): the present negative finding is confined to the specified 32-bit classes.
