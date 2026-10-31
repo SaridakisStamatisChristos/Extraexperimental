@@ -1,0 +1,19 @@
+{
+  "execution": "independent GitHub-connected JavaScript implementation reading canonical GitHub CSV, no local Python replay",
+  "branch": "main",
+  "source_path": "experiments/extra5_five_year/extra5_2022_2026_authoritative.csv",
+  "source_blob_sha": "eff4bdcb94a67bad95dd1a8e8da0e61354746d15",
+  "recorded_source_sha256": "61fc2a3a57656a8188f7defc422ea5efbb1a33756455a41b97891cf0004c8307",
+  "observations_accessed": 500,
+  "condition": "Marsaglia xorshift128, full arbitrary 128-bit initial state, known fixed sampler, fixed gap, no reseeding, exact five removals per draw",
+  "evidence": "XOR of necessary GF(2) affine-hull equations yields 0 = 1; not a claim about any other family or the actual production RNG",
+  "cases": [
+    {"sampler":"mod","gap":0,"status":"UNSAT","draw_id":11101,"rank":128,"equations":132,"certificate_equations":63,"last_parity_mask":8},
+    {"sampler":"mod","gap":1,"status":"UNSAT","draw_id":11099,"rank":128,"equations":130,"certificate_equations":67,"last_parity_mask":8},
+    {"sampler":"mod","gap":2,"status":"UNSAT","draw_id":11096,"rank":126,"equations":128,"certificate_equations":74,"last_parity_mask":24},
+    {"sampler":"high","gap":0,"status":"UNSAT","draw_id":11095,"rank":126,"equations":127,"certificate_equations":68,"last_parity_mask":8},
+    {"sampler":"high","gap":1,"status":"UNSAT","draw_id":11096,"rank":127,"equations":128,"certificate_equations":75,"last_parity_mask":24},
+    {"sampler":"high","gap":2,"status":"UNSAT","draw_id":11099,"rank":128,"equations":131,"certificate_equations":60,"last_parity_mask":18}
+  ],
+  "verification_remaining": "Rerun real_audit.py using canonical unmodified CSV and compare earliest contradictions; Jupyter/container environment cannot directly retrieve GitHub bytes."
+}
