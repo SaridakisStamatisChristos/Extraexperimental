@@ -1,0 +1,78 @@
+{
+  "scope": "Marsaglia xorshift128 unrestricted state, exact high sampler, unordered five-ticket-permutation constraints",
+  "seed_fixture_hex": "0x8877665544332211ffeeddccbbaa9988",
+  "z3_version": "4.13.3.0",
+  "python": "3.13.5",
+  "cases": [
+    {
+      "status": "SAT",
+      "seconds": 0.28751479199945607,
+      "seed": 167831480200484700837125613080225574687,
+      "full_ticket_replay": true,
+      "true_planted_state": false,
+      "n": 3,
+      "strengthen": false,
+      "pin": false,
+      "timeout_ms": 3000,
+      "formula_bytes": 12819,
+      "end_to_end_seconds": 0.3031079480006156
+    },
+    {
+      "status": "UNKNOWN",
+      "seconds": 5.0113719139999375,
+      "reason": "timeout",
+      "n": 5,
+      "strengthen": false,
+      "pin": false,
+      "timeout_ms": 5000,
+      "formula_bytes": 21379,
+      "end_to_end_seconds": 5.031302645999858
+    },
+    {
+      "status": "UNKNOWN",
+      "seconds": 8.02308222099964,
+      "reason": "timeout",
+      "n": 8,
+      "strengthen": false,
+      "pin": false,
+      "timeout_ms": 8000,
+      "formula_bytes": 34219,
+      "end_to_end_seconds": 8.054651059999742
+    },
+    {
+      "status": "UNKNOWN",
+      "seconds": 8.035238747999756,
+      "reason": "timeout",
+      "n": 8,
+      "strengthen": true,
+      "pin": false,
+      "timeout_ms": 8000,
+      "formula_bytes": 48987,
+      "end_to_end_seconds": 8.074712275999445
+    },
+    {
+      "status": "SAT",
+      "seconds": 0.06444643299983,
+      "seed": 181394966314194386162713626309886122376,
+      "full_ticket_replay": true,
+      "true_planted_state": true,
+      "n": 8,
+      "strengthen": true,
+      "pin": true,
+      "timeout_ms": 3000,
+      "formula_bytes": 49052,
+      "end_to_end_seconds": 0.10591481199935515
+    },
+    {
+      "status": "UNSAT",
+      "seconds": 0.003991111000686942,
+      "n": 3,
+      "strengthen": false,
+      "pin": true,
+      "timeout_ms": 3000,
+      "formula_bytes": 12884,
+      "end_to_end_seconds": 0.01015293999989808
+    }
+  ],
+  "conclusion": "Known planted state passes pinned SAT; underdetermined unpinned 3-draw SAT witnesses match; 5/8-draw unpinned timeouts UNKNOWN, not production RNG exclusions."
+}

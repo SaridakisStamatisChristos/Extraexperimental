@@ -1,0 +1,55 @@
+{
+  "experiment": "phase3b prefix K3 exhaustive",
+  "source": "frozen prior Phase3A first300 rank CSV (GitHub blob eff4bdcb94a67bad95dd1a8e8da0e61354746d15)",
+  "source_limitation": "canonical CSV not re-downloaded for full SHA256 validation in this container",
+  "records": [
+    {
+      "model": "marsaglia128",
+      "gap": 0,
+      "status": "UNSAT",
+      "prefix_length": 60,
+      "full_replay_draws": 300,
+      "max_prefix_skips": 3,
+      "paths_tested": 39711,
+      "total_prefix_paths": 39711,
+      "search_complete": true,
+      "rank_deficient_paths": 0,
+      "linearly_inconsistent_paths": 39711,
+      "full_replay_rejected_candidates": 0,
+      "suffix_skip_bound": null,
+      "seconds": 15.520439
+    },
+    {
+      "model": "marsaglia128",
+      "gap": 1,
+      "status": "UNSAT",
+      "prefix_length": 60,
+      "full_replay_draws": 300,
+      "max_prefix_skips": 3,
+      "paths_tested": 39711,
+      "total_prefix_paths": 39711,
+      "search_complete": true,
+      "rank_deficient_paths": 0,
+      "linearly_inconsistent_paths": 39711,
+      "full_replay_rejected_candidates": 0,
+      "suffix_skip_bound": null,
+      "seconds": 17.871859
+    },
+    {
+      "model": "marsaglia128",
+      "gap": 2,
+      "status": "UNSAT",
+      "prefix_length": 60,
+      "full_replay_draws": 300,
+      "max_prefix_skips": 3,
+      "paths_tested": 39711,
+      "total_prefix_paths": 39711,
+      "search_complete": true,
+      "rank_deficient_paths": 0,
+      "linearly_inconsistent_paths": 39711,
+      "full_replay_rejected_candidates": 0,
+      "suffix_skip_bound": null,
+      "seconds": 19.221075
+    }
+  ]
+}

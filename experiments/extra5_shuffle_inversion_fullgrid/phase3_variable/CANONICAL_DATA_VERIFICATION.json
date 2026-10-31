@@ -1,0 +1,17 @@
+{
+  "record_type": "Phase3C provenance independent canonical SHA-256 verification",
+  "date": "2026-10-31",
+  "source_repo": "SaridakisStamatisChristos/Extraexperimental",
+  "source_branch": "main",
+  "source_path": "experiments/extra5_five_year/extra5_2022_2026_authoritative.csv",
+  "source_git_blob_sha": "eff4bdcb94a67bad95dd1a8e8da0e61354746d15",
+  "source_size_bytes": 264795,
+  "source_records": 3526,
+  "computed_sha256": "61fc2a3a57656a8188f7defc422ea5efbb1a33756455a41b97891cf0004c8307",
+  "expected_sha256": "61fc2a3a57656a8188f7defc422ea5efbb1a33756455a41b97891cf0004c8307",
+  "sha256_matches": true,
+  "sha256_method": "Independent pure JavaScript SHA-256 implementation, self-tested on NIST SHA256('abc') test vector, applied to unchanged ASCII GitHub fetch content",
+  "first300_rank_fnv1a64": "0x38c420afceb1967b",
+  "first300_matches_frozen_lab_fixture": true,
+  "limitations": "No new operator primary-source reconciliation or prospective forecast; source bytes verified within connected GitHub tool response."
+}
