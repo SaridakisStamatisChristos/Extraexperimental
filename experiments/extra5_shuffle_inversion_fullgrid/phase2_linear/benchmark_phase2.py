@@ -9,7 +9,7 @@ import subprocess
 import sys
 import time
 from pathlib import Path
-from inverse_linear import MODELS, ticket, fourth_domain, forms, solve_equations
+from inverse_linear import MODELS, ticket, fourth_domain, forms, solve_equations, replay
 from smt_unordered import Solver, build_formula, selected_domains
 
 SAMPLES=[0x0123456789abcdef112233445566778899aabbccddeeff0013579bdf2468ace1,
@@ -39,6 +39,7 @@ def run(smt_ms=1200):
                         if result.rank==model.size and min_full_rank is None:min_full_rank=k
                     sec=time.perf_counter()-start
                     assert result.rank==model.size and result.seed==seed
+                    assert replay(model,result.seed,sets,gap,sampler)
                     entries.append({'model':model.name,'state_bits':model.size,'sampler':sampler,'extra_gap':gap,
                         'seed_hex':f'{seed:0{model.size//4}x}','rank':result.rank,'nullity':len(result.nullspace),
                         'min_fourth_indices_for_full_rank':min_full_rank,'rank_by_observation':rank_trace,
