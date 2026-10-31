@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-31",
+  "scope": "Unrestricted 128/256-bit GF2-linear state recovery from unordered five-number synthetic tickets",
+  "execution_environment": {
+    "python": "3.13.5",
+    "platform": "Linux 6.18.57 x86_64",
+    "benchmark_wall_seconds": 19.882791172999532
+  },
+  "models": [
+    "xorshift128",
+    "xoroshiro128_raw",
+    "xoshiro256_raw"
+  ],
+  "model_caveat": "xoroshiro and xoshiro were tested using raw linear projections of state; nonlinear published scramblers not tested",
+  "training_tickets_per_case": 1000,
+  "heldout_tickets_per_case": 100,
+  "cases": 24,
+  "exact_initial_state_recoveries": 24,
+  "heldout_complete_tickets_matched": 2400,
+  "heldout_complete_tickets_total": 2400,
+  "regression_methods_passed": 7,
+  "regression_methods_total": 7,
+  "complete_5_of_35_combination_census": {
+    "zero_parities": 181456,
+    "one_parity": 120868,
+    "two_parities": 20853,
+    "three_parities": 1424,
+    "four_parities": 31
+  },
+  "original_smt_status": "unrestricted 5/8-draw solver timeout UNKNOWN (not refuted)",
+  "real_data_status": "six precisely pinned Marsaglia models conditionally REFUTED by independent GitHub-connected JS linear contradiction audit; local Python canonical-data replay pending",
+  "production_rng_status": "UNKNOWN",
+  "reproduce": [
+    "python -W error -m unittest -v test_affine_inversion.py",
+    "python benchmark_affine.py",
+    "python real_audit.py --source ../../../extra5_five_year/extra5_2022_2026_authoritative.csv --output REAL_PYTHON_AUDIT.json"
+  ],
+  "complete_local_archive_sha256": "d94aa5e6292d5feaf2241cbcb4422b6b9043be078bed68a92b3930048fe9cec6",
+  "archive_scope": "full per-case raw results, all scripts, source-independent tests and local checkpoint"
+}
