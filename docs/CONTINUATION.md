@@ -472,3 +472,29 @@ A later independently audited inverse-state investigation extended the five-outp
 - See `SYNC_MANIFEST.md` and `docs/EXTRA5_FULLGRID_SYNC_2026-10-31.md` for verification and completeness; the full-grid CSV shards and synthetic fixtures are contained in the reconstructed ZIP.
 - Results remain conditional: 288,880 exhaustive model/sampler checks; unresolved configurations and 64-bit SMT timeouts are not falsifications. No deployed RNG or validated next-draw prediction.
 - Previous prediction locks and CI were left unchanged.
+
+
+## 2026-10-31 — Phase 1: exact xorshift64 unordered-set inversion (NEW, EXECUTED)
+
+**Base:** `main@9934579a6f02fdb3557e0a5990e129825753a36b`. Development branch: `research/inverse-64-hybrid`.
+Historical files, published data, old prediction locks and CI were left untouched.
+
+**New implementation:** `experiments/extra5_shuffle_inversion_fullgrid/inverse64_branch.cpp` builds a 64-bit GF(2) observation matrix from the fourth sequential removal index. For each unordered set, it computes the exact domain of possible fourth indices without trusting reported order; selects thirteen low-domain, linearly independent observations (rank 64); performs syndrome-based elimination of incompatible index assignments; reconstructs each candidate state; filters with sixty additional necessary unordered constraints; and replays all observed training tickets. Missing rows in a sparse input are represented by zero masks and still consume five-plus-gap PRNG steps. A deterministic enumeration cap reports `UNKNOWN`, never `UNSAT`.
+
+**Synthetic positives (executed locally):** recovered the exact 64-bit states for **5/5** distinct planted seeds, with gaps 0, 1 or 2, from **3,526 or 15,000 unordered training tickets** each. An independent Python reference replay verified **100/100 reserved continuation tickets for every case** (500/500 total), after the state was recovered using training data only. Five new unittest methods passed; 400 independently brute-permuted ticket domains agreed; a random negative and a tampered positive returned complete `UNSAT`, and a budget-limited case returned `UNKNOWN`.
+
+**Authentic-data conditional falsifications (executed locally):** the unchanged GitHub canonical 3,526-row CSV was read and a sparse subset derived from recorded original positions: first two rows plus 130 rows with the smallest possible fourth-index domains. Reproduction code: `prepare_real_subset.py`; expected source SHA-256 `61fc2a3a57656a8188f7defc422ea5efbb1a33756455a41b97891cf0004c8307`; derived sparse CSV SHA-256 `21120eb16a72c1a05693b471aba596b7f954a472f568ff4bca7c1249d4129ad9`. For the **specific xorshift64(13,7,17) + modulo-without-replacement + exactly five outputs + persistent state** hypothesis, fixed additional output gaps **0,1,2,3,4 each returned complete UNSAT**. Each gap required 5,038,848 exhaustively enumerated fourth-index assignments, of which 2,519,424 passed linear consistency and **zero passed sixty additional necessary domain constraints**. No production RNG, alternate sampler, variable gap or reseeding model was eliminated. Original output order was not used.
+
+**Reproduction (new tests only):**
+
+```bash
+cd experiments/extra5_shuffle_inversion_fullgrid
+python -W error -m unittest -v test_inverse64_branch.py
+python prepare_real_subset.py --output /tmp/extra5_phase1_real_sparse.csv
+g++ -O3 -std=c++20 -Wall -Wextra -Werror inverse64_branch.cpp -o /tmp/inverse64_branch
+for g in 0 1 2 3 4; do /tmp/inverse64_branch /tmp/extra5_phase1_real_sparse.csv 3526 "$g" 20000000 60; done
+```
+
+**Execution environment:** Python 3.13.5; g++ 14.2.0; AMD EPYC 9V74. Real-sparse solver times ~0.034–0.038 s per gap, excluding compilation/input preparation. Full case records: `PHASE1_HYBRID_RESULTS.json`. The original 83-file Base64 archive was **not reconstructed in this isolated compute sandbox** because the local container could not access the remote archive parts; consequently the original 12 regression tests were **not rerun this session**. Their results remain a previous checkpoint only. No existing results were modified.
+
+**Status / decision:** Phase-1 known specified 64-bit family has a working exact unordered inversion engine and independently reserved synthetic continuation. Promote to additional 64-bit shift triplets / alternative sampler experiments, then 128-bit designs. Do **not** generalize five pinned real-data `UNSAT` proofs to a claim about modern production EXTRA 5 or predictability. Production mechanism remains **UNKNOWN**.
