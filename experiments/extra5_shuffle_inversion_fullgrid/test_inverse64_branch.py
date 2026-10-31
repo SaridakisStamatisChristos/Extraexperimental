@@ -103,3 +103,49 @@ class Inverse64BranchTests(unittest.TestCase):
         self.assertEqual(r['observed_training_rows'],132)
 
 if __name__=='__main__':unittest.main(verbosity=2)
+
+# Independently coded parameterized generator oracle; this exercises both
+# xorshift directions, non-default shifts, and 64-bit multiply-high sampling.
+class ParameterizedXorshift64Tests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.temp=tempfile.TemporaryDirectory()
+        cls.binary=Path(cls.temp.name)/'inverse64_branch'
+        subprocess.run(['g++','-O3','-std=c++20','-Wall','-Wextra','-Werror',
+                        str(HERE/'inverse64_branch.cpp'),'-o',str(cls.binary)],check=True)
+    @classmethod
+    def tearDownClass(cls):cls.temp.cleanup()
+    def test_unordered_recovery_configurations(self):
+        specs=[(13,7,17,0,1,0),(7,9,13,0,0,2),
+               (7,9,13,0,1,1),(13,7,17,1,0,0),(13,7,17,1,1,2)]
+        for a,b,c,direction,high,gap in specs:
+            with self.subTest(model=(a,b,c,direction,high,gap)):
+                def step(x):
+                    if not direction:
+                        x^=(x<<a)&MASK;x^=x>>b;x^=(x<<c)&MASK
+                    else:
+                        x^=x>>a;x^=(x<<b)&MASK;x^=x>>c
+                    return x&MASK
+                def draw(x):
+                    pool=list(range(1,36));numbers=[]
+                    for _ in range(5):
+                        x=step(x)
+                        index=(x*len(pool))>>64 if high else x%len(pool)
+                        numbers.append(pool.pop(index))
+                    for _ in range(gap):x=step(x)
+                    return x,tuple(sorted(numbers))
+                seed=0xabcdef9876543210
+                x=seed;sets=[]
+                for _ in range(3626):
+                    x,t=draw(x);sets.append(t)
+                path=Path(self.temp.name)/'custom.csv'
+                write_csv(path,sets[:3526])
+                cmd=[str(self.binary),str(path),'3526',str(gap),'200000000',
+                     '60','3526',str(a),str(b),str(c),str(direction),str(high)]
+                r=json.loads(subprocess.run(cmd,check=True,capture_output=True,text=True).stdout)
+                self.assertEqual(r['status'],'SAT',r)
+                self.assertEqual(r['witness_state'],seed,r)
+                x=r['witness_state']
+                for i,expected in enumerate(sets):
+                    x,actual=draw(x)
+                    self.assertEqual(actual,expected,f'failed independent replay at {i}')
