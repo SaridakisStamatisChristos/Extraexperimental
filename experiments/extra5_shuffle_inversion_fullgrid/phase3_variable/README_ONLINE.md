@@ -37,3 +37,7 @@ The K=4 experiment is intentionally **not** part of the small unit-test suite. `
 ## Open boundaries
 
 Rejection rules consuming five distinct-number sampler words, collision retries, arbitrary skip rates, unknown per-draw reseeding, published xoshiro `++` / `**` nonlinear output functions and the actual operator's RNG remain `UNKNOWN`. `UNSAT` for K=4 says nothing about skip count >4 inside the first 60 records. The conventional 32-bit rejection probability is about 2e-5 per word, but this probability does not justify silently replacing a formal unbounded test with a bounded one. No future prediction has been claimed.
+
+## Subsequent canonical source integrity verification
+
+The canonical 3,526-draw GitHub CSV (Git blob `eff4bdcb94a67bad95dd1a8e8da0e61354746d15`, 264,795 bytes) was independently hashed in the GitHub-connected tool environment with a pure JavaScript SHA-256 implementation validated against the known `abc` test vector. The computed SHA-256 is `61fc2a3a57656a8188f7defc422ea5efbb1a33756455a41b97891cf0004c8307`, **matching the authoritative original**. The first300 rank data also match the frozen input. This verification supersedes the narrower earlier note about the missing full-CSV hash in the isolated local runtime. See `CANONICAL_DATA_VERIFICATION.json`. No lottery-model conclusion changes.
