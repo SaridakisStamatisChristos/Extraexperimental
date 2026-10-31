@@ -26,7 +26,7 @@ If the first output word is rejected and the second is accepted, a model initial
 
 - `python -W error -m unittest -v test_variable_rejection.py`: **11/11 green**, including independent Marsaglia forward implementation, inverse-transition-engineered early and late rejections, real nonlinear '+' output forced rejection in both 128- and 256-bit models, two separated rejects in one planted sample, zero-skip exhaustive UNSAT, budget `UNKNOWN`, rank-nullity `UNKNOWN`, and ordinal parity checks.
 - `python benchmark_phase3b.py`: **6/6 verified synthetic instances**, each with 100 reserved complete ticket continuations, 600/600 full tickets. The first-rejection case deliberately recovers a distinct yet future-equivalent seed; other stated controls recover their planted original states exactly when their hypotheses pin the correct skip behavior.
-- `python -W error -m unittest -v ../phase3_rank/test_rank_inverse.py`: previously preserved Phase 3A **7/7** green; combined **18/18**.
+- `(cd ../phase3_rank && python -W error -m unittest -v test_rank_inverse.py)`: previously preserved Phase 3A **7/7** green; combined **18/18**.
 - Benchmark timings in `PHASE3B_RESULTS.json` are local Python 3.13.5 on Linux x86_64. State generation time and regression-suite runtime are excluded from per-case inversion timings.
 
 ## Historically observed ranks: narrow bounded exclusions
@@ -45,7 +45,7 @@ From this directory:
 
 ```bash
 python -W error -m unittest -v test_variable_rejection.py
-python -W error -m unittest -v ../phase3_rank/test_rank_inverse.py
+(cd ../phase3_rank && python -W error -m unittest -v test_rank_inverse.py)
 python benchmark_phase3b.py
 python audit_real300.py --ranks ../phase3_rank/real_first300_ranks.csv --output REAL_300_BOUNDED_REPLAY.json --max-skips 1
 ```
