@@ -1,0 +1,225 @@
+{
+  "version": "phase3b-v1",
+  "python": "3.13.5",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "N": 324632,
+  "rejection_probabilities_ideal_uniform_words": {
+    "32bit": 2.000853419303894e-05,
+    "64bit": 1.4493614641786223e-14,
+    "expected_rejected_32bit_over_3526": 0.0705500915646553,
+    "probability_no_rejection_in_3526_independent_32bit_words": 0.9318804012443234
+  },
+  "cases": [
+    {
+      "case": "late_1",
+      "model": "marsaglia128",
+      "seed_planted_hex": "0xfb95259e1ebeac3b1b8bd7160dffc85a",
+      "seed_recovered_hex": "0xfb95259e1ebeac3b1b8bd7160dffc85a",
+      "original_seed_equal": true,
+      "actual_training_skip_draws": [
+        14
+      ],
+      "predicted_skip_draws": [
+        14
+      ],
+      "training_full_replay": 65,
+      "heldout_full_replay": 100,
+      "recovery": {
+        "status": "SAT",
+        "seed": "0xfb95259e1ebeac3b1b8bd7160dffc85a",
+        "model": "marsaglia128",
+        "sampler": "one_word_rank_uniform_rejection",
+        "accepted_limit": 4294881360,
+        "canonical_rejection": true,
+        "gap": 0,
+        "max_skips": 1,
+        "minimum_skips": 0,
+        "recovered_path": [
+          14
+        ],
+        "actual_rejections": 1,
+        "exact_training_tickets": 65,
+        "linear_rank": 128,
+        "paths_tested": 16,
+        "total_bounded_paths": 66,
+        "search_complete": false,
+        "seconds": 0.011818
+      }
+    },
+    {
+      "case": "initial_1_identifiable_alias",
+      "model": "marsaglia128",
+      "seed_planted_hex": "0x4fc8e7e8fedcba989abcdef012345678",
+      "seed_recovered_hex": "0xffffffff4fc8e7e8fedcba989abcdef0",
+      "original_seed_equal": false,
+      "actual_training_skip_draws": [
+        0
+      ],
+      "predicted_skip_draws": [],
+      "training_full_replay": 65,
+      "heldout_full_replay": 100,
+      "recovery": {
+        "status": "SAT",
+        "seed": "0xffffffff4fc8e7e8fedcba989abcdef0",
+        "model": "marsaglia128",
+        "sampler": "one_word_rank_uniform_rejection",
+        "accepted_limit": 4294881360,
+        "canonical_rejection": true,
+        "gap": 0,
+        "max_skips": 1,
+        "minimum_skips": 0,
+        "recovered_path": [],
+        "actual_rejections": 0,
+        "exact_training_tickets": 65,
+        "linear_rank": 128,
+        "paths_tested": 1,
+        "total_bounded_paths": 66,
+        "search_complete": false,
+        "seconds": 0.006027
+      }
+    },
+    {
+      "case": "two_skips_stress",
+      "model": "marsaglia128",
+      "seed_planted_hex": "0x00000000000000000000000000000025",
+      "seed_recovered_hex": "0x00000000000000000000000000000025",
+      "original_seed_equal": true,
+      "actual_training_skip_draws": [
+        46,
+        50
+      ],
+      "predicted_skip_draws": [
+        46,
+        50
+      ],
+      "training_full_replay": 68,
+      "heldout_full_replay": 100,
+      "recovery": {
+        "status": "SAT",
+        "seed": "0x00000000000000000000000000000025",
+        "model": "marsaglia128",
+        "sampler": "one_word_rank_uniform_rejection",
+        "accepted_limit": 4260470368,
+        "canonical_rejection": false,
+        "gap": 0,
+        "max_skips": 2,
+        "minimum_skips": 0,
+        "recovered_path": [
+          46,
+          50
+        ],
+        "actual_rejections": 2,
+        "exact_training_tickets": 68,
+        "linear_rank": 128,
+        "paths_tested": 2167,
+        "total_bounded_paths": 2415,
+        "search_complete": false,
+        "seconds": 0.817493
+      }
+    },
+    {
+      "case": "no_rejection",
+      "model": "xoroshiro128plus",
+      "seed_planted_hex": "0xabcdeeddfedcba987654321123456789",
+      "seed_recovered_hex": "0xabcdeeddfedcba987654321123456789",
+      "original_seed_equal": true,
+      "actual_training_skip_draws": [],
+      "predicted_skip_draws": [],
+      "training_full_replay": 175,
+      "heldout_full_replay": 100,
+      "recovery": {
+        "status": "SAT",
+        "seed": "0xabcdeeddfedcba987654321123456789",
+        "model": "xoroshiro128plus",
+        "sampler": "one_word_rank_uniform_rejection",
+        "accepted_limit": 18446744073709284256,
+        "canonical_rejection": true,
+        "gap": 0,
+        "max_skips": 0,
+        "minimum_skips": 0,
+        "recovered_path": [],
+        "actual_rejections": 0,
+        "exact_training_tickets": 175,
+        "linear_rank": 128,
+        "paths_tested": 1,
+        "total_bounded_paths": 1,
+        "search_complete": true,
+        "seconds": 0.01506
+      }
+    },
+    {
+      "case": "forced_initial_reject_plus",
+      "model": "xoroshiro128plus",
+      "seed_planted_hex": "0xedcba9876543210f123456789abcdef0",
+      "seed_recovered_hex": "0xedcba9876543210f123456789abcdef0",
+      "original_seed_equal": true,
+      "actual_training_skip_draws": [
+        0
+      ],
+      "predicted_skip_draws": [
+        0
+      ],
+      "training_full_replay": 170,
+      "heldout_full_replay": 100,
+      "recovery": {
+        "status": "SAT",
+        "seed": "0xedcba9876543210f123456789abcdef0",
+        "model": "xoroshiro128plus",
+        "sampler": "one_word_rank_uniform_rejection",
+        "accepted_limit": 18446744073709284256,
+        "canonical_rejection": true,
+        "gap": 0,
+        "max_skips": 1,
+        "minimum_skips": 1,
+        "recovered_path": [
+          0
+        ],
+        "actual_rejections": 1,
+        "exact_training_tickets": 170,
+        "linear_rank": 128,
+        "paths_tested": 1,
+        "total_bounded_paths": 170,
+        "search_complete": false,
+        "seconds": 0.015054
+      }
+    },
+    {
+      "case": "forced_initial_reject_plus",
+      "model": "xoshiro256plus",
+      "seed_planted_hex": "0xedcba9876543210ffedcba98765432107777777777777777123456789abcdef0",
+      "seed_recovered_hex": "0xedcba9876543210ffedcba98765432107777777777777777123456789abcdef0",
+      "original_seed_equal": true,
+      "actual_training_skip_draws": [
+        0
+      ],
+      "predicted_skip_draws": [
+        0
+      ],
+      "training_full_replay": 300,
+      "heldout_full_replay": 100,
+      "recovery": {
+        "status": "SAT",
+        "seed": "0xedcba9876543210ffedcba98765432107777777777777777123456789abcdef0",
+        "model": "xoshiro256plus",
+        "sampler": "one_word_rank_uniform_rejection",
+        "accepted_limit": 18446744073709284256,
+        "canonical_rejection": true,
+        "gap": 0,
+        "max_skips": 1,
+        "minimum_skips": 1,
+        "recovered_path": [
+          0
+        ],
+        "actual_rejections": 1,
+        "exact_training_tickets": 300,
+        "linear_rank": 256,
+        "paths_tested": 1,
+        "total_bounded_paths": 300,
+        "search_complete": false,
+        "seconds": 0.053339
+      }
+    }
+  ],
+  "source_assumptions": "Uniform output-word probabilities only for probabilities. No deployed RNG attribution.",
+  "original_seed_alias_warning": "A rejected first word permits a shifted initial state with identical accepted stream."
+}
