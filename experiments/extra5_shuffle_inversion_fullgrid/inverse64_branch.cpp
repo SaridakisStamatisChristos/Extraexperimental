@@ -19,7 +19,13 @@ using U128=unsigned __int128;
 using Five=std::array<U64,5>;
 struct Draw {U64 mask;uint32_t allowed;};
 constexpr U64 FULL=(1ULL<<35)-1;
-static inline U64 step(U64 s){s^=s<<13;s^=s>>7;s^=s<<17;return s;}
+struct Model {int a=13,b=7,c=17,dir=0,high=0;};
+static Model model;
+static inline U64 step(U64 s){
+  if(!model.dir){s^=s<<model.a;s^=s>>model.b;s^=s<<model.c;}
+  else{s^=s>>model.a;s^=s<<model.b;s^=s>>model.c;}
+  return s;
+}
 static uint32_t allowed_mask(U64 mask){
   std::array<int,5> nums{};int n=0;
   for(int i=0;i<35;i++)if((mask>>i)&1ULL){if(n<5)nums[n]=i+1;n++;}
@@ -37,7 +43,7 @@ static U64 draw_ticket(U64 &state,int gap){
   U64 remaining=FULL,chosen=0;
   for(int i=0;i<5;i++){
     state=step(state);
-    unsigned r=unsigned(state%(35-i));
+    unsigned r=model.high?unsigned(((U128)state*(35-i))>>64):unsigned(state%(35-i));
     U64 avail=remaining;
     for(unsigned j=0;j<r;j++)avail&=avail-1;
     U64 bit=1ULL<<std::countr_zero(avail);
@@ -83,7 +89,7 @@ static std::vector<Five> linear_forms(int n,int gap){
       U64 fourth=0;
       for(int i=0;i<5;i++){state=step(state);if(i==3)fourth=state;}
       for(int j=0;j<gap;j++)state=step(state);
-      for(int k=0;k<5;k++)if((fourth>>k)&1ULL)forms[d][k]|=1ULL<<bit;
+      for(int k=0;k<5;k++)if((fourth>>(model.high?59+k:k))&1ULL)forms[d][k]|=1ULL<<bit;
     }
   }
   return forms;
@@ -109,6 +115,7 @@ struct Inverse {
   std::vector<std::array<U64,32>> seed;
   std::vector<std::array<U64,32>> synd;
   int rank=0;
+  std::vector<U64> null_basis;
   bool build(const std::vector<Five>&f,const std::vector<int>&ids){
     int N=int(ids.size())*5;
     if(N>120)return false;
@@ -122,7 +129,14 @@ struct Inverse {
       }
       if(!x)deps.push_back(e);
     }
-    if(rank!=64||deps.size()>63)return false;
+    if(rank<60||deps.size()>63)return false;
+    for(int free=0;free<64;free++)if(!piv[free].row){
+      U64 state=1ULL<<free;
+      for(int bit=0;bit<64;bit++)if(piv[bit].row){
+        if(std::popcount(piv[bit].row&state)&1)state|=1ULL<<bit;
+      }
+      null_basis.push_back(state);
+    }
     std::vector<U64> state_delta(N),syn_delta(N);
     for(int i=0;i<N;i++){
       U128 rhs=(U128)1<<i;
@@ -180,7 +194,16 @@ struct Engine{
     if(incomplete)return;
     if(depth==(int)indices.size()){
       if(++assignments>bound){incomplete=true;return;}
-      if(syn==0){linear_consistent++;validate(seed);}
+      if(syn==0){
+        linear_consistent++;
+        const U64 count=1ULL<<inv.null_basis.size();
+        for(U64 mask=0;mask<count;mask++){
+          U64 candidate=seed;
+          for(size_t k=0;k<inv.null_basis.size();k++)
+            if((mask>>k)&1ULL)candidate^=inv.null_basis[k];
+          validate(candidate);
+        }
+      }
       return;
     }
     int d=indices[depth];uint32_t allowed=data[d].allowed;
@@ -193,7 +216,7 @@ struct Engine{
 };
 int main(int argc,char**argv){
   if(argc<4){
-    std::cerr<<"usage: inverse64_branch DATA.csv TRAIN_LIMIT GAP [BRANCH_LIMIT] [EXTRA_CHECKS] [MAX_SELECTION_POOL]\n";
+    std::cerr<<"usage: inverse64_branch DATA.csv TRAIN_LIMIT GAP [BRANCH_LIMIT] [EXTRA_CHECKS] [MAX_SELECTION_POOL] [A B C DIR HIGH]\n";
     return 2;
   }
   try{
@@ -203,6 +226,13 @@ int main(int argc,char**argv){
     U64 branch_limit=argc>=5?std::stoull(argv[4]):20000000ULL;
     int extra_count=argc>=6?std::stoi(argv[5]):40;
     int pool_size=argc>=7?std::stoi(argv[6]):train;
+    if(argc>=12){
+      model.a=std::stoi(argv[7]);model.b=std::stoi(argv[8]);model.c=std::stoi(argv[9]);
+      model.dir=std::stoi(argv[10]);model.high=std::stoi(argv[11]);
+    }
+    if(model.a<1||model.a>63||model.b<1||model.b>63||model.c<1||model.c>63||
+       (model.dir!=0&&model.dir!=1)||(model.high!=0&&model.high!=1))
+      throw std::runtime_error("invalid transition/sampler parameters");
     if(train<13||train>(int)data.size()||gap<0||gap>32||
        pool_size<13||pool_size>train||extra_count<0)
       throw std::runtime_error("invalid bounds");
@@ -216,18 +246,33 @@ int main(int argc,char**argv){
       return x==y?a<b:x<y;
     });
     Engine e(data,forms);e.gap=gap;e.bound=branch_limit;e.train_limit=train;
+    // Prefer twelve rank-five draws, then a rank-completing thirteenth.
+    // Enumerate residual nullspace when the observation rank is under 64.
     int rank=0;
     std::vector<char> used(train);
     for(int d:ids){
-      if(e.indices.size()==13)break;
+      if(e.indices.size()>=12)break;
       int newrank=rank_of(forms,e.indices,d);
-      int desired=std::min(5,64-rank);
-      if(newrank-rank>=desired){
+      if(newrank-rank==5){
         e.indices.push_back(d);used[d]=1;rank=newrank;
       }
     }
+    if(e.indices.size()==12){
+      for(int d:ids)if(!used[d]&&rank_of(forms,e.indices,d)==64){
+        e.indices.push_back(d);used[d]=1;rank=64;break;
+      }
+    }
+    while((e.indices.size()<13||rank<60)&&e.indices.size()<16){
+      int best=-1,best_rank=rank;
+      for(int d:ids)if(!used[d]){
+        int nr=rank_of(forms,e.indices,d);
+        if(nr>best_rank){best=d;best_rank=nr;}
+      }
+      if(best<0)break;
+      e.indices.push_back(best);used[best]=1;rank=best_rank;
+    }
     std::string status="UNKNOWN";
-    if(e.indices.size()==13&&rank==64&&e.inv.build(forms,e.indices)){
+    if(rank>=60&&e.indices.size()>=13&&e.inv.build(forms,e.indices)){
       for(int d:ids)if(!used[d]&&(int)e.extra.size()<extra_count)
         e.extra.push_back(d);
       e.search(0,0,0);
