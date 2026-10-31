@@ -110,7 +110,15 @@
     "counts": {
       "UNSAT": 40,
       "SAT": 0,
-      "UNKNOWN": 0
+      "UNKNOWN": 0,
+      "gf2_consistent_range": [
+        1259712,
+        2519640
+      ],
+      "runtime_seconds_range": [
+        0.0501738,
+        0.0632333
+      ]
     },
     "observations": {
       "source_rows": 3526,
@@ -132,7 +140,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0501738
       },
       {
         "a": 13,
@@ -146,7 +155,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0632333
       },
       {
         "a": 13,
@@ -160,7 +170,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0549619
       },
       {
         "a": 13,
@@ -174,7 +185,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0578506
       },
       {
         "a": 13,
@@ -188,7 +200,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0583626
       },
       {
         "a": 13,
@@ -202,7 +215,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0568391
       },
       {
         "a": 13,
@@ -216,7 +230,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0551171
       },
       {
         "a": 13,
@@ -230,7 +245,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0607616
       },
       {
         "a": 13,
@@ -244,7 +260,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0559319
       },
       {
         "a": 13,
@@ -258,7 +275,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0573142
       },
       {
         "a": 13,
@@ -271,8 +289,9 @@
         "rank": 64,
         "search_complete": true,
         "assignments_examined": 5038848,
-        "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "gf2_consistent_assignments": 2519328,
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0567867
       },
       {
         "a": 13,
@@ -285,8 +304,9 @@
         "rank": 64,
         "search_complete": true,
         "assignments_examined": 5038848,
-        "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "gf2_consistent_assignments": 2519408,
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0514711
       },
       {
         "a": 13,
@@ -299,8 +319,9 @@
         "rank": 64,
         "search_complete": true,
         "assignments_examined": 5038848,
-        "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "gf2_consistent_assignments": 2519280,
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0540221
       },
       {
         "a": 13,
@@ -314,7 +335,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0588285
       },
       {
         "a": 13,
@@ -328,7 +350,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0507398
       },
       {
         "a": 13,
@@ -342,7 +365,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.051831
       },
       {
         "a": 13,
@@ -356,7 +380,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0631996
       },
       {
         "a": 13,
@@ -370,7 +395,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0578491
       },
       {
         "a": 13,
@@ -384,7 +410,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0510662
       },
       {
         "a": 13,
@@ -398,7 +425,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0511865
       },
       {
         "a": 7,
@@ -411,8 +439,9 @@
         "rank": 64,
         "search_complete": true,
         "assignments_examined": 5038848,
-        "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "gf2_consistent_assignments": 2519400,
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0600841
       },
       {
         "a": 7,
@@ -426,7 +455,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0518871
       },
       {
         "a": 7,
@@ -440,7 +470,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0608365
       },
       {
         "a": 7,
@@ -453,8 +484,9 @@
         "rank": 64,
         "search_complete": true,
         "assignments_examined": 5038848,
-        "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "gf2_consistent_assignments": 2519640,
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0502991
       },
       {
         "a": 7,
@@ -468,7 +500,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0598571
       },
       {
         "a": 7,
@@ -482,7 +515,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0534545
       },
       {
         "a": 7,
@@ -495,8 +529,9 @@
         "rank": 63,
         "search_complete": true,
         "assignments_examined": 5038848,
-        "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "gf2_consistent_assignments": 1260036,
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.056054
       },
       {
         "a": 7,
@@ -510,7 +545,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0613213
       },
       {
         "a": 7,
@@ -524,7 +560,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0552714
       },
       {
         "a": 7,
@@ -537,8 +574,9 @@
         "rank": 63,
         "search_complete": true,
         "assignments_examined": 5038848,
-        "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "gf2_consistent_assignments": 1259712,
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0528033
       },
       {
         "a": 7,
@@ -552,7 +590,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0556944
       },
       {
         "a": 7,
@@ -565,8 +604,9 @@
         "rank": 63,
         "search_complete": true,
         "assignments_examined": 5038848,
-        "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "gf2_consistent_assignments": 1259748,
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0553148
       },
       {
         "a": 7,
@@ -580,7 +620,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0566034
       },
       {
         "a": 7,
@@ -594,7 +635,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0602646
       },
       {
         "a": 7,
@@ -607,8 +649,9 @@
         "rank": 63,
         "search_complete": true,
         "assignments_examined": 5038848,
-        "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "gf2_consistent_assignments": 1259712,
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0570865
       },
       {
         "a": 7,
@@ -622,7 +665,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0597
       },
       {
         "a": 7,
@@ -636,7 +680,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0542282
       },
       {
         "a": 7,
@@ -650,7 +695,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0559352
       },
       {
         "a": 7,
@@ -664,7 +710,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0542716
       },
       {
         "a": 7,
@@ -678,7 +725,8 @@
         "search_complete": true,
         "assignments_examined": 5038848,
         "gf2_consistent_assignments": 2519424,
-        "passed_extra_domains": 0
+        "passed_extra_domains": 0,
+        "elapsed_seconds": 0.0536916
       }
     ],
     "additional_synthetic_positive_controls": {
@@ -732,6 +780,7 @@
       ]
     },
     "local_verification": "6/6 unittest methods PASS (including five model subtests), 10/10 synthetic state recoveries total; no CI was run",
-    "conclusion": "UNSAT only for these 40 exactly specified no-reseed fixed-output-consumption models; production generator UNKNOWN"
+    "conclusion": "UNSAT only for these 40 exactly specified no-reseed fixed-output-consumption models; production generator UNKNOWN",
+    "per_case_counts_corrected_from_raw_local_execution": true
   }
 }
