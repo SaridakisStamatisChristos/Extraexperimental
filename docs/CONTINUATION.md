@@ -463,3 +463,12 @@ Four additional **user-authoritative** spreadsheets (2022, 2023, 2024 and 2025) 
 ## 2026-10-30 — Full-grid shuffle-invariant continuation (recorded checkpoint)
 
 A later independently audited inverse-state investigation extended the five-output xorshift32 solver to both modulo and multiply-high samplers. Examined 297,910 parameter/direction/gap specifications per sampler (595,820 combined); 144,440 per sampler (288,880 combined) were exhaustively enumerated after seven/eight observation constraints, while 153,470 per sampler (306,940 combined) remained underdetermined and were **not** classified as eliminated. All 1,620 maximal-period configurations per sampler were exhaustively rejected in the modeled fixed-gap, five-word selection architecture. Twelve synthetic planted-state controls each reproduced 60/60 sets. The optional 64-bit SMT prototype timed out on both real and planted instances and establishes no 64-bit elimination. **No production RNG identified and no live forecast verified.** Tests verified 12/12 after compiling C++ binaries. See `experiments/extra5_shuffle_inversion_fullgrid/` for the verified report and machine-readable results. Full 83-file archive was generated in the originating ChatGPT session; GitHub availability of that ZIP is not asserted in this checkpoint.
+
+
+## Complete 83-file full-grid laboratory synchronization (2026-10-31)
+
+- The full 83-file laboratory is now preserved in `experiments/extra5_shuffle_inversion_fullgrid/`: 23 directly browsable sources/reports/tests, 21 archive parts, a reconstruction script and checksums.
+- To restore the original 5,034,451-byte ZIP, run `bash assemble_archive.sh` in the experiment directory. SHA256 `c3f02f8c96fe59c34b61e521bf3613a68d531aecb5e02c8dddef726323b37712`.
+- See `SYNC_MANIFEST.md` and `docs/EXTRA5_FULLGRID_SYNC_2026-10-31.md` for verification and completeness; the full-grid CSV shards and synthetic fixtures are contained in the reconstructed ZIP.
+- Results remain conditional: 288,880 exhaustive model/sampler checks; unresolved configurations and 64-bit SMT timeouts are not falsifications. No deployed RNG or validated next-draw prediction.
+- Previous prediction locks and CI were left unchanged.

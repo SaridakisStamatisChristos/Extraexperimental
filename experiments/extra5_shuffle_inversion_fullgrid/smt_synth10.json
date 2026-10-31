@@ -1,0 +1,21 @@
+{
+  "status": "UNKNOWN",
+  "reason": "timeout",
+  "elapsed_seconds": 3.007572557000003,
+  "draws": 10,
+  "gap": 0,
+  "selection": "smallest",
+  "indices": [
+    56,
+    4,
+    15,
+    22,
+    37,
+    41,
+    45,
+    7,
+    10,
+    12
+  ],
+  "input": "synthetic_xorshift64_13_7_17_gap0.csv"
+}
