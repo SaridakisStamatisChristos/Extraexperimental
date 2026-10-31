@@ -28,3 +28,14 @@ The benchmark probes need libz3.so.4; core algebra/tests require only Python 3.1
 ## Remaining gate
 
 To claim Phase 2 complete, recover 128/256-bit states from **unordered** planted sets without oracle extraction indices, preferably by an XOR-aware SAT backend with domain filtering, rank-guided dependencies, or a complete meet-in-the-middle solver. Nonlinear output scramblers and variable output consumption must then be modeled independently. Do not run the unknown model on real data or declare a real generator recovery until these synthetic gates pass. Current status: **GF(2) core EMPIRICALLY_VALIDATED; unordered 128-/256-bit recovery UNKNOWN**.
+
+## Full telemetry restoration
+
+Full per-case JSON results are committed byte-for-byte in compressed text form as `PHASE2_RESULTS.json.zlib.b64` (Base64 of zlib-compressed UTF-8 JSON). Reconstruct and verify with:
+
+```sh
+base64 --decode PHASE2_RESULTS.json.zlib.b64 | python -c 'import sys,zlib;sys.stdout.buffer.write(zlib.decompress(sys.stdin.buffer.read()))' > PHASE2_RESULTS.json
+printf '%s  %s\n' c91becb39c184e56a55feebbd34c4d00869a69ea71edfb118d3eae3eacf5d10e PHASE2_RESULTS.json | sha256sum --check -
+```
+
+The separate `SECOND_PARITY_REDUNDANCY.md` proves that modulo sampler's second-selection parity is redundant after hiding extraction order. `test_second_parity.py` independently verifies the exact Cartesian joint-domain property for 203 ticket controls. Both Phase 2 Python test modules pass **8/8** methods in total.
