@@ -130,3 +130,57 @@ def recover_bounded(model,tickets,gap=0,max_skips=1,max_paths=None,
             'unique_state_replay_failures':unique_replay_fail,
             'seconds':round(time.monotonic()-t0,6),
             'limitation':'Only paths with <= max_skips discarded outputs are analyzed'}
+
+
+def recover_from_prefix(model, tickets, prefix_length, gap=0, max_prefix_skips=2,
+                        max_paths=None, accept_multiple=None):
+    """Exact prefix-bounded inversion; suffix rejection count is NOT bounded.
+
+    Enumerate rejected output-word placements only within an informative prefix.
+    Each full-rank seed is replayed against *all* tickets with actual rejection
+    decisions. If all prefix paths are full rank or contradictory and no replay
+    witness exists, this proves UNSAT for the model with <=K prefix rejections,
+    regardless of later rejections (which are determined by the initial state).
+    """
+    if not tickets or not 1<=prefix_length<=len(tickets) or gap<0 or max_prefix_skips<0:
+        raise ValueError('invalid prefix parameters')
+    if max_paths is not None and max_paths<1:raise ValueError('invalid path cap')
+    n=prefix_length;start=time.monotonic();width=model.proved_linear_low_bits
+    ranks=[combination_rank(x) for x in tickets[:n]]
+    forms=ordinal_forms(model,n*(gap+1)+max_prefix_skips)
+    total=sum(comb(n+k-1,k) for k in range(max_prefix_skips+1))
+    tested=0;rank_deficient=0;linear_contradictions=0;replay_mismatches=0
+    truncated=False
+    for k in range(max_prefix_skips+1):
+        for path in combinations_with_replacement(range(n),k):
+            if max_paths is not None and tested>=max_paths:
+                truncated=True;break
+            tested+=1
+            indices=ordinal_positions(n,gap,path)
+            equations=[(forms[idx][bit],(ranks[d]>>bit)&1)
+                       for d,idx in enumerate(indices) for bit in range(width)]
+            ans=solve(equations,model.size)
+            if ans['status']=='UNKNOWN':rank_deficient+=1;continue
+            if ans['status']=='UNSAT':linear_contradictions+=1;continue
+            seed=ans['seed']
+            replay,counts,_=generate_trace(model,seed,len(tickets),gap,accept_multiple)
+            actual_prefix=tuple(d for d,c in enumerate(counts[:n]) for _ in range(c))
+            if replay==list(tickets) and actual_prefix==path:
+                return {'status':'SAT','model':model.name,'seed':f'0x{seed:0{model.size//4}x}',
+                        'training_tickets_replayed':len(tickets),'prefix_length':n,
+                        'max_prefix_skips':max_prefix_skips,'recovered_prefix_path':list(path),
+                        'realized_suffix_rejections':sum(counts[n:]),
+                        'paths_tested':tested,'total_prefix_paths':total,
+                        'search_complete':tested==total,'gap':gap,
+                        'seconds':round(time.monotonic()-start,6)}
+            replay_mismatches+=1
+        if truncated:break
+    return {'status':'UNKNOWN' if (truncated or rank_deficient) else 'UNSAT',
+            'model':model.name,'training_tickets_replayed':len(tickets),
+            'prefix_length':n,'max_prefix_skips':max_prefix_skips,
+            'paths_tested':tested,'total_prefix_paths':total,
+            'search_complete':not truncated,'rank_deficient_paths':rank_deficient,
+            'linearly_inconsistent_paths':linear_contradictions,
+            'full_replay_rejected_candidates':replay_mismatches,'gap':gap,
+            'suffix_rejection_bound':'NONE; determined by forward replay',
+            'seconds':round(time.monotonic()-start,6)}

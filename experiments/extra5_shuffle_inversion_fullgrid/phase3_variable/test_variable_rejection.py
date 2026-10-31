@@ -7,7 +7,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parent.parent / "phase3_rank"))
 from math import comb
 from rank_inverse import MODELS, N, combination_unrank
 from variable_rejection import (threshold, generate_trace, ordinal_forms,
-                                ordinal_positions, recover_bounded)
+                                ordinal_positions, recover_bounded, recover_from_prefix)
 
 M32=(1<<32)-1
 
@@ -187,6 +187,29 @@ class VariablePathTest(unittest.TestCase):
             self.assertEqual(int(r['seed'],16),seed)
             self.assertEqual(r['recovered_path'],[0])
             self.assertEqual(generate_trace(m,int(r['seed'],16),n+100)[0][n:],tickets[n:])
+
+    def test_prefix_recovery_with_later_unbounded_rejection(self):
+        model=MODELS['marsaglia128']
+        seed=forced_later_rejection(70)
+        tickets,skips,_=generate_trace(model,seed,190)
+        self.assertEqual(sum(skips[:60]),0)
+        self.assertEqual(skips[70],1)
+        r=recover_from_prefix(model,tickets[:90],prefix_length=60,max_prefix_skips=0)
+        self.assertEqual(r['status'],'SAT',r)
+        self.assertEqual(int(r['seed'],16),seed)
+        self.assertEqual(r['recovered_prefix_path'],[])
+        self.assertEqual(generate_trace(model,int(r['seed'],16),190)[0][90:],tickets[90:])
+
+    def test_prefix_path_budget_and_wrong_model(self):
+        model=MODELS['marsaglia128'];seed=forced_later_rejection(14)
+        data,_,_=generate_trace(model,seed,180)
+        self.assertEqual(recover_from_prefix(model,data,prefix_length=60,max_prefix_skips=0)['status'],'UNSAT')
+        bounded=recover_from_prefix(model,data,prefix_length=60,max_prefix_skips=1,max_paths=1)
+        self.assertEqual(bounded['status'],'UNKNOWN')
+        complete=recover_from_prefix(model,data,prefix_length=60,max_prefix_skips=1)
+        self.assertEqual(complete['status'],'SAT')
+        self.assertEqual(int(complete['seed'],16),seed)
+        self.assertEqual(complete['recovered_prefix_path'],[14])
 
     def test_ordinal_form_oracle(self):
         for m in MODELS.values():

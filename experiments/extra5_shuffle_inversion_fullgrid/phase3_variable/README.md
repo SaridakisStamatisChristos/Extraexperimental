@@ -24,7 +24,7 @@ If the first output word is rejected and the second is accepted, a model initial
 
 ## Synthetic execution and independent controls
 
-- `python -W error -m unittest -v test_variable_rejection.py`: **11/11 green**, including independent Marsaglia forward implementation, inverse-transition-engineered early and late rejections, real nonlinear '+' output forced rejection in both 128- and 256-bit models, two separated rejects in one planted sample, zero-skip exhaustive UNSAT, budget `UNKNOWN`, rank-nullity `UNKNOWN`, and ordinal parity checks.
+- `python -W error -m unittest -v test_variable_rejection.py`: **13/13 green**, including independent Marsaglia forward implementation, inverse-transition-engineered early and late rejections, real nonlinear '+' output forced rejection in both 128- and 256-bit models, two separated rejects in one planted sample, zero-skip exhaustive UNSAT, budget `UNKNOWN`, rank-nullity `UNKNOWN`, and ordinal parity checks.
 - `python benchmark_phase3b.py`: **6/6 verified synthetic instances**, each with 100 reserved complete ticket continuations, 600/600 full tickets. The first-rejection case deliberately recovers a distinct yet future-equivalent seed; other stated controls recover their planted original states exactly when their hypotheses pin the correct skip behavior.
 - `(cd ../phase3_rank && python -W error -m unittest -v test_rank_inverse.py)`: previously preserved Phase 3A **7/7** green; combined **18/18**.
 - Benchmark timings in `PHASE3B_RESULTS.json` are local Python 3.13.5 on Linux x86_64. State generation time and regression-suite runtime are excluded from per-case inversion timings.
@@ -47,10 +47,17 @@ From this directory:
 python -W error -m unittest -v test_variable_rejection.py
 (cd ../phase3_rank && python -W error -m unittest -v test_rank_inverse.py)
 python benchmark_phase3b.py
+python audit_prefix_k3.py --gap 0 --output replay_k3_gap0.json
 python audit_real300.py --ranks ../phase3_rank/real_first300_ranks.csv --output REAL_300_BOUNDED_REPLAY.json --max-skips 1
 ```
 
 For the 128-bit two-rejection cases, use `recover_bounded` on the first 85/165 ranks as recorded in `REAL_2REJECTIONS_128BIT.json`. The audit runs only the first 300 historical ranks, not a full 3,526-draw brute-force sweep.
+
+## Prefix-only path inference (Phase 3B extension)
+
+`recover_from_prefix(model, full_tickets, prefix_length, max_prefix_skips=K)` checks possible rejection placements only in the informative prefix and replays **all** supplied tickets with the exact rejection rule. Suffix rejection count is unrestricted and deterministic once the seed is recovered. An exhaustive bounded UNSAT needs *every* prefix path either inconsistent or full-rank with a failed full replay; rank-deficient paths still give UNKNOWN. The new 13th Phase 3B test proves a seeded rejection after the chosen prefix is recovered with a zero-skip prefix, and the budget guard test independently checks UNKNOWN.
+
+For Marsaglia xorshift128, first 60 authentic (previously transcribed) ranks, both samplers not asserted, one-word **rank** rejection sampler, and gaps 0/1/2, every one of **39,711/39,711** paths with 0–3 total rejected words inside the **first 60 draws** was linearly contradictory. There were no underdetermined paths. This excludes each pinned model under the prefix skip bound even with an *unbounded number of later rejections*, because every candidate initial state would replay the suffix automatically. It does not eliminate paths with 4 or more early skips or unknown sampler/reseeding. See `REAL_PREFIX_K3_MARSAGLIA.json` and execute `python audit_prefix_k3.py --gap 0 --output replay_k3_gap0.json` (repeat for gaps 1/2).
 
 ## Next gates
 
